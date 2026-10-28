@@ -9,7 +9,7 @@ import { STEPS, evaluate, labelFor } from './identify.js';
 import { illustrate, heroArt } from './illustration.js';
 import { DONATION } from './config.js';
 
-const APP_VERSION = '1.1.0';
+const APP_VERSION = '1.2.0';
 const $view = document.getElementById('view');
 const state = {
   data: null,
@@ -189,11 +189,10 @@ function viewHome() {
 
   const html = `
   <section class="hero">
-    ${heroArt()}
-    <div class="hero-content">
-      <div class="eyebrow">Digitales Pilzlexikon · offline</div>
-      <h1>Den Wald verstehen – Art für Art.</h1>
-      <p>${all.length} Pilzarten Mitteleuropas mit Merkmalen, Verwechslungspartnern und einer ehrlichen Bestimmungshilfe.</p>
+        <div class="hero-content">
+      <div class="eyebrow">Pilzlexikon für Mitteleuropa</div>
+      <h1>Pilze bestimmen, verstehen und sicher unterscheiden.</h1>
+      <p>${all.length} Arten mit Merkmalen, Verwechslungspartnern und Bestimmungshilfe. Funktioniert auch offline.</p>
       <form class="searchbox" id="home-search" role="search">
         <label class="visually-hidden" for="home-q">Pilz suchen</label>
         ${ICON.search}
