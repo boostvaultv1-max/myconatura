@@ -33,8 +33,10 @@
   },
   "fliegenpilz": {
     "exclude": [
-      "File:2015-09-26-SFERO (Foto Dietrich Michael Weidmann) (20).JPG"
-    ]
+      "File:2015-09-26-SFERO (Foto Dietrich Michael Weidmann) (20).JPG",
+      "File:2015-09-26-SFERO (Foto Dietrich Michael Weidmann) (16).JPG"
+    ],
+    "search": "Amanita muscaria fly agaric close up"
   },
   "zunderschwamm": {
     "exclude": [
