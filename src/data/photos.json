@@ -396,19 +396,21 @@
   },
   "heidelbeere": {
    "src": "assets/photos/heidelbeere.jpg",
-   "title": "File:Vacc myrt kz4.jpg",
-   "author": "Krzysztof Ziarnek, Kenraiz",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vacc_myrt_kz4.jpg"
+   "title": "File:Vaccinium myrtillus RecolteAuPeigne.JPG",
+   "author": "B.navez",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vaccinium_myrtillus_RecolteAuPeigne.JPG",
+   "search": "Vaccinium myrtillus fruit"
   },
   "schwarzer-holunder": {
    "src": "assets/photos/schwarzer-holunder.jpg",
-   "title": "File:Alte Schanzen sl5.jpg",
-   "author": "Stefan.lefnaer",
+   "title": "File:Sambucus nigra fruit 3.JPG",
+   "author": "Andrikkos",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alte_Schanzen_sl5.jpg"
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sambucus_nigra_fruit_3.JPG",
+   "search": "Sambucus nigra fruit"
   },
   "brombeere": {
    "src": "assets/photos/brombeere.jpg",
@@ -436,19 +438,21 @@
   },
   "haselnuss": {
    "src": "assets/photos/haselnuss.jpg",
-   "title": "File:Lathraea clandestina parasitising a hazel.JPG",
-   "author": "Meneerke bloem",
+   "title": "File:Corylus avellana 0007.JPG",
+   "author": "H. Zell",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lathraea_clandestina_parasitising_a_hazel.JPG"
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Corylus_avellana_0007.JPG",
+   "search": "Corylus avellana nuts"
   },
   "hagebutte": {
    "src": "assets/photos/hagebutte.jpg",
-   "title": "File:Chornobyl DSC 0226 14.JPG",
-   "author": "Antanana",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chornobyl_DSC_0226_14.JPG"
+   "title": "File:Rosa canina hips, Đerdap.jpg",
+   "author": "Gmihail at Serbian Wikipedia",
+   "license": "CC BY-SA 3.0 rs",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/rs/deed.en",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rosa_canina_hips,_%C4%90erdap.jpg",
+   "search": "Rosa canina hips"
   },
   "maigloeckchen": {
    "src": "assets/photos/maigloeckchen.jpg",
