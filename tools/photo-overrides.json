@@ -40,5 +40,35 @@
     "exclude": [
       "File:Fomes fomentarius - National Museum of Nature and Science, Tokyo - DSC06757.JPG"
     ]
+  },
+  "loewenzahn": {
+    "exclude": [
+      "File:Fly drops.jpg"
+    ]
+  },
+  "heidelbeere": {
+    "exclude": [
+      "File:Høstblåbærlyng mellom reinlav eller reinmose.JPG"
+    ]
+  },
+  "schwarzer-holunder": {
+    "exclude": [
+      "File:Cesta do Chodovlic.JPG"
+    ]
+  },
+  "hagebutte": {
+    "exclude": [
+      "File:PR Kopeč, pohled na východ s šípkem (Rosa canina).JPG"
+    ]
+  },
+  "haselnuss": {
+    "exclude": [
+      "File:NPR Kněžičky, líska.jpg"
+    ]
+  },
+  "brennnessel": {
+    "exclude": [
+      "File:Arundo donax - Urtica dioica 3825.JPG"
+    ]
   }
 }
