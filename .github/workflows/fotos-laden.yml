@@ -1,0 +1,45 @@
+# Lädt frei lizenzierte Pilzfotos von Wikimedia Commons ins Repository.
+# Start auf GitHub (auch am iPhone): Reiter "Actions" → "Pilzfotos laden" → "Run workflow".
+name: Pilzfotos laden
+
+on:
+  workflow_dispatch:
+    inputs:
+      modus:
+        description: "fehlende = nur fehlende Fotos laden, alle = alle neu laden"
+        required: true
+        default: "fehlende"
+        type: choice
+        options: [fehlende, alle]
+
+permissions:
+  contents: write
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fotos von Wikimedia Commons laden
+        run: |
+          if [ "${{ inputs.modus }}" = "alle" ]; then
+            python3 tools/fetch_photos.py --all
+          else
+            python3 tools/fetch_photos.py
+          fi
+      - name: Offline-Cache-Version erhöhen und speichern
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/photos src/data/photos.json
+          if git diff --cached --quiet; then
+            echo "Keine neuen Fotos."
+            exit 0
+          fi
+          sed -i -E "s/(const PHOTOS_REV = ')[^']*(')/\1$(date +%Y%m%d%H%M)\2/" service-worker.js
+          git add service-worker.js
+          git commit -m "Pilzfotos von Wikimedia Commons aktualisiert"
+          git push

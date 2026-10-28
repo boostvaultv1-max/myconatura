@@ -1,0 +1,5179 @@
+{
+ "meta": {
+  "name": "MycoNatura Pilzdatenbank",
+  "version": "1.1.0",
+  "updated": "2026-10",
+  "language": "de",
+  "count": 44,
+  "disclaimer": "Die Einträge fassen weithin dokumentiertes Bestimmungswissen für Mitteleuropa zusammen. Sie ersetzen keine Bestimmung durch geprüfte Pilzsachverständige. Verzehre niemals einen Pilz allein auf Grundlage dieser Website.",
+  "sourceNote": "Die angegebenen Werke und Websites sind Referenzliteratur zum Nachprüfen. Die Angaben wurden nicht Seite für Seite gegen diese Werke abgeglichen; bei Abweichungen gilt die Fachliteratur bzw. das Urteil von Pilzsachverständigen. Felder ohne gesicherte Angabe sind als „unbekannt“ gekennzeichnet.",
+  "imageNote": "Fotos stammen von Wikimedia Commons und stehen unter freien Lizenzen (Urheber und Lizenz jeweils am Bild). Wo kein Foto vorhanden ist, wird eine eigene, schematische SVG-Illustration gezeigt. Bilder ersetzen keine Bestimmung."
+ },
+ "sources": {
+  "laux": {
+   "title": "Laux, Hans E.: Der große Kosmos-Pilzführer. Franckh-Kosmos, Stuttgart.",
+   "url": null
+  },
+  "gminder": {
+   "title": "Gminder, Andreas: Handbuch für Pilzsammler. Franckh-Kosmos, Stuttgart.",
+   "url": null
+  },
+  "flueck": {
+   "title": "Flück, Markus: Welcher Pilz ist das? Franckh-Kosmos, Stuttgart.",
+   "url": null
+  },
+  "dgfm": {
+   "title": "Deutsche Gesellschaft für Mykologie e. V. (DGfM) – Pilzsachverständige, Giftpilz-Informationen",
+   "url": "https://www.dgfm-ev.de"
+  },
+  "speciesfungorum": {
+   "title": "Species Fungorum – Nomenklatur-Datenbank für wissenschaftliche Pilznamen",
+   "url": "https://www.speciesfungorum.org"
+  },
+  "btmg": {
+   "title": "Betäubungsmittelgesetz (BtMG), Anlage I – Bundesministerium der Justiz",
+   "url": "https://www.gesetze-im-internet.de/btmg_1981/"
+  },
+  "giz": {
+   "title": "Giftinformationszentren (GIZ) in Deutschland, Österreich und der Schweiz – Hinweise zu Pilzvergiftungen",
+   "url": null
+  }
+ },
+ "mushrooms": [
+  {
+   "id": "fichten-steinpilz",
+   "name": "Fichten-Steinpilz",
+   "scientific": "Boletus edulis",
+   "family": "Boletaceae (Dickröhrlingsverwandte)",
+   "synonyms": [
+    "Steinpilz",
+    "Herrenpilz",
+    "Edelpilz"
+   ],
+   "edibility": "essbar",
+   "popular": true,
+   "edibilityNote": "Hervorragender Speisepilz. Nur feste, madenfreie Exemplare verwenden und gut durchgaren.",
+   "description": "Der bekannteste Röhrling Mitteleuropas: kräftig gebaut, mit braunem Hut, weißlich-hellem, genetztem Stiel und Röhren, die von Weiß über Gelb nach Olivgrün altern. Das Fleisch bleibt beim Anschneiden weiß.",
+   "cap": {
+    "text": "5–25 cm, jung halbkugelig, dann polsterförmig; hell- bis dunkelbraun, Rand oft heller; bei Feuchtigkeit leicht schmierig.",
+    "shape": [
+     "gewoelbt",
+     "kugelig"
+    ],
+    "colors": [
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "roehren",
+    "text": "Röhren jung weiß, dann gelblich, alt olivgrün; auf Druck nicht blauend.",
+    "colors": [
+     "weiss",
+     "gelb",
+     "oliv"
+    ]
+   },
+   "stem": {
+    "text": "Bauchig bis keulig, weißlich bis hellbraun, im oberen Teil mit feinem weißem Netz.",
+    "colors": [
+     "weiss",
+     "braun",
+     "creme"
+    ],
+    "shape": [
+     "bauchig"
+    ],
+    "base": "knollig",
+    "baseText": "Keulig-bauchig verdickt, ohne Scheide.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, fest, unter der Huthaut etwas weinbräunlich; verfärbt sich beim Anschneiden nicht."
+   },
+   "smell": {
+    "text": "Angenehm pilzig; Geschmack mild, nussig.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Olivbraun",
+    "tags": [
+     "olivbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Nadel- und Laubwälder, gern an Wegrändern und in lichten Beständen; Mykorrhizapilz.",
+    "tags": [
+     "nadelwald",
+     "laubwald"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Fichte",
+    "Kiefer",
+    "Buche",
+    "Eiche"
+   ],
+   "distribution": "In Europa weit verbreitet und vielerorts häufig, von der Ebene bis ins Gebirge.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "Juni bis November, Hauptzeit August bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "gallenroehrling",
+     "name": "Gallenröhrling",
+     "dangerous": false,
+     "note": "Röhren werden rosa, Stielnetz dunkelbraun und grob, Geschmack extrem bitter. Nicht giftig, verdirbt aber jedes Gericht."
+    },
+    {
+     "id": "satans-roehrling",
+     "name": "Satans-Röhrling",
+     "dangerous": true,
+     "note": "Rote Poren, rotes Stielnetz, Fleisch blauend, Hut weißlich-grau; giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Röhren nicht blauend, jung weiß",
+    "Weißes, feines Netz am oberen Stiel",
+    "Fleisch weiß und unveränderlich",
+    "Mild im Geschmack (Gallenröhrling: bitter)"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "hemisphere",
+    "cap": "#8a5a2e",
+    "cap2": "#5e3a1a",
+    "under": "#e7dfb8",
+    "gills": "roehren",
+    "stem": "#e9dfc6",
+    "stemShape": "bulbous",
+    "net": "#fbf7ee"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10"
+  },
+  {
+   "id": "maronen-roehrling",
+   "name": "Maronen-Röhrling",
+   "scientific": "Imleria badia",
+   "family": "Boletaceae (Dickröhrlingsverwandte)",
+   "synonyms": [
+    "Marone",
+    "Braunhäuptchen",
+    "Xerocomus badius",
+    "Boletus badius"
+   ],
+   "edibility": "essbar",
+   "popular": true,
+   "edibilityNote": "Sehr guter Speisepilz. Gut durchgaren.",
+   "description": "Häufiger Röhrling der Nadelwälder mit kastanienbraunem Hut und blassgelben Röhren, die auf Druck blau-grünlich anlaufen. Der Stiel trägt kein Netz.",
+   "cap": {
+    "text": "4–15 cm, polsterförmig; kastanien- bis schokoladenbraun, trocken samtig, feucht schmierig.",
+    "shape": [
+     "gewoelbt"
+    ],
+    "colors": [
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "roehren",
+    "text": "Blassgelb bis olivgelb, auf Druck blau verfärbend.",
+    "colors": [
+     "gelb",
+     "oliv"
+    ]
+   },
+   "stem": {
+    "text": "Zylindrisch, gelbbraun bis braun, längsfaserig gestreift, ohne Netz.",
+    "colors": [
+     "braun",
+     "gelb"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Zylindrisch, ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weißlich bis gelblich, beim Anschneiden schwach blauend."
+   },
+   "smell": {
+    "text": "Angenehm, fruchtig-pilzig; Geschmack mild.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Olivbraun",
+    "tags": [
+     "olivbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Vor allem saure Nadelwälder, auch Mischwälder; Mykorrhizapilz.",
+    "tags": [
+     "nadelwald",
+     "sauer"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Fichte",
+    "Kiefer",
+    "Buche"
+   ],
+   "distribution": "In Mitteleuropa weit verbreitet und häufig.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "Juni bis November"
+   },
+   "lookalikes": [
+    {
+     "id": "gallenroehrling",
+     "name": "Gallenröhrling",
+     "dangerous": false,
+     "note": "Röhren rosa, nicht blauend, Stiel mit dunklem Netz, sehr bitter."
+    },
+    {
+     "id": "flockenstieliger-hexen-roehrling",
+     "name": "Flockenstieliger Hexen-Röhrling",
+     "dangerous": false,
+     "note": "Rote Poren, rot geflockter Stiel, Fleisch sofort tiefblau; nur gegart essbar."
+    }
+   ],
+   "keyFeatures": [
+    "Kastanienbrauner, bei Nässe schmieriger Hut",
+    "Gelbe Röhren blauen auf Druck",
+    "Stiel ohne Netz, längsgestreift"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#6b3d1f",
+    "cap2": "#3e2210",
+    "under": "#d9cf6a",
+    "gills": "roehren",
+    "stem": "#b88a55",
+    "stemShape": "slender"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10"
+  },
+  {
+   "id": "birkenpilz",
+   "name": "Gemeiner Birkenpilz",
+   "scientific": "Leccinum scabrum",
+   "family": "Boletaceae (Dickröhrlingsverwandte)",
+   "synonyms": [
+    "Birkenröhrling",
+    "Graukappe",
+    "Kapuzinerpilz"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Essbar; ältere Exemplare werden schnell weich. Raustielröhrlinge immer gut durchgaren (roh unverträglich).",
+   "description": "Schlanker Röhrling, der ausschließlich mit Birken vorkommt. Typisch ist der weißliche Stiel mit schwarzen Schüppchen.",
+   "cap": {
+    "text": "5–15 cm, gewölbt bis polsterförmig; grau- bis haselbraun, trocken.",
+    "shape": [
+     "gewoelbt"
+    ],
+    "colors": [
+     "braun",
+     "grau"
+    ]
+   },
+   "hymenophore": {
+    "type": "roehren",
+    "text": "Weißlich bis schmutzig grau, auf Druck kaum verfärbend.",
+    "colors": [
+     "weiss",
+     "grau",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Lang und schlank, nach unten verdickt, weiß mit dunklen bis schwarzen Schüppchen.",
+    "colors": [
+     "weiss",
+     "grau"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Leicht verdickt, ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weißlich, unveränderlich oder schwach rosa; im Alter weich und wässrig, Stiel faserig-zäh."
+   },
+   "smell": {
+    "text": "Unauffällig bis angenehm; Geschmack mild.",
+    "tags": [
+     "unauffaellig",
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Braun",
+    "tags": [
+     "braun"
+    ]
+   },
+   "habitat": {
+    "text": "Stets bei Birken: Wälder, Parks, Moore, Heiden.",
+    "tags": [
+     "laubwald",
+     "park",
+     "feucht"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Birke"
+   ],
+   "distribution": "In Mitteleuropa überall, wo Birken wachsen, verbreitet und häufig.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juni bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "gallenroehrling",
+     "name": "Gallenröhrling",
+     "dangerous": false,
+     "note": "Rosa Röhren, braunes Netz statt schwarzer Schuppen am Stiel, bitter."
+    }
+   ],
+   "keyFeatures": [
+    "Nur bei Birken",
+    "Weißer Stiel mit schwarzen Schüppchen",
+    "Weißlich-graue Röhren"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#8b6a4a",
+    "cap2": "#5c432c",
+    "under": "#e6e1d6",
+    "gills": "roehren",
+    "stem": "#f0ece2",
+    "stemShape": "tall",
+    "stemScales": "#2b2b2b"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "flockenstieliger-hexen-roehrling",
+   "name": "Flockenstieliger Hexen-Röhrling",
+   "scientific": "Neoboletus luridiformis",
+   "family": "Boletaceae (Dickröhrlingsverwandte)",
+   "synonyms": [
+    "Schusterpilz",
+    "Boletus erythropus",
+    "Sutorius luridiformis"
+   ],
+   "edibility": "bedingt",
+   "edibilityNote": "Roh giftig! Nur gut durchgegart essbar. Wegen Verwechslung mit giftigen rotporigen Röhrlingen nur für Erfahrene.",
+   "description": "Kräftiger Röhrling mit dunkelbraunem, samtigem Hut, roten Poren und gelbem, rot geflocktem Stiel. Das gelbe Fleisch läuft beim Anschneiden sofort tief dunkelblau an.",
+   "cap": {
+    "text": "6–20 cm, polsterförmig; dunkel- bis schwarzbraun, samtig.",
+    "shape": [
+     "gewoelbt"
+    ],
+    "colors": [
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "roehren",
+    "text": "Röhren gelb, Poren dunkel- bis orangerot; auf Druck sofort blauschwarz.",
+    "colors": [
+     "rot",
+     "orange"
+    ]
+   },
+   "stem": {
+    "text": "Gelb mit dichten roten Flöckchen, ohne Netz; bauchig bis zylindrisch.",
+    "colors": [
+     "gelb",
+     "rot"
+    ],
+    "shape": [
+     "bauchig",
+     "schlank"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Leuchtend gelb, beim Anschneiden augenblicklich tief dunkelblau."
+   },
+   "smell": {
+    "text": "Unauffällig; Geschmack mild.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Olivbraun",
+    "tags": [
+     "olivbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Nadel- und Laubwälder auf sauren Böden.",
+    "tags": [
+     "nadelwald",
+     "laubwald",
+     "sauer"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Fichte",
+    "Buche",
+    "Tanne"
+   ],
+   "distribution": "In Mitteleuropa verbreitet, auf sauren Böden häufig.",
+   "season": {
+    "months": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Mai bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "satans-roehrling",
+     "name": "Satans-Röhrling",
+     "dangerous": true,
+     "note": "Hut hell weißlich-grau, Stiel mit rotem Netz statt Flocken, auf Kalk; giftig."
+    },
+    {
+     "id": "maronen-roehrling",
+     "name": "Maronen-Röhrling",
+     "dangerous": false,
+     "note": "Gelbe statt rote Poren, Stiel braun gestreift."
+    }
+   ],
+   "keyFeatures": [
+    "Rote Poren",
+    "Stiel rot geflockt – kein Netz",
+    "Fleisch gelb, sofort tiefblau",
+    "Saure Böden"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#5a3a22",
+    "cap2": "#2e1c10",
+    "under": "#c84a24",
+    "gills": "roehren",
+    "stem": "#d9b23a",
+    "stemShape": "bulbous",
+    "stemScales": "#b0301e"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "satans-roehrling",
+   "name": "Satans-Röhrling",
+   "scientific": "Rubroboletus satanas",
+   "family": "Boletaceae (Dickröhrlingsverwandte)",
+   "synonyms": [
+    "Satanspilz",
+    "Boletus satanas"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Giftig: verursacht heftige Magen-Darm-Beschwerden.",
+   "description": "Großer, massiger Röhrling wärmebegünstigter Kalk-Laubwälder. Auffällig ist der Kontrast zwischen dem hellen, weißlich-grauen Hut und den roten Poren sowie dem rot genetzten Stiel.",
+   "cap": {
+    "text": "10–30 cm, polsterförmig; weißlich, grau bis olivgrau, feinfilzig.",
+    "shape": [
+     "gewoelbt"
+    ],
+    "colors": [
+     "weiss",
+     "grau",
+     "oliv"
+    ]
+   },
+   "hymenophore": {
+    "type": "roehren",
+    "text": "Röhren gelb bis grünlich, Poren blutrot bis orangerot; auf Druck blauend.",
+    "colors": [
+     "rot",
+     "orange"
+    ]
+   },
+   "stem": {
+    "text": "Dick bauchig, oben gelb, darunter rot mit rotem Netz.",
+    "colors": [
+     "rot",
+     "gelb"
+    ],
+    "shape": [
+     "bauchig"
+    ],
+    "base": "knollig",
+    "baseText": "Bauchig-knollig, ohne Scheide.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weißlich bis blassgelb, beim Anschneiden schwach blauend."
+   },
+   "smell": {
+    "text": "Jung schwach, im Alter unangenehm aasartig.",
+    "tags": [
+     "unangenehm"
+    ]
+   },
+   "spore": {
+    "text": "Olivbraun",
+    "tags": [
+     "olivbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Warme, lichte Laubwälder auf Kalkböden.",
+    "tags": [
+     "laubwald",
+     "kalk"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Buche",
+    "Eiche",
+    "Hainbuche"
+   ],
+   "distribution": "In Mitteleuropa zerstreut bis selten, vor allem in wärmebegünstigten Kalkgebieten.",
+   "season": {
+    "months": [
+     7,
+     8,
+     9
+    ],
+    "text": "Juli bis September"
+   },
+   "lookalikes": [
+    {
+     "id": "flockenstieliger-hexen-roehrling",
+     "name": "Flockenstieliger Hexen-Röhrling",
+     "dangerous": false,
+     "note": "Dunkelbrauner Hut, geflockter Stiel ohne Netz, saure Böden."
+    },
+    {
+     "id": "fichten-steinpilz",
+     "name": "Steinpilz",
+     "dangerous": false,
+     "note": "Weiße bis olivgrüne Röhren, nicht blauend, weißes Stielnetz."
+    }
+   ],
+   "keyFeatures": [
+    "Heller, weißlich-grauer Hut",
+    "Rote Poren und rot genetzter Stiel",
+    "Kalkböden, warme Lagen",
+    "Alt aasartiger Geruch"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "hemisphere",
+    "cap": "#d9d4c6",
+    "cap2": "#a8a290",
+    "under": "#c43a22",
+    "gills": "roehren",
+    "stem": "#cf4a30",
+    "stemShape": "bulbous",
+    "net": "#8a1d10"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "gallenroehrling",
+   "name": "Gallenröhrling",
+   "scientific": "Tylopilus felleus",
+   "family": "Boletaceae (Dickröhrlingsverwandte)",
+   "synonyms": [
+    "Bitterling",
+    "Bitterröhrling"
+   ],
+   "edibility": "ungeniessbar",
+   "edibilityNote": "Nicht giftig, aber extrem bitter – schon ein Exemplar verdirbt ein ganzes Gericht.",
+   "description": "Häufiger Doppelgänger des Steinpilzes. Erkennbar an den rosa werdenden Röhren und dem groben, dunkelbraunen Netz auf dem Stiel.",
+   "cap": {
+    "text": "5–15 cm, polsterförmig; hell- bis olivbraun, trocken, matt.",
+    "shape": [
+     "gewoelbt"
+    ],
+    "colors": [
+     "braun",
+     "oliv"
+    ]
+   },
+   "hymenophore": {
+    "type": "roehren",
+    "text": "Jung weiß, dann deutlich rosa; nicht blauend.",
+    "colors": [
+     "weiss",
+     "rosa"
+    ]
+   },
+   "stem": {
+    "text": "Gelbbraun mit grobem, dunkelbraunem Netz.",
+    "colors": [
+     "braun",
+     "creme"
+    ],
+    "shape": [
+     "bauchig"
+    ],
+    "base": "knollig",
+    "baseText": "Keulig verdickt.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, unveränderlich; Geschmack sehr bitter (nur eine winzige Probe kosten und ausspucken)."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Rosabraun",
+    "tags": [
+     "rosa",
+     "braun"
+    ]
+   },
+   "habitat": {
+    "text": "Nadelwälder auf sauren Böden, gern an morschen Stümpfen.",
+    "tags": [
+     "nadelwald",
+     "sauer"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Fichte",
+    "Kiefer"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juni bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "fichten-steinpilz",
+     "name": "Steinpilz",
+     "dangerous": false,
+     "note": "Weißes, feines Netz; Röhren werden gelb-olivgrün, nicht rosa; mild."
+    },
+    {
+     "id": "birkenpilz",
+     "name": "Birkenpilz",
+     "dangerous": false,
+     "note": "Schwarze Schüppchen am Stiel, nur bei Birke."
+    }
+   ],
+   "keyFeatures": [
+    "Rosa Röhren im Alter",
+    "Grobes dunkelbraunes Stielnetz",
+    "Extrem bitterer Geschmack"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "hemisphere",
+    "cap": "#9a7346",
+    "cap2": "#6a4a26",
+    "under": "#e8c9c4",
+    "gills": "roehren",
+    "stem": "#c9a66e",
+    "stemShape": "bulbous",
+    "net": "#5a3a1e"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "echter-pfifferling",
+   "name": "Echter Pfifferling",
+   "scientific": "Cantharellus cibarius",
+   "family": "Cantharellaceae (Pfifferlingsverwandte)",
+   "synonyms": [
+    "Pfifferling",
+    "Eierschwamm",
+    "Reherl"
+   ],
+   "edibility": "essbar",
+   "popular": true,
+   "edibilityNote": "Beliebter Speisepilz. Gut durchgaren.",
+   "description": "Dottergelber, trichterförmiger Pilz mit stumpfen, gegabelten Leisten statt echter Lamellen, die weit am Stiel herablaufen.",
+   "cap": {
+    "text": "2–10 cm, jung gewölbt, dann trichterförmig mit welligem, eingerolltem Rand; eidotter- bis blassgelb.",
+    "shape": [
+     "trichter"
+    ],
+    "colors": [
+     "gelb",
+     "orange"
+    ]
+   },
+   "hymenophore": {
+    "type": "leisten",
+    "text": "Stumpfe, niedrige, gegabelte Leisten, weit herablaufend, gleichfarben.",
+    "colors": [
+     "gelb",
+     "orange"
+    ]
+   },
+   "stem": {
+    "text": "Gleichfarbig, voll, nach unten verjüngt, geht ohne Grenze in den Hut über.",
+    "colors": [
+     "gelb"
+    ],
+    "shape": [
+     "kurz"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Verjüngt, ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weißlich bis blassgelb, fest und faserig (lässt sich in Längsfasern reißen)."
+   },
+   "smell": {
+    "text": "Fruchtig, an Aprikose erinnernd; Geschmack mild bis leicht pfeffrig.",
+    "tags": [
+     "fruchtig"
+    ]
+   },
+   "spore": {
+    "text": "Weißlich bis blass cremegelb",
+    "tags": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "habitat": {
+    "text": "Laub- und Nadelwälder, oft im Moos, auf sauren Böden.",
+    "tags": [
+     "nadelwald",
+     "laubwald",
+     "sauer"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Fichte",
+    "Kiefer",
+    "Buche",
+    "Eiche",
+    "Birke"
+   ],
+   "distribution": "In Mitteleuropa verbreitet, regional durch Lebensraumverlust zurückgegangen.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juni bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "falscher-pfifferling",
+     "name": "Falscher Pfifferling",
+     "dangerous": false,
+     "note": "Echte, dünne, dicht stehende Lamellen; orange; weiches Fleisch; kein Speisepilz."
+    }
+   ],
+   "keyFeatures": [
+    "Leisten statt Lamellen",
+    "Fleisch faserig-fest",
+    "Fruchtiger Aprikosengeruch"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "funnel",
+    "cap": "#e9b52a",
+    "cap2": "#c98d14",
+    "under": "#e2ad30",
+    "gills": "leisten",
+    "stem": "#e8b83a",
+    "stemShape": "short"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10"
+  },
+  {
+   "id": "falscher-pfifferling",
+   "name": "Falscher Pfifferling",
+   "scientific": "Hygrophoropsis aurantiaca",
+   "family": "Hygrophoropsidaceae",
+   "synonyms": [
+    "Orangegelber Gabelblättling"
+   ],
+   "edibility": "ungeniessbar",
+   "edibilityNote": "Kein Speisepilz; Verträglichkeit umstritten, vereinzelt werden Magen-Darm-Beschwerden berichtet.",
+   "description": "Orange, trichterförmiger Pilz mit echten, dünnen, mehrfach gegabelten Lamellen. Häufige Verwechslung mit dem Echten Pfifferling.",
+   "cap": {
+    "text": "2–8 cm, flach bis trichterförmig; orange, Rand eingerollt, filzig.",
+    "shape": [
+     "trichter",
+     "flach"
+    ],
+    "colors": [
+     "orange"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Echte Lamellen: dünn, dicht, mehrfach gegabelt, orange, herablaufend.",
+    "colors": [
+     "orange"
+    ]
+   },
+   "stem": {
+    "text": "Orange bis bräunlich, oft etwas gebogen.",
+    "colors": [
+     "orange",
+     "braun"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weich, blass orange, nicht faserig."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß bis creme",
+    "tags": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "habitat": {
+    "text": "Nadelwälder, auf Nadelstreu und morschem Holz.",
+    "tags": [
+     "nadelwald",
+     "kompost",
+     "holz"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Kiefer",
+    "Fichte"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "August bis November"
+   },
+   "lookalikes": [
+    {
+     "id": "echter-pfifferling",
+     "name": "Echter Pfifferling",
+     "dangerous": false,
+     "note": "Stumpfe Leisten statt dünner Lamellen, faseriges Fleisch, Aprikosengeruch."
+    }
+   ],
+   "keyFeatures": [
+    "Echte, dünne, gegabelte Lamellen",
+    "Weiches Fleisch",
+    "Kräftig orange"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "funnel",
+    "cap": "#e07a1e",
+    "cap2": "#b45710",
+    "under": "#e9862a",
+    "gills": "lamellen",
+    "stem": "#c9701e",
+    "stemShape": "slender"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "herbsttrompete",
+   "name": "Herbsttrompete",
+   "scientific": "Craterellus cornucopioides",
+   "family": "Cantharellaceae (Pfifferlingsverwandte)",
+   "synonyms": [
+    "Totentrompete",
+    "Füllhorn"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Guter Würzpilz, auch getrocknet. Gut durchgaren.",
+   "description": "Dunkelgrauer bis schwarzer, trompetenförmiger und durchgehend hohler Pilz. Die Außenseite ist glatt bis runzelig und aschgrau.",
+   "cap": {
+    "text": "3–8 cm breit, 5–12 cm hoch, tief trichter- bis trompetenförmig, innen schwarzbraun, Rand wellig.",
+    "shape": [
+     "trichter"
+    ],
+    "colors": [
+     "schwarz",
+     "grau"
+    ]
+   },
+   "hymenophore": {
+    "type": "sonstige",
+    "text": "Außenseite glatt bis leicht runzelig, aschgrau – keine Lamellen.",
+    "colors": [
+     "grau"
+    ]
+   },
+   "stem": {
+    "text": "Kein abgesetzter Stiel; der Fruchtkörper verjüngt sich nach unten, hohl.",
+    "colors": [
+     "grau",
+     "schwarz"
+    ],
+    "shape": [
+     "fehlend"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Verjüngt, hohl.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Dünn, grau, elastisch-zäh."
+   },
+   "smell": {
+    "text": "Würzig, angenehm.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Laubwälder, gern bei Buche, oft gesellig in der Laubstreu.",
+    "tags": [
+     "laubwald",
+     "kompost"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Buche",
+    "Eiche"
+   ],
+   "distribution": "In Mitteleuropa verbreitet, gebietsweise häufig.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "August bis November"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Schwarzgraue Trompetenform",
+    "Durchgehend hohl",
+    "Glatte, graue Außenseite ohne Lamellen"
+   ],
+   "illustration": {
+    "type": "trumpet",
+    "cap": "#2b2626"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "semmel-stoppelpilz",
+   "name": "Semmel-Stoppelpilz",
+   "scientific": "Hydnum repandum",
+   "family": "Hydnaceae (Stoppelpilzverwandte)",
+   "synonyms": [
+    "Semmelstoppelpilz",
+    "Stoppelpilz"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Essbar; ältere Exemplare können bitter sein. Gut durchgaren.",
+   "description": "Semmelgelber Pilz, der unter dem Hut statt Lamellen kurze, brüchige Stacheln trägt.",
+   "cap": {
+    "text": "3–12 cm, unregelmäßig gewölbt bis flach, oft verbogen; semmel- bis ockergelb.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "creme",
+     "gelb",
+     "orange"
+    ]
+   },
+   "hymenophore": {
+    "type": "stacheln",
+    "text": "Dichte, brüchige, weißliche bis cremefarbene Stacheln.",
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Kurz, kräftig, weißlich, oft exzentrisch.",
+    "colors": [
+     "weiss",
+     "creme"
+    ],
+    "shape": [
+     "kurz",
+     "seitlich"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, brüchig, im Alter bitterlich."
+   },
+   "smell": {
+    "text": "Angenehm; Geschmack mild bis leicht bitter.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Weiß bis creme",
+    "tags": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "habitat": {
+    "text": "Laub- und Nadelwälder, oft in Reihen oder Ringen.",
+    "tags": [
+     "laubwald",
+     "nadelwald"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Buche",
+    "Fichte",
+    "Eiche"
+   ],
+   "distribution": "In Mitteleuropa verbreitet.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "August bis November"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Stacheln statt Lamellen",
+    "Semmelgelbe Farbe",
+    "Brüchiges Fleisch"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "flat",
+    "cap": "#e2b874",
+    "cap2": "#b98a44",
+    "under": "#f1e2c4",
+    "gills": "stacheln",
+    "stem": "#efe2c6",
+    "stemShape": "short"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "krause-glucke",
+   "name": "Krause Glucke",
+   "scientific": "Sparassis crispa",
+   "family": "Sparassidaceae",
+   "synonyms": [
+    "Fette Henne",
+    "Bärentatze"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Guter Speisepilz; vor der Zubereitung gründlich von Nadeln und Erde reinigen.",
+   "description": "Großer, blumenkohl- oder badeschwammartiger Fruchtkörper aus zahlreichen krausen, gewellten Lappen, meist am Fuß von Kiefern.",
+   "cap": {
+    "text": "10–30 cm, kugeliger Strauß aus vielen flachen, krausen Lappen; cremeweiß bis ockergelb.",
+    "shape": [
+     "sonderform"
+    ],
+    "colors": [
+     "creme",
+     "gelb"
+    ]
+   },
+   "hymenophore": {
+    "type": "sonstige",
+    "text": "Sporenbildende Schicht auf den Lappenflächen; keine Lamellen.",
+    "colors": [
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Dicker, tief wurzelnder Strunk.",
+    "colors": [
+     "creme"
+    ],
+    "shape": [
+     "kurz"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Wurzelnder Strunk.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, elastisch-wachsartig."
+   },
+   "smell": {
+    "text": "Würzig, angenehm.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Weiß bis creme",
+    "tags": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "habitat": {
+    "text": "An Stammbasis und Wurzeln von Kiefern (Parasit/Saprobiont).",
+    "tags": [
+     "nadelwald",
+     "holz"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Kiefer"
+   ],
+   "distribution": "In Mitteleuropa verbreitet, in Kiefernwäldern regelmäßig.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "August bis November"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Blumenkohlartig aus krausen Lappen",
+    "Am Fuß von Kiefern"
+   ],
+   "illustration": {
+    "type": "coral",
+    "cap": "#e3d29a"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "parasol",
+   "name": "Parasol",
+   "scientific": "Macrolepiota procera",
+   "family": "Agaricaceae (Champignonverwandte)",
+   "synonyms": [
+    "Riesenschirmling",
+    "Gemeiner Riesenschirmling",
+    "Schirmpilz"
+   ],
+   "edibility": "essbar",
+   "popular": true,
+   "edibilityNote": "Essbar (nur die Hüte, Stiele sind zäh). Nur Exemplare mit Hut über 10 cm und allen Merkmalen sammeln – kleine Schirmlinge können tödlich giftig sein.",
+   "description": "Sehr großer, schlanker Lamellenpilz mit braun geschupptem Hut, schlangenartig genattertem Stiel und einem dicken, verschiebbaren Doppelring.",
+   "cap": {
+    "text": "10–30 cm, jung kugelig wie ein Paukenschlegel, dann flach ausgebreitet mit dunklem Buckel; braune Schuppen auf hellem Grund.",
+    "shape": [
+     "flach",
+     "gebuckelt",
+     "kugelig"
+    ],
+    "colors": [
+     "braun",
+     "creme"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß bis cremefarben, frei, weich.",
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "15–40 cm lang, schlank, hohl, braun genattert (schlangenhautartig).",
+    "colors": [
+     "braun",
+     "creme"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "knollig",
+    "baseText": "Mit deutlicher Knolle, ohne Scheide.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Hut weiß, weich, nicht rötend; Stiel faserig-zäh."
+   },
+   "smell": {
+    "text": "Angenehm nussig-pilzig.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Waldränder, Lichtungen, lichte Wälder, Wiesen.",
+    "tags": [
+     "waldrand",
+     "wiese",
+     "laubwald",
+     "nadelwald"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juli bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Kleine Schirmlinge (Lepiota spp.)",
+     "dangerous": true,
+     "note": "Hut meist unter 10 cm; einige Arten enthalten tödliche Amatoxine."
+    },
+    {
+     "id": "pantherpilz",
+     "name": "Pantherpilz",
+     "dangerous": true,
+     "note": "Weiße Flocken statt brauner Schuppen, ungenatterter Stiel, Knolle mit abgesetztem Rand."
+    },
+    {
+     "id": null,
+     "name": "Safranschirmling (Chlorophyllum rhacodes)",
+     "dangerous": false,
+     "note": "Fleisch rötet beim Anschneiden, Stiel glatt, nicht genattert; Verträglichkeit umstritten."
+    }
+   ],
+   "keyFeatures": [
+    "Stiel braun genattert",
+    "Dicker, verschiebbarer Doppelring",
+    "Hut über 10 cm, braun geschuppt",
+    "Fleisch nicht rötend"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "umbo",
+    "cap": "#e9dcc2",
+    "cap2": "#c7b28c",
+    "scales": "#6a4524",
+    "under": "#f6f1e6",
+    "gills": "lamellen",
+    "stem": "#e6d8bd",
+    "stemShape": "tall",
+    "snake": "#6a4a2a",
+    "ring": true,
+    "ringColor": "#f2ead8"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10"
+  },
+  {
+   "id": "wiesen-champignon",
+   "name": "Wiesen-Champignon",
+   "scientific": "Agaricus campestris",
+   "family": "Agaricaceae (Champignonverwandte)",
+   "synonyms": [
+    "Feld-Egerling",
+    "Wiesenchampignon"
+   ],
+   "edibility": "essbar",
+   "popular": true,
+   "edibilityNote": "Essbar. Lamellen müssen rosa bis braun sein – weiße Lamellen deuten auf tödliche Knollenblätterpilze hin!",
+   "description": "Kleiner bis mittelgroßer, weißer Champignon der Wiesen und Weiden. Die Lamellen sind jung leuchtend rosa und werden schokoladenbraun.",
+   "cap": {
+    "text": "3–10 cm, halbkugelig, dann flach gewölbt; weiß bis bräunlich-faserig.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Frei, jung lebhaft rosa, später schokoladen- bis schwarzbraun – nie weiß.",
+    "colors": [
+     "rosa",
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Kurz, weiß, mit einfachem, schmalem, vergänglichem Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "kurz"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle, ohne Scheide.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weiß, beim Anschneiden schwach rötlich; Stielbasis nicht gilbend."
+   },
+   "smell": {
+    "text": "Angenehm pilzig.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Schokoladenbraun",
+    "tags": [
+     "braun",
+     "purpurbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Gedüngte Wiesen und Weiden, oft nach Regen in Gruppen oder Ringen.",
+    "tags": [
+     "wiese"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa verbreitet, durch Intensivlandwirtschaft seltener geworden.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juni bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "gruener-knollenblaetterpilz",
+     "name": "Grüner Knollenblätterpilz",
+     "dangerous": true,
+     "note": "Lamellen immer weiß, Knolle mit häutiger Scheide; tödlich giftig."
+    },
+    {
+     "id": "kegelhuetiger-knollenblaetterpilz",
+     "name": "Kegelhütiger Knollenblätterpilz",
+     "dangerous": true,
+     "note": "Reinweiß, weiße Lamellen, Knolle mit Scheide; tödlich giftig."
+    },
+    {
+     "id": "karbol-champignon",
+     "name": "Karbol-Champignon",
+     "dangerous": true,
+     "note": "Stielbasis gilbt beim Anschneiden chromgelb, Tinten-/Karbolgeruch; giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Lamellen rosa → schokobraun, niemals weiß",
+    "Keine Knolle mit Scheide",
+    "Stielbasis gilbt nicht",
+    "Auf Wiesen und Weiden"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#f1ece2",
+    "cap2": "#cfc6b4",
+    "under": "#d98e8a",
+    "gills": "lamellen",
+    "stem": "#f3efe6",
+    "stemShape": "short",
+    "ring": true,
+    "scene": "wiese"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10"
+  },
+  {
+   "id": "schopf-tintling",
+   "name": "Schopf-Tintling",
+   "scientific": "Coprinus comatus",
+   "family": "Agaricaceae (Champignonverwandte)",
+   "synonyms": [
+    "Spargelpilz",
+    "Porzellantintling"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Nur jung essbar, solange die Lamellen rein weiß sind; rasch verarbeiten. Anders als der Graue Faltentintling ohne Alkoholunverträglichkeit.",
+   "description": "Hoher, walzenförmiger, weiß-zottig geschuppter Pilz. Die Lamellen färben sich von unten her rosa bis schwarz und zerfließen zu tintenartiger Flüssigkeit.",
+   "cap": {
+    "text": "5–15 cm hoch, walzen- bis eiförmig, später glockig; weiß mit abstehenden, bräunlich-zottigen Schuppen, Scheitel bräunlich.",
+    "shape": [
+     "walze",
+     "kegelig"
+    ],
+    "colors": [
+     "weiss",
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Sehr dicht, jung weiß, dann rosa, schließlich schwarz und zerfließend.",
+    "colors": [
+     "weiss",
+     "rosa",
+     "schwarz"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, hohl, schlank, mit beweglichem, schmalem Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "knollig",
+    "baseText": "Leicht verdickt, ohne Scheide.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weiß, zart."
+   },
+   "smell": {
+    "text": "Angenehm mild.",
+    "tags": [
+     "angenehm",
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Schwarz",
+    "tags": [
+     "schwarz"
+    ]
+   },
+   "habitat": {
+    "text": "Wiesen, Wegränder, Rasen, Schuttplätze, gedüngter oder gestörter Boden.",
+    "tags": [
+     "wiese",
+     "park",
+     "waldrand"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "Frühjahr bis Spätherbst"
+   },
+   "lookalikes": [
+    {
+     "id": "grauer-faltentintling",
+     "name": "Grauer Faltentintling",
+     "dangerous": true,
+     "note": "Grau, glatt, ohne Zottelschuppen; zusammen mit Alkohol giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Walzenförmiger, zottiger weißer Hut",
+    "Lamellen zerfließen schwarz",
+    "Beweglicher Ring"
+   ],
+   "illustration": {
+    "type": "tall",
+    "cap": "#f2ede2",
+    "cap2": "#a88a62",
+    "scales": "#b39a78",
+    "under": "#2a2424",
+    "stem": "#f3efe6",
+    "ring": true,
+    "scene": "wiese"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "austern-seitling",
+   "name": "Austern-Seitling",
+   "scientific": "Pleurotus ostreatus",
+   "family": "Pleurotaceae (Seitlingsverwandte)",
+   "synonyms": [
+    "Austernpilz",
+    "Kalbfleischpilz",
+    "Austernseitling"
+   ],
+   "edibility": "essbar",
+   "popular": true,
+   "edibilityNote": "Guter Speisepilz, auch kultiviert erhältlich. Gut durchgaren.",
+   "description": "Muschelförmige, dachziegelig übereinander wachsende Fruchtkörper an Laubholz, typisch für die kalte Jahreszeit.",
+   "cap": {
+    "text": "5–20 cm, muschel- bis zungenförmig, seitlich angewachsen; grau, blaugrau bis braun.",
+    "shape": [
+     "konsole"
+    ],
+    "colors": [
+     "grau",
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß bis cremefarben, weit herablaufend.",
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Kurz, seitlich, oft kaum vorhanden, an der Basis filzig.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "seitlich"
+    ],
+    "base": "buschelig",
+    "baseText": "Büschelig verwachsen.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, fest, im Alter zäh."
+   },
+   "smell": {
+    "text": "Angenehm pilzig.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Weißlich bis blass lila-grau",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Auf Totholz und geschwächten Stämmen von Laubbäumen.",
+    "tags": [
+     "holz",
+     "laubwald",
+     "feucht"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Buche",
+    "Pappel",
+    "Weide"
+   ],
+   "distribution": "In Mitteleuropa verbreitet.",
+   "season": {
+    "months": [
+     10,
+     11,
+     12,
+     1,
+     2,
+     3
+    ],
+    "text": "Spätherbst bis Frühjahr, oft nach Frost"
+   },
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Gelbstieliger Muschelseitling (Sarcomyxa serotina)",
+     "dangerous": false,
+     "note": "Grünliche bis olivgelbe Huthaut, gelblicher Stiel, gelatinöse Schicht unter der Huthaut; geringer Speisewert."
+    }
+   ],
+   "keyFeatures": [
+    "Muschelförmig, seitlich an Holz",
+    "Weiße, herablaufende Lamellen",
+    "Kalte Jahreszeit"
+   ],
+   "illustration": {
+    "type": "oyster",
+    "cap": "#8f939a",
+    "under": "#f3eee4"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10"
+  },
+  {
+   "id": "hallimasch",
+   "name": "Honiggelber Hallimasch",
+   "scientific": "Armillaria mellea",
+   "family": "Physalacriaceae",
+   "synonyms": [
+    "Hallimasch"
+   ],
+   "edibility": "bedingt",
+   "popular": true,
+   "edibilityNote": "Roh giftig! Nur ausreichend lange gegart essbar; wird auch dann nicht von allen vertragen. Stiele sind zäh.",
+   "description": "Büschelig an Holz wachsender, honiggelber bis brauner Pilz mit dunklen Schüppchen auf dem Hut und wattigem Ring. Gefürchteter Holzzerstörer.",
+   "cap": {
+    "text": "3–10 cm, gewölbt bis flach; honiggelb bis olivbraun, mit feinen dunklen Schüppchen zur Mitte hin.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "gelb",
+     "braun",
+     "oliv"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weißlich bis cremefarben, später bräunlich fleckig, leicht herablaufend.",
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Lang, faserig-zäh, mit wattigem, weiß-gelblichem Ring.",
+    "colors": [
+     "gelb",
+     "braun"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "buschelig",
+    "baseText": "Büschelig verwachsen.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weißlich, im Stiel zäh-faserig; roh herb-kratzend."
+   },
+   "smell": {
+    "text": "Schwach, etwas unangenehm.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß bis blass creme",
+    "tags": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "habitat": {
+    "text": "Büschelig an Stümpfen, Wurzeln und lebenden Laubbäumen.",
+    "tags": [
+     "holz",
+     "laubwald"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Buche",
+    "Eiche",
+    "Obstbäume"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     9,
+     10,
+     11
+    ],
+    "text": "September bis November"
+   },
+   "lookalikes": [
+    {
+     "id": "gifthaeubling",
+     "name": "Gift-Häubling",
+     "dangerous": true,
+     "note": "Rostbraune Lamellen und Sporenpulver, kleiner, ohne Schüppchen; tödlich giftig."
+    },
+    {
+     "id": "gruenblaettriger-schwefelkopf",
+     "name": "Grünblättriger Schwefelkopf",
+     "dangerous": true,
+     "note": "Schwefelgelb, grünliche Lamellen, kein Ring, bitter; giftig."
+    },
+    {
+     "id": "stockschwaemmchen",
+     "name": "Stockschwämmchen",
+     "dangerous": false,
+     "note": "Zweifarbiger, glatter Hut, Stiel unterhalb des Rings sparrig geschuppt."
+    }
+   ],
+   "keyFeatures": [
+    "Büschelig an Holz",
+    "Dunkle Schüppchen auf dem Hut",
+    "Wattiger Ring",
+    "Weißes Sporenpulver"
+   ],
+   "illustration": {
+    "type": "cluster",
+    "capShape": "convex",
+    "cap": "#c9a14a",
+    "cap2": "#8a6a2a",
+    "scales": "#4a3a1a",
+    "under": "#efe6d0",
+    "gills": "lamellen",
+    "stem": "#b8955a",
+    "ring": true,
+    "ringColor": "#f1e6c2"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10"
+  },
+  {
+   "id": "stockschwaemmchen",
+   "name": "Gemeines Stockschwämmchen",
+   "scientific": "Kuehneromyces mutabilis",
+   "family": "Strophariaceae (Träuschlingsverwandte)",
+   "synonyms": [
+    "Stockschwamm",
+    "Pholiota mutabilis"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Essbar, aber nur für sehr Erfahrene: Verwechslungsgefahr mit dem tödlich giftigen Gift-Häubling!",
+   "description": "Kleiner, büschelig auf Laubholzstümpfen wachsender Pilz mit zweifarbigem, hygrophanem Hut. Entscheidend ist der sparrig geschuppte Stiel unterhalb des Rings.",
+   "cap": {
+    "text": "2–6 cm, gewölbt mit stumpfem Buckel; zimt- bis honigbraun, feucht dunkler, vom Scheitel her heller abtrocknend (zweifarbig).",
+    "shape": [
+     "gewoelbt",
+     "gebuckelt"
+    ],
+    "colors": [
+     "braun",
+     "orange"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Jung blass, dann zimtbraun.",
+    "colors": [
+     "creme",
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Über dem Ring glatt und hell, unterhalb dunkel und sparrig-schuppig.",
+    "colors": [
+     "braun",
+     "creme"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "buschelig",
+    "baseText": "Büschelig verwachsen.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Dünn, hellbräunlich."
+   },
+   "smell": {
+    "text": "Angenehm würzig.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Rost- bis ockerbraun",
+    "tags": [
+     "rostbraun",
+     "braun"
+    ]
+   },
+   "habitat": {
+    "text": "Büschelig auf Stümpfen und Totholz von Laubbäumen, selten Nadelholz.",
+    "tags": [
+     "holz",
+     "laubwald"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Buche",
+    "Birke",
+    "Pappel"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "April bis November"
+   },
+   "lookalikes": [
+    {
+     "id": "gifthaeubling",
+     "name": "Gift-Häubling",
+     "dangerous": true,
+     "note": "Stiel unterhalb des Rings silbrig längsfaserig, nicht sparrig geschuppt; oft auf Nadelholz; tödlich giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Zweifarbig abtrocknender Hut",
+    "Stiel unterhalb des Rings sparrig geschuppt",
+    "Büschelig auf Laubholz"
+   ],
+   "illustration": {
+    "type": "cluster",
+    "capShape": "convex",
+    "cap": "#b6763a",
+    "cap2": "#7a4a20",
+    "under": "#c9a06a",
+    "gills": "lamellen",
+    "stem": "#a87a4a",
+    "stemScales": "#4a2e18",
+    "ring": true
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "frauen-taeubling",
+   "name": "Frauen-Täubling",
+   "scientific": "Russula cyanoxantha",
+   "family": "Russulaceae (Täublingsverwandte)",
+   "synonyms": [
+    "Violettgrüner Täubling"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Guter Speisepilz. Grüne Täublinge niemals ohne sichere Unterscheidung vom Grünen Knollenblätterpilz sammeln!",
+   "description": "Täubling mit sehr variablem, violett, blau und grün gemischtem Hut. Besonderheit: Die weißen Lamellen sind biegsam und splittern nicht beim Darüberstreichen.",
+   "cap": {
+    "text": "5–15 cm, gewölbt bis flach vertieft; violett, blaugrau, grün, oft gemischt.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "violett",
+     "gruen",
+     "grau"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß, biegsam-elastisch, fühlen sich fettig an, splittern kaum.",
+    "colors": [
+     "weiss"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, fest, zylindrisch, ohne Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "schlank",
+     "kurz"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle, ohne Scheide.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, fest; Geschmack mild."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Laub- und Mischwälder.",
+    "tags": [
+     "laubwald"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Buche",
+    "Eiche"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juni bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "gruener-knollenblaetterpilz",
+     "name": "Grüner Knollenblätterpilz",
+     "dangerous": true,
+     "note": "Ring am Stiel, Knolle mit häutiger Scheide; tödlich giftig. Täublinge haben nie Ring oder Knolle."
+    }
+   ],
+   "keyFeatures": [
+    "Biegsame, nicht splitternde Lamellen",
+    "Kein Ring, keine Knolle",
+    "Mild schmeckend"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "flat",
+    "cap": "#7a6496",
+    "cap2": "#4f6a52",
+    "under": "#f6f3ec",
+    "gills": "lamellen",
+    "stem": "#f5f2ea",
+    "stemShape": "thick"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "perlpilz",
+   "name": "Perlpilz",
+   "scientific": "Amanita rubescens",
+   "family": "Amanitaceae (Wulstlingsverwandte)",
+   "synonyms": [
+    "Rötender Wulstling",
+    "Rötlicher Wulstling"
+   ],
+   "edibility": "bedingt",
+   "edibilityNote": "Roh giftig! Nur gut durchgegart essbar. Gefährliche Verwechslung mit dem Pantherpilz – nur für Erfahrene.",
+   "description": "Wulstling mit fleisch- bis rotbraunem Hut und grauweißen bis rötlichen Hüllresten. Wichtigstes Merkmal: Das Fleisch, besonders an Fraßstellen und der Stielbasis, rötet weinrot.",
+   "cap": {
+    "text": "5–15 cm, gewölbt bis flach; fleischrosa bis rotbraun mit grauweißen bis rosa Flocken.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "braun",
+     "rosa",
+     "rot"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß, frei, später rötlich gefleckt.",
+    "colors": [
+     "weiss"
+    ]
+   },
+   "stem": {
+    "text": "Weißlich bis rosa, mit hängendem, oberseits gerieftem Ring.",
+    "colors": [
+     "weiss",
+     "rosa"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "knollig",
+    "baseText": "Rübenförmige Knolle ohne abgesetzten Rand.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weiß, rötet langsam weinrot, besonders in der Stielbasis und an Fraßstellen."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Laub- und Nadelwälder.",
+    "tags": [
+     "laubwald",
+     "nadelwald"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Fichte",
+    "Kiefer",
+    "Buche",
+    "Eiche"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juni bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "pantherpilz",
+     "name": "Pantherpilz",
+     "dangerous": true,
+     "note": "Reinweiße Flocken, ungeriefter Ring, Knolle mit abgesetztem Rand, Fleisch rötet nie; stark giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Fleisch und Fraßstellen röten weinrot",
+    "Ring oberseits gerieft",
+    "Knolle ohne abgesetzten Rand"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#b37b62",
+    "cap2": "#7a4a38",
+    "warts": "#e8d6d0",
+    "under": "#f6f1ea",
+    "gills": "lamellen",
+    "stem": "#ecd9d0",
+    "stemShape": "bulbous",
+    "ring": true
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "violetter-roetelritterling",
+   "name": "Violetter Rötelritterling",
+   "scientific": "Lepista nuda",
+   "family": "Tricholomataceae (Ritterlingsverwandte)",
+   "synonyms": [
+    "Nackter Rötelritterling",
+    "Clitocybe nuda",
+    "Collybia nuda"
+   ],
+   "edibility": "bedingt",
+   "edibilityNote": "Roh unverträglich, nur gut durchgegart essbar; nicht von allen vertragen.",
+   "description": "Spät im Jahr erscheinender, violetter bis bräunlich-violetter Lamellenpilz, oft in Laubstreu oder auf Kompost.",
+   "cap": {
+    "text": "5–15 cm, gewölbt, dann flach; violett bis bräunlich-lila, glatt, feucht etwas glänzend.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "violett",
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Lila bis violett, im Alter bräunlich, ausgebuchtet angewachsen, leicht vom Hut ablösbar.",
+    "colors": [
+     "violett"
+    ]
+   },
+   "stem": {
+    "text": "Violett, faserig, an der Basis verdickt, ohne Ring.",
+    "colors": [
+     "violett"
+    ],
+    "shape": [
+     "kurz",
+     "bauchig"
+    ],
+    "base": "knollig",
+    "baseText": "Verdickt, ohne Scheide.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Blass lila, fest."
+   },
+   "smell": {
+    "text": "Fruchtig-parfümiert.",
+    "tags": [
+     "fruchtig"
+    ]
+   },
+   "spore": {
+    "text": "Blass rosa (Rötelritterling!)",
+    "tags": [
+     "rosa"
+    ]
+   },
+   "habitat": {
+    "text": "Laub- und Nadelstreu, Komposthaufen, Waldränder, Gärten.",
+    "tags": [
+     "kompost",
+     "laubwald",
+     "nadelwald",
+     "park"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     9,
+     10,
+     11,
+     12
+    ],
+    "text": "September bis Dezember"
+   },
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Violette Schleierlinge (Cortinarius spp.)",
+     "dangerous": true,
+     "note": "Spinnwebartiger Schleier (Cortina), rostbraune Lamellen im Alter und rostbraunes Sporenpulver; einige Schleierlinge sind tödlich giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Ganz violett",
+    "Rosa Sporenpulver (nicht rostbraun!)",
+    "Parfümierter Geruch",
+    "Spätherbst"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "flat",
+    "cap": "#8a6a9e",
+    "cap2": "#5c4470",
+    "under": "#a88ab8",
+    "gills": "lamellen",
+    "stem": "#9a80ad",
+    "stemShape": "thick"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "mai-ritterling",
+   "name": "Mai-Ritterling",
+   "scientific": "Calocybe gambosa",
+   "family": "Lyophyllaceae",
+   "synonyms": [
+    "Maipilz",
+    "Georgsritterling",
+    "Mairitterling"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Essbar. Gefährliche Verwechslung mit dem Ziegelroten Risspilz, der zur selben Zeit wächst.",
+   "description": "Dickfleischiger, weißer bis cremefarbener Frühjahrspilz mit starkem Mehlgeruch, oft in Reihen oder Hexenringen.",
+   "cap": {
+    "text": "5–15 cm, gewölbt, dann flach, oft unregelmäßig verbogen; weiß bis cremeocker.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Sehr dicht, schmal, weiß bis creme, ausgebuchtet.",
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Kurz, dick, weiß, ohne Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "kurz"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, dick und fest."
+   },
+   "smell": {
+    "text": "Stark mehl- bis gurkenartig.",
+    "tags": [
+     "mehlartig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Wiesen, Waldränder, Hecken, Gärten, Parks, oft in Ringen.",
+    "tags": [
+     "wiese",
+     "waldrand",
+     "park"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa verbreitet.",
+   "season": {
+    "months": [
+     4,
+     5,
+     6
+    ],
+    "text": "April bis Juni"
+   },
+   "lookalikes": [
+    {
+     "id": "ziegelroter-risspilz",
+     "name": "Ziegelroter Risspilz",
+     "dangerous": true,
+     "note": "Kegeliger, radialrissiger Hut, der ziegelrot verfärbt; kein Mehlgeruch; braunes Sporenpulver; potenziell tödlich giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Frühjahr (April–Juni)",
+    "Kräftiger Mehlgeruch",
+    "Weiße, sehr dichte Lamellen"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#efe6d4",
+    "cap2": "#cfc1a2",
+    "under": "#f7f2e8",
+    "gills": "lamellen",
+    "stem": "#f3eee4",
+    "stemShape": "thick",
+    "scene": "wiese"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "speise-morchel",
+   "name": "Speise-Morchel",
+   "scientific": "Morchella esculenta",
+   "family": "Morchellaceae (Morchelverwandte)",
+   "synonyms": [
+    "Rundmorchel",
+    "Morchel"
+   ],
+   "edibility": "bedingt",
+   "edibilityNote": "Roh giftig! Nur gut durchgegart essbar; Morcheln auch gegart nur in Maßen. Verwechslungsgefahr mit der Frühjahrs-Giftlorchel.",
+   "description": "Frühjahrspilz mit eiförmigem, wabenartig gekammertem, ockergelbem Hut. Hut und Stiel bilden einen durchgehenden Hohlraum.",
+   "cap": {
+    "text": "4–10 cm hoch, ei- bis kugelförmig; wabenartig mit unregelmäßigen Gruben, ocker- bis graugelb.",
+    "shape": [
+     "sonderform"
+    ],
+    "colors": [
+     "gelb",
+     "creme",
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "sonstige",
+    "text": "Sporenschicht in den Gruben der Waben; keine Lamellen.",
+    "colors": [
+     "creme",
+     "gelb"
+    ]
+   },
+   "stem": {
+    "text": "Weißlich, hohl, mit dem Hut direkt verwachsen, kleiig.",
+    "colors": [
+     "weiss",
+     "creme"
+    ],
+    "shape": [
+     "kurz"
+    ],
+    "base": "knollig",
+    "baseText": "Basis oft verdickt.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Dünn, wachsartig-brüchig; der gesamte Pilz ist innen ein einziger Hohlraum."
+   },
+   "smell": {
+    "text": "Angenehm würzig.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Creme bis ocker",
+    "tags": [
+     "creme",
+     "ocker"
+    ]
+   },
+   "habitat": {
+    "text": "Auwälder, unter Eschen und Ulmen, Obstgärten, Parks, oft auf kalkhaltigem Boden.",
+    "tags": [
+     "feucht",
+     "laubwald",
+     "park",
+     "kalk"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Esche",
+    "Ulme",
+    "Obstbäume"
+   ],
+   "distribution": "In Mitteleuropa zerstreut, örtlich häufig.",
+   "season": {
+    "months": [
+     3,
+     4,
+     5
+    ],
+    "text": "März bis Mai"
+   },
+   "lookalikes": [
+    {
+     "id": "fruehjahrs-giftlorchel",
+     "name": "Frühjahrs-Giftlorchel",
+     "dangerous": true,
+     "note": "Hirnartig gewundener, rotbrauner Hut statt Waben; innen gekammert, nicht ein Hohlraum; stark giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Wabenartiger Hut",
+    "Innen ein einziger, durchgehender Hohlraum",
+    "Frühjahr"
+   ],
+   "illustration": {
+    "type": "morel",
+    "cap": "#c9a462",
+    "stem": "#efe4cc"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "riesenbovist",
+   "name": "Riesenbovist",
+   "scientific": "Calvatia gigantea",
+   "family": "Agaricaceae (Champignonverwandte)",
+   "synonyms": [
+    "Riesenstäubling",
+    "Langermannia gigantea"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Nur jung essbar, solange das Innere rein weiß und fest ist. Kleine Exemplare stets längs durchschneiden (Ausschluss junger Knollenblätterpilze).",
+   "description": "Kugeliger, weißer Fruchtkörper, der Fußballgröße und mehr erreicht. Im Alter wird das Innere gelb-olivbraun und zerfällt zu Sporenstaub.",
+   "cap": {
+    "text": "20–50 cm und größer, kugelig ohne Stiel; außen weiß, glatt bis lederartig.",
+    "shape": [
+     "kugelig"
+    ],
+    "colors": [
+     "weiss"
+    ]
+   },
+   "hymenophore": {
+    "type": "sonstige",
+    "text": "Sporen bilden sich im Inneren (Gleba): jung weiß, alt olivbraun und pulverig.",
+    "colors": [
+     "weiss",
+     "oliv"
+    ]
+   },
+   "stem": {
+    "text": "Kein Stiel, mit einem Myzelstrang im Boden verankert.",
+    "colors": [],
+    "shape": [
+     "fehlend"
+    ],
+    "base": "fehlend",
+    "baseText": "Sitzend.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Jung reinweiß, fest, käseartig."
+   },
+   "smell": {
+    "text": "Jung angenehm pilzig.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Olivbraun",
+    "tags": [
+     "olivbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Stickstoffreiche Wiesen, Weiden, Gärten, Parks, Waldränder.",
+    "tags": [
+     "wiese",
+     "park",
+     "waldrand"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa zerstreut.",
+   "season": {
+    "months": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juli bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "gruener-knollenblaetterpilz",
+     "name": "Knollenblätterpilze im Hexenei-Stadium",
+     "dangerous": true,
+     "note": "Junge Knollenblätterpilze sind eiförmig in eine Hülle gehüllt; im Längsschnitt sieht man die Umrisse von Hut, Lamellen und Stiel. Tödlich giftig."
+    },
+    {
+     "id": null,
+     "name": "Kartoffelboviste (Scleroderma spp.)",
+     "dangerous": true,
+     "note": "Hart, dickschalig, innen früh violettschwarz marmoriert; giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Sehr groß, kugelig, ohne Stiel",
+    "Innen jung durchgehend weiß, ohne Strukturen",
+    "Auf Wiesen"
+   ],
+   "illustration": {
+    "type": "ball",
+    "cap": "#f3f0e6",
+    "scene": "wiese"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "schwefelporling",
+   "name": "Gemeiner Schwefelporling",
+   "scientific": "Laetiporus sulphureus",
+   "family": "Fomitopsidaceae (Baumschwammverwandte)",
+   "synonyms": [
+    "Schwefelporling",
+    "Chicken of the woods"
+   ],
+   "edibility": "bedingt",
+   "edibilityNote": "Nur junge, weiche Randbereiche und nur gut gegart essbar. Manche Menschen reagieren mit Unverträglichkeiten. Exemplare von Robinie oder Eibe meiden.",
+   "description": "Leuchtend schwefelgelber bis orangefarbener, dachziegelig wachsender Baumpilz an Laubholz.",
+   "cap": {
+    "text": "10–40 cm breite Konsolen, dachziegelig übereinander, wellig; oberseits orange bis schwefelgelb, im Alter blass und brüchig.",
+    "shape": [
+     "konsole"
+    ],
+    "colors": [
+     "gelb",
+     "orange"
+    ]
+   },
+   "hymenophore": {
+    "type": "poren",
+    "text": "Feine Poren, leuchtend schwefelgelb.",
+    "colors": [
+     "gelb"
+    ]
+   },
+   "stem": {
+    "text": "Kein Stiel, seitlich am Holz angewachsen.",
+    "colors": [],
+    "shape": [
+     "fehlend"
+    ],
+    "base": "fehlend",
+    "baseText": "Sitzend.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Jung saftig-weich, weißlich-gelb; alt kreidig-brüchig."
+   },
+   "smell": {
+    "text": "Jung angenehm, säuerlich-pilzig.",
+    "tags": [
+     "angenehm"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Parasit und Saprobiont an Laubbäumen, seltener Nadelholz.",
+    "tags": [
+     "holz",
+     "laubwald",
+     "park"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Eiche",
+    "Weide",
+    "Robinie",
+    "Obstbäume",
+    "Pappel"
+   ],
+   "distribution": "In Mitteleuropa verbreitet.",
+   "season": {
+    "months": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Mai bis September"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Leuchtend gelb-orange",
+    "Dachziegelige Konsolen an Laubholz",
+    "Gelbe Porenschicht"
+   ],
+   "illustration": {
+    "type": "bracket",
+    "cap": "#f2a63a",
+    "cap2": "#e88a1a",
+    "under": "#f3d24a",
+    "tiers": 3
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "judasohr",
+   "name": "Judasohr",
+   "scientific": "Auricularia auricula-judae",
+   "family": "Auriculariaceae",
+   "synonyms": [
+    "Holunderschwamm",
+    "Mu-Err (verwandte Art)"
+   ],
+   "edibility": "essbar",
+   "edibilityNote": "Essbar, gut gegart. Hat nur geringen Eigengeschmack.",
+   "description": "Ohrmuschelförmiger, gallertig-gummiartiger, rotbrauner Pilz, der besonders häufig an Holunder wächst.",
+   "cap": {
+    "text": "3–10 cm, ohr- oder muschelförmig, gallertig-elastisch; rot- bis olivbraun, außen fein samtig.",
+    "shape": [
+     "sonderform",
+     "konsole"
+    ],
+    "colors": [
+     "braun",
+     "rot"
+    ]
+   },
+   "hymenophore": {
+    "type": "sonstige",
+    "text": "Innenseite glatt bis aderig gefaltet, sporenbildend.",
+    "colors": [
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Kein Stiel, seitlich angewachsen.",
+    "colors": [],
+    "shape": [
+     "fehlend"
+    ],
+    "base": "fehlend",
+    "baseText": "Sitzend.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Gallertig-gummiartig, eingetrocknet hart, wieder aufquellend."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "An lebenden und toten Ästen von Laubholz, vor allem Holunder.",
+    "tags": [
+     "holz",
+     "laubwald",
+     "feucht"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Holunder",
+    "Buche"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "text": "Ganzjährig, vor allem in feuchten, milden Phasen"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Ohrförmig und gummiartig",
+    "Meist an Holunder"
+   ],
+   "illustration": {
+    "type": "ear",
+    "cap": "#7a3a26"
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "gruener-knollenblaetterpilz",
+   "name": "Grüner Knollenblätterpilz",
+   "scientific": "Amanita phalloides",
+   "family": "Amanitaceae (Wulstlingsverwandte)",
+   "synonyms": [
+    "Grüner Wulstling"
+   ],
+   "edibility": "toedlich",
+   "popular": true,
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Tödlich giftig (Amatoxine, Leberversagen). Symptome beginnen oft erst 6–24 Stunden nach dem Verzehr. Für den Großteil der tödlichen Pilzvergiftungen in Mitteleuropa verantwortlich.",
+   "description": "Der gefährlichste Giftpilz Mitteleuropas. Hut olivgrün bis gelblich, weiße Lamellen, Ring am Stiel und eine Knolle mit häutiger Scheide (Volva), die oft im Boden steckt.",
+   "cap": {
+    "text": "5–15 cm, gewölbt bis flach; olivgrün, gelbgrün bis fast weiß, eingewachsen radialfaserig, meist ohne Hüllreste.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "gruen",
+     "oliv",
+     "gelb",
+     "weiss"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß, frei, dicht – bleiben immer weiß.",
+    "colors": [
+     "weiss"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, oft grünlich genattert, mit hängendem häutigem Ring.",
+    "colors": [
+     "weiss",
+     "gruen"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "volva",
+    "baseText": "Knolle mit großer, häutiger, lappiger Scheide (Volva) – oft im Boden verborgen!",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weiß, unveränderlich; Geschmack ist kein Unterscheidungsmerkmal – niemals probieren!"
+   },
+   "smell": {
+    "text": "Jung schwach süßlich, alt unangenehm süßlich (Kunsthonig).",
+    "tags": [
+     "suesslich",
+     "unangenehm"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Laubwälder und Parks, auch Mischwälder.",
+    "tags": [
+     "laubwald",
+     "park"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Eiche",
+    "Buche",
+    "Hainbuche"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und gebietsweise häufig.",
+   "season": {
+    "months": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juli bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "frauen-taeubling",
+     "name": "Grüne Täublinge",
+     "dangerous": false,
+     "note": "Täublinge haben nie Ring und nie Knolle mit Scheide; Fleisch bröckelig."
+    },
+    {
+     "id": "wiesen-champignon",
+     "name": "Champignons",
+     "dangerous": false,
+     "note": "Lamellen rosa bis braun, keine Scheide an der Basis."
+    }
+   ],
+   "keyFeatures": [
+    "Weiße Lamellen",
+    "Ring am Stiel",
+    "Knolle mit häutiger Scheide (Volva)",
+    "Hut olivgrün bis weißlich"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#9aa25a",
+    "cap2": "#6a7238",
+    "fibrils": "#3a3f1a",
+    "under": "#f6f3ea",
+    "gills": "lamellen",
+    "stem": "#eef0e2",
+    "stemShape": "slender",
+    "snake": "#b5bf8a",
+    "ring": true,
+    "volva": true
+   },
+   "updated": "2026-10"
+  },
+  {
+   "id": "kegelhuetiger-knollenblaetterpilz",
+   "name": "Kegelhütiger Knollenblätterpilz",
+   "scientific": "Amanita virosa",
+   "family": "Amanitaceae (Wulstlingsverwandte)",
+   "synonyms": [
+    "Spitzhütiger Knollenblätterpilz",
+    "Weißer Knollenblätterpilz"
+   ],
+   "edibility": "toedlich",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Tödlich giftig (Amatoxine).",
+   "description": "Reinweißer Knollenblätterpilz mit kegelig-glockigem, oft asymmetrischem Hut, wollig-faserigem Stiel und Knolle mit Scheide.",
+   "cap": {
+    "text": "4–10 cm, kegelig bis glockig, oft schief; reinweiß, seidig glänzend.",
+    "shape": [
+     "kegelig"
+    ],
+    "colors": [
+     "weiss"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß, frei.",
+    "colors": [
+     "weiss"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, wollig-faserig bis flockig, Ring oft zerrissen oder fehlend.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "volva",
+    "baseText": "Knolle mit häutiger Scheide.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weiß."
+   },
+   "smell": {
+    "text": "Unangenehm, etwas rettichartig.",
+    "tags": [
+     "unangenehm",
+     "rettich"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Nadel- und Mischwälder auf sauren Böden, oft im Bergland.",
+    "tags": [
+     "nadelwald",
+     "sauer"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Fichte",
+    "Kiefer",
+    "Birke"
+   ],
+   "distribution": "In Mitteleuropa zerstreut, gebietsweise häufiger.",
+   "season": {
+    "months": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juli bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "wiesen-champignon",
+     "name": "Weiße Champignons",
+     "dangerous": false,
+     "note": "Lamellen rosa bis braun, keine Volva."
+    }
+   ],
+   "keyFeatures": [
+    "Reinweiß",
+    "Weiße Lamellen",
+    "Knolle mit Scheide"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "conical",
+    "cap": "#f7f5ef",
+    "cap2": "#d9d6cc",
+    "under": "#ffffff",
+    "gills": "lamellen",
+    "stem": "#f6f4ee",
+    "stemShape": "slender",
+    "ring": true,
+    "volva": true
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "fliegenpilz",
+   "name": "Fliegenpilz",
+   "scientific": "Amanita muscaria",
+   "family": "Amanitaceae (Wulstlingsverwandte)",
+   "synonyms": [
+    "Roter Fliegenpilz"
+   ],
+   "edibility": "giftig",
+   "popular": true,
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Giftig (Ibotensäure, Muscimol): Rauschzustände, Verwirrtheit, Krämpfe, Bewusstseinsstörungen.",
+   "description": "Der bekannteste Pilz überhaupt: roter Hut mit weißen Flocken, weiße Lamellen, Ring und Knolle mit Warzengürteln.",
+   "cap": {
+    "text": "8–20 cm, jung kugelig, dann flach; leuchtend rot bis orangerot mit weißen, abwischbaren Flocken.",
+    "shape": [
+     "gewoelbt",
+     "flach",
+     "kugelig"
+    ],
+    "colors": [
+     "rot",
+     "orange"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß, frei, dicht.",
+    "colors": [
+     "weiss"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, mit hängendem Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "wulst",
+    "baseText": "Knolle mit warzigen Gürteln, keine häutige Scheide.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weiß, unter der Huthaut gelblich-orange."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Nadel- und Laubwälder, Parks; Mykorrhizapilz.",
+    "tags": [
+     "nadelwald",
+     "laubwald",
+     "park"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Birke",
+    "Fichte",
+    "Kiefer"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "Juli bis November"
+   },
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Kaiserling (Amanita caesarea)",
+     "dangerous": false,
+     "note": "Gelbe Lamellen und gelber Stiel, weiße sackartige Volva; in Mitteleuropa nur in Wärmegebieten, geschützt."
+    }
+   ],
+   "keyFeatures": [
+    "Roter Hut mit weißen Flocken",
+    "Weiße Lamellen",
+    "Knolle mit Warzengürteln"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#d6331f",
+    "cap2": "#9a1d10",
+    "warts": "#fbf8f0",
+    "under": "#fbf8f2",
+    "gills": "lamellen",
+    "stem": "#f8f5ee",
+    "stemShape": "bulbous",
+    "ring": true,
+    "wulst": true
+   },
+   "updated": "2026-10"
+  },
+  {
+   "id": "pantherpilz",
+   "name": "Pantherpilz",
+   "scientific": "Amanita pantherina",
+   "family": "Amanitaceae (Wulstlingsverwandte)",
+   "synonyms": [
+    "Panther-Wulstling"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Stark giftig (Ibotensäure, Muscimol) – Vergiftungen verlaufen oft schwerer als beim Fliegenpilz.",
+   "description": "Brauner Wulstling mit reinweißen Flocken und gerieftem Hutrand. Gefährlicher Doppelgänger des Perlpilzes.",
+   "cap": {
+    "text": "5–12 cm, gewölbt bis flach; hell- bis dunkelbraun mit reinweißen Flocken, Rand deutlich gerieft.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß, frei.",
+    "colors": [
+     "weiss"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, mit glattem, ungerieftem Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "wulst",
+    "baseText": "Knolle mit abgesetztem, gerandetem Saum („Bergsteigersöckchen“).",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weiß, verfärbt sich nicht (rötet nicht!)."
+   },
+   "smell": {
+    "text": "Unauffällig, etwas rettichartig.",
+    "tags": [
+     "unauffaellig",
+     "rettich"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Laub- und Nadelwälder.",
+    "tags": [
+     "laubwald",
+     "nadelwald"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Buche",
+    "Eiche",
+    "Fichte",
+    "Kiefer"
+   ],
+   "distribution": "In Mitteleuropa verbreitet.",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juni bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "perlpilz",
+     "name": "Perlpilz",
+     "dangerous": false,
+     "note": "Fleisch rötet, Ring gerieft, Knolle ohne abgesetzten Rand; nur gegart essbar."
+    }
+   ],
+   "keyFeatures": [
+    "Reinweiße Flocken auf braunem Hut",
+    "Gerieftem Hutrand",
+    "Ring nicht gerieft",
+    "Fleisch rötet nicht"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#8a6440",
+    "cap2": "#5a3e22",
+    "warts": "#ffffff",
+    "under": "#fbf8f2",
+    "gills": "lamellen",
+    "stem": "#f6f3ec",
+    "stemShape": "slender",
+    "ring": true,
+    "wulst": true
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "gifthaeubling",
+   "name": "Gift-Häubling",
+   "scientific": "Galerina marginata",
+   "family": "Hymenogastraceae",
+   "synonyms": [
+    "Nadelholzhäubling",
+    "Galerina autumnalis",
+    "Pholiota marginata"
+   ],
+   "edibility": "toedlich",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Tödlich giftig (Amatoxine, wie Knollenblätterpilze).",
+   "description": "Kleiner, brauner Holzbewohner, der dem Stockschwämmchen täuschend ähnlich sieht. Unterhalb des Rings ist der Stiel silbrig längsfaserig, nicht schuppig.",
+   "cap": {
+    "text": "1–5 cm, gewölbt bis flach, oft mit Buckel; ocker- bis honigbraun, hygrophan.",
+    "shape": [
+     "gewoelbt",
+     "gebuckelt"
+    ],
+    "colors": [
+     "braun",
+     "orange"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Ocker bis rostbraun.",
+    "colors": [
+     "braun",
+     "orange"
+    ]
+   },
+   "stem": {
+    "text": "Braun, unterhalb des schmalen, vergänglichen Rings silbrig-weiß längsfaserig überzogen.",
+    "colors": [
+     "braun"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Oft einzeln oder in kleinen Gruppen, seltener büschelig.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Dünn, bräunlich."
+   },
+   "smell": {
+    "text": "Mehlartig.",
+    "tags": [
+     "mehlartig"
+    ]
+   },
+   "spore": {
+    "text": "Rostbraun",
+    "tags": [
+     "rostbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Auf morschem Nadel- und Laubholz.",
+    "tags": [
+     "holz",
+     "nadelwald",
+     "laubwald"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Fichte",
+    "Kiefer",
+    "Buche"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "Frühjahr bis Spätherbst"
+   },
+   "lookalikes": [
+    {
+     "id": "stockschwaemmchen",
+     "name": "Stockschwämmchen",
+     "dangerous": false,
+     "note": "Stiel unterhalb des Rings sparrig dunkel geschuppt, fast immer auf Laubholz."
+    },
+    {
+     "id": "hallimasch",
+     "name": "Hallimasch",
+     "dangerous": false,
+     "note": "Weiße Lamellen und weißes Sporenpulver, Schüppchen auf dem Hut."
+    }
+   ],
+   "keyFeatures": [
+    "Stiel unterhalb des Rings silbrig faserig, nicht schuppig",
+    "Rostbraunes Sporenpulver",
+    "Mehlgeruch"
+   ],
+   "illustration": {
+    "type": "cluster",
+    "capShape": "convex",
+    "cap": "#b5803e",
+    "cap2": "#7a5020",
+    "under": "#a8672a",
+    "gills": "lamellen",
+    "stem": "#8a5a32",
+    "ring": true,
+    "ringColor": "#c9a87a"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "orangefuchsiger-raukopf",
+   "name": "Orangefuchsiger Raukopf",
+   "scientific": "Cortinarius orellanus",
+   "family": "Cortinariaceae (Schleierlingsverwandte)",
+   "synonyms": [
+    "Orangefuchsiger Schleierling"
+   ],
+   "edibility": "toedlich",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Tödlich giftig (Orellanin): schwere Nierenschäden, Symptome oft erst nach 2 bis 20 Tagen.",
+   "description": "Orange- bis fuchsbrauner, trockener Schleierling mit rostbraunen Lamellen. Wegen der langen Latenzzeit besonders tückisch.",
+   "cap": {
+    "text": "3–8 cm, gewölbt bis flach, mit stumpfem Buckel; orange- bis fuchsig rotbraun, trocken, feinfilzig.",
+    "shape": [
+     "gewoelbt",
+     "gebuckelt"
+    ],
+    "colors": [
+     "orange",
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Dick, entfernt stehend, orange- bis rostbraun.",
+    "colors": [
+     "orange",
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Gelblich bis orangebraun, faserig, ohne deutliche Gürtel.",
+    "colors": [
+     "gelb",
+     "orange"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Gelblich."
+   },
+   "smell": {
+    "text": "Schwach rettichartig.",
+    "tags": [
+     "rettich"
+    ]
+   },
+   "spore": {
+    "text": "Rostbraun",
+    "tags": [
+     "rostbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Warme Laubwälder auf sauren Böden.",
+    "tags": [
+     "laubwald",
+     "sauer"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Eiche",
+    "Buche"
+   ],
+   "distribution": "In Mitteleuropa selten bis zerstreut.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "text": "August bis Oktober"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Orange-fuchsiger, trockener Hut",
+    "Rostbraune Lamellen und Sporenpulver"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "umbo",
+    "cap": "#c8642a",
+    "cap2": "#8a3a14",
+    "under": "#b0602a",
+    "gills": "lamellen",
+    "stem": "#d9a23a",
+    "stemShape": "slender"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "spitzgebuckelter-raukopf",
+   "name": "Spitzgebuckelter Raukopf",
+   "scientific": "Cortinarius rubellus",
+   "family": "Cortinariaceae (Schleierlingsverwandte)",
+   "synonyms": [
+    "Orangefuchsiger Rauhkopf (Nadelwaldform)",
+    "Cortinarius speciosissimus"
+   ],
+   "edibility": "toedlich",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Tödlich giftig (Orellanin): Nierenversagen nach langer Latenzzeit.",
+   "description": "Rotbrauner Schleierling der Nadelwälder mit spitzem Buckel und gelblichen Gürtelresten am Stiel.",
+   "cap": {
+    "text": "3–8 cm, kegelig-gewölbt mit spitzem Buckel; orange- bis rotbraun, feinfilzig.",
+    "shape": [
+     "kegelig",
+     "gebuckelt"
+    ],
+    "colors": [
+     "orange",
+     "braun",
+     "rot"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Dick, entfernt, ocker- bis rostbraun.",
+    "colors": [
+     "braun",
+     "orange"
+    ]
+   },
+   "stem": {
+    "text": "Orangebraun mit gelblichen Gürtelresten (Velum).",
+    "colors": [
+     "orange",
+     "braun",
+     "gelb"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Gelblich-orange."
+   },
+   "smell": {
+    "text": "Schwach rettichartig.",
+    "tags": [
+     "rettich"
+    ]
+   },
+   "spore": {
+    "text": "Rostbraun",
+    "tags": [
+     "rostbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Feuchte, saure Nadelwälder, oft zwischen Moos und Heidelbeere.",
+    "tags": [
+     "nadelwald",
+     "sauer",
+     "feucht"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Fichte",
+    "Kiefer"
+   ],
+   "distribution": "In Mitteleuropa zerstreut, im Bergland häufiger.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "text": "August bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "echter-pfifferling",
+     "name": "Pfifferling (bei flüchtigem Blick)",
+     "dangerous": false,
+     "note": "Pfifferlinge haben Leisten statt Lamellen und kein rostbraunes Sporenpulver."
+    }
+   ],
+   "keyFeatures": [
+    "Spitzer Buckel",
+    "Gelbe Gürtelreste am Stiel",
+    "Rostbraunes Sporenpulver",
+    "Nadelwald"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "bell",
+    "cap": "#b5552a",
+    "cap2": "#7a2e12",
+    "under": "#a8622e",
+    "gills": "lamellen",
+    "stem": "#c98a3a",
+    "stemShape": "slender",
+    "snake": "#e9c34a"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "fruehjahrs-giftlorchel",
+   "name": "Frühjahrs-Giftlorchel",
+   "scientific": "Gyromitra esculenta",
+   "family": "Discinaceae",
+   "synonyms": [
+    "Giftlorchel",
+    "Frühjahrslorchel"
+   ],
+   "edibility": "toedlich",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Stark giftig, kann tödlich sein (Gyromitrin). Auch Dämpfe beim Kochen können Vergiftungen auslösen. Früher fälschlich als Speisepilz gehandelt.",
+   "description": "Frühjahrspilz mit hirnartig gewundenem, rot- bis kastanienbraunem Hut. Im Längsschnitt innen gekammert – anders als die Morchel.",
+   "cap": {
+    "text": "3–10 cm, unregelmäßig hirnartig gewunden; rot- bis kastanienbraun.",
+    "shape": [
+     "sonderform"
+    ],
+    "colors": [
+     "braun",
+     "rot"
+    ]
+   },
+   "hymenophore": {
+    "type": "sonstige",
+    "text": "Sporenschicht auf der gewundenen Oberfläche; keine Lamellen.",
+    "colors": [
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Kurz, weißlich, unregelmäßig, innen gekammert.",
+    "colors": [
+     "weiss",
+     "creme"
+    ],
+    "shape": [
+     "kurz"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Wachsartig-brüchig; innen mehrfach gekammert."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß bis creme",
+    "tags": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "habitat": {
+    "text": "Kiefernwälder auf sandigen, sauren Böden, oft an Holzlagerplätzen.",
+    "tags": [
+     "nadelwald",
+     "sauer"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Kiefer"
+   ],
+   "distribution": "In Mitteleuropa zerstreut, vor allem in sandigen Kieferngebieten.",
+   "season": {
+    "months": [
+     3,
+     4,
+     5
+    ],
+    "text": "März bis Mai"
+   },
+   "lookalikes": [
+    {
+     "id": "speise-morchel",
+     "name": "Speise-Morchel",
+     "dangerous": false,
+     "note": "Wabenartig, innen ein einziger Hohlraum; ockergelb."
+    }
+   ],
+   "keyFeatures": [
+    "Hirnartig gewunden statt wabig",
+    "Innen gekammert",
+    "Frühjahr, Kiefernwald"
+   ],
+   "illustration": {
+    "type": "brain",
+    "cap": "#8a3f22",
+    "stem": "#ece2d0"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "karbol-champignon",
+   "name": "Karbol-Champignon",
+   "scientific": "Agaricus xanthodermus",
+   "family": "Agaricaceae (Champignonverwandte)",
+   "synonyms": [
+    "Gift-Egerling",
+    "Tintenegerling"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Giftig: Magen-Darm-Beschwerden.",
+   "description": "Weißer Champignon, dessen Fleisch in der Stielbasis beim Anschneiden sofort chromgelb verfärbt. Unangenehmer Geruch nach Tinte oder Karbol.",
+   "cap": {
+    "text": "5–15 cm, jung trapezförmig gewölbt, dann flach; weiß, auf Druck gilbend.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "weiss",
+     "grau"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Jung blassrosa, dann schokoladenbraun.",
+    "colors": [
+     "rosa",
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, mit hängendem Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "knollig",
+    "baseText": "Knollig, Fleisch dort beim Anschnitt chromgelb.",
+    "ring": true
+   },
+   "flesh": {
+    "text": "Weiß, in der Stielbasis sofort leuchtend chromgelb verfärbend."
+   },
+   "smell": {
+    "text": "Unangenehm nach Tinte, Karbol oder Phenol – besonders beim Erhitzen.",
+    "tags": [
+     "phenol",
+     "unangenehm"
+    ]
+   },
+   "spore": {
+    "text": "Schokoladenbraun",
+    "tags": [
+     "braun",
+     "purpurbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Parks, Gärten, Waldränder, Gebüsche.",
+    "tags": [
+     "park",
+     "waldrand",
+     "laubwald"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa verbreitet.",
+   "season": {
+    "months": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juli bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "wiesen-champignon",
+     "name": "Essbare Champignons",
+     "dangerous": false,
+     "note": "Keine chromgelbe Verfärbung in der Stielbasis, angenehmer oder Anisgeruch."
+    }
+   ],
+   "keyFeatures": [
+    "Stielbasis gilbt sofort chromgelb",
+    "Tinten-/Karbolgeruch"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "flat",
+    "cap": "#f3f1ea",
+    "cap2": "#cfcabc",
+    "under": "#c89a8a",
+    "gills": "lamellen",
+    "stem": "#f5f3ec",
+    "stemShape": "bulbous",
+    "ring": true,
+    "scene": "park"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "gruenblaettriger-schwefelkopf",
+   "name": "Grünblättriger Schwefelkopf",
+   "scientific": "Hypholoma fasciculare",
+   "family": "Strophariaceae (Träuschlingsverwandte)",
+   "synonyms": [
+    "Büscheliger Schwefelkopf"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Giftig: Magen-Darm-Vergiftung; sehr bitter.",
+   "description": "Büschelig an Holz wachsender, schwefelgelber Pilz mit grünlichen Lamellen. Fast ganzjährig zu finden.",
+   "cap": {
+    "text": "2–7 cm, gewölbt bis flach; schwefelgelb, Mitte orangebraun.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "gelb",
+     "orange"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Schwefelgelb, dann grünlich, schließlich olivschwarz.",
+    "colors": [
+     "gelb",
+     "gruen",
+     "oliv"
+    ]
+   },
+   "stem": {
+    "text": "Gelb, zur Basis bräunlich, mit flüchtiger Ringzone.",
+    "colors": [
+     "gelb",
+     "braun"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "buschelig",
+    "baseText": "Büschelig verwachsen.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Gelb, sehr bitter."
+   },
+   "smell": {
+    "text": "Unauffällig bis unangenehm.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Purpurbraun bis schwarzviolett",
+    "tags": [
+     "purpurbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Büschelig auf Stümpfen und Totholz von Laub- und Nadelbäumen.",
+    "tags": [
+     "holz",
+     "laubwald",
+     "nadelwald"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Buche",
+    "Fichte",
+    "Eiche",
+    "Kiefer"
+   ],
+   "distribution": "In Mitteleuropa sehr häufig.",
+   "season": {
+    "months": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "text": "Fast ganzjährig, Hauptzeit Sommer bis Spätherbst"
+   },
+   "lookalikes": [
+    {
+     "id": "hallimasch",
+     "name": "Hallimasch",
+     "dangerous": false,
+     "note": "Weiße Lamellen, wattiger Ring, Schüppchen auf dem Hut."
+    },
+    {
+     "id": "stockschwaemmchen",
+     "name": "Stockschwämmchen",
+     "dangerous": false,
+     "note": "Zimtbraune Lamellen, zweifarbiger Hut."
+    }
+   ],
+   "keyFeatures": [
+    "Schwefelgelb",
+    "Grünliche Lamellen",
+    "Büschelig an Holz",
+    "Sehr bitter"
+   ],
+   "illustration": {
+    "type": "cluster",
+    "capShape": "convex",
+    "cap": "#e3c33a",
+    "cap2": "#c9822a",
+    "under": "#a8b04a",
+    "gills": "lamellen",
+    "stem": "#d9b83a"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "ziegelroter-risspilz",
+   "name": "Ziegelroter Risspilz",
+   "scientific": "Inocybe erubescens",
+   "family": "Inocybaceae (Risspilzverwandte)",
+   "synonyms": [
+    "Mai-Risspilz",
+    "Inocybe patouillardii"
+   ],
+   "edibility": "toedlich",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Sehr giftig (Muscarin), Todesfälle sind dokumentiert. Symptome: Schweißausbrüche, Speichelfluss, Sehstörungen, Kreislaufprobleme.",
+   "description": "Weißlicher Lamellenpilz mit kegeligem, radialrissigem Hut, der sich im Alter und bei Verletzung ziegelrot verfärbt. Wächst zur gleichen Zeit wie der Mai-Ritterling.",
+   "cap": {
+    "text": "3–8 cm, kegelig bis glockig, später flach mit Buckel; weißlich, rötend, radialfaserig-rissig.",
+    "shape": [
+     "kegelig",
+     "gebuckelt"
+    ],
+    "colors": [
+     "weiss",
+     "creme",
+     "rot",
+     "rosa"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Jung weißlich-rosa, dann olivbraun, rötend.",
+    "colors": [
+     "weiss",
+     "rosa",
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, rötend, ohne Ring.",
+    "colors": [
+     "weiss",
+     "rosa"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "knollig",
+    "baseText": "Leicht verdickt, ohne Scheide.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, bei Verletzung rötend."
+   },
+   "smell": {
+    "text": "Schwach, Angaben in der Literatur uneinheitlich – kein Mehlgeruch.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Braun",
+    "tags": [
+     "braun"
+    ]
+   },
+   "habitat": {
+    "text": "Lichte Laubwälder, Parks und Gärten auf Kalk.",
+    "tags": [
+     "laubwald",
+     "park",
+     "kalk"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Buche",
+    "Eiche",
+    "Hainbuche"
+   ],
+   "distribution": "In Mitteleuropa zerstreut, in Kalkgebieten.",
+   "season": {
+    "months": [
+     5,
+     6,
+     7
+    ],
+    "text": "Mai bis Juli"
+   },
+   "lookalikes": [
+    {
+     "id": "mai-ritterling",
+     "name": "Mai-Ritterling",
+     "dangerous": false,
+     "note": "Kräftiger Mehlgeruch, dicht stehende weiße Lamellen, kein Röten, weißes Sporenpulver."
+    }
+   ],
+   "keyFeatures": [
+    "Kegeliger, radialrissiger Hut",
+    "Verfärbt ziegelrot",
+    "Braunes Sporenpulver"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "conical",
+    "cap": "#e9cbb8",
+    "cap2": "#c4664a",
+    "fibrils": "#7a3a2a",
+    "under": "#d9b8a2",
+    "gills": "lamellen",
+    "stem": "#f1e1d6",
+    "stemShape": "slender"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "kahler-krempling",
+   "name": "Kahler Krempling",
+   "scientific": "Paxillus involutus",
+   "family": "Paxillaceae (Kremplingsverwandte)",
+   "synonyms": [
+    "Krempling"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Giftig! Kann eine schwere, immunologisch bedingte Reaktion (Paxillus-Syndrom) auslösen, die tödlich verlaufen kann – auch nach früher gut vertragenen Mahlzeiten. Galt früher als Speisepilz.",
+   "description": "Häufiger, brauner Pilz mit stark eingerolltem, filzigem Hutrand und weit herablaufenden, leicht ablösbaren Lamellen, die auf Druck braun fleckig werden.",
+   "cap": {
+    "text": "5–15 cm, flach bis trichterförmig vertieft; ocker- bis olivbraun, Rand lange eingerollt und filzig.",
+    "shape": [
+     "trichter",
+     "flach"
+    ],
+    "colors": [
+     "braun",
+     "oliv"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Herablaufend, gelblich bis olivbraun, leicht vom Hut ablösbar, auf Druck dunkelbraun.",
+    "colors": [
+     "gelb",
+     "oliv",
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Kurz, gleichfarben, ohne Ring.",
+    "colors": [
+     "braun"
+    ],
+    "shape": [
+     "kurz"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Gelblich, an Schnittstellen bräunend."
+   },
+   "smell": {
+    "text": "Säuerlich, unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Braun",
+    "tags": [
+     "braun"
+    ]
+   },
+   "habitat": {
+    "text": "Wälder, Parks, Moore; häufig bei Birke.",
+    "tags": [
+     "laubwald",
+     "nadelwald",
+     "park",
+     "feucht"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Birke",
+    "Fichte",
+    "Kiefer",
+    "Eiche"
+   ],
+   "distribution": "In Mitteleuropa sehr häufig.",
+   "season": {
+    "months": [
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "Juli bis November"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Eingerollter, filziger Rand",
+    "Lamellen bräunen auf Druck",
+    "Lamellen leicht ablösbar"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "funnel",
+    "cap": "#8a6a3a",
+    "cap2": "#5a4220",
+    "under": "#a88a4a",
+    "gills": "lamellen",
+    "stem": "#8a6a42",
+    "stemShape": "short"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "riesen-roetling",
+   "name": "Riesen-Rötling",
+   "scientific": "Entoloma sinuatum",
+   "family": "Entolomataceae (Rötlingsverwandte)",
+   "synonyms": [
+    "Riesenrötling",
+    "Entoloma lividum"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Stark giftig: schwere Magen-Darm-Vergiftung.",
+   "description": "Großer, grauweißer Lamellenpilz, dessen Lamellen jung gelblich sind und später lachsrosa werden. Rosa Sporenpulver.",
+   "cap": {
+    "text": "7–20 cm, gewölbt bis flach, wellig; cremeweiß bis hellgrau, seidig.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "weiss",
+     "grau",
+     "creme"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Jung gelblich, später lachsrosa, ausgebuchtet.",
+    "colors": [
+     "gelb",
+     "rosa",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, kräftig, ohne Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "kurz",
+     "bauchig"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, dick."
+   },
+   "smell": {
+    "text": "Mehlartig bis ranzig.",
+    "tags": [
+     "mehlartig"
+    ]
+   },
+   "spore": {
+    "text": "Rosa",
+    "tags": [
+     "rosa"
+    ]
+   },
+   "habitat": {
+    "text": "Lichte Laubwälder auf Kalk und Lehm.",
+    "tags": [
+     "laubwald",
+     "kalk"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Eiche",
+    "Buche",
+    "Hainbuche"
+   ],
+   "distribution": "In Mitteleuropa zerstreut.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "text": "August bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": "mai-ritterling",
+     "name": "Mai-Ritterling",
+     "dangerous": false,
+     "note": "Frühjahr, weiße Lamellen, weißes Sporenpulver."
+    }
+   ],
+   "keyFeatures": [
+    "Lamellen gelblich → lachsrosa",
+    "Rosa Sporenpulver",
+    "Mehlartiger Geruch"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "flat",
+    "cap": "#ddd8cc",
+    "cap2": "#a9a396",
+    "under": "#e9c3a8",
+    "gills": "lamellen",
+    "stem": "#f3f0e8",
+    "stemShape": "thick"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "tiger-ritterling",
+   "name": "Tiger-Ritterling",
+   "scientific": "Tricholoma pardinum",
+   "family": "Tricholomataceae (Ritterlingsverwandte)",
+   "synonyms": [
+    "Pantherritterling"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Giftig: heftige Magen-Darm-Vergiftung.",
+   "description": "Kräftiger Ritterling mit grauem Hut, auf dem dunklere, dachziegelartig angeordnete Schuppen sitzen.",
+   "cap": {
+    "text": "5–15 cm, gewölbt bis flach; grau mit dunkelgrauen, konzentrischen Schuppen.",
+    "shape": [
+     "gewoelbt",
+     "flach"
+    ],
+    "colors": [
+     "grau"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weißlich bis creme, manchmal grünlich getönt, ausgebuchtet.",
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Weißlich, kräftig, ohne Ring.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "kurz",
+     "bauchig"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, fest."
+   },
+   "smell": {
+    "text": "Mehlartig.",
+    "tags": [
+     "mehlartig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Laub- und Nadelwälder auf Kalk, besonders im Bergland.",
+    "tags": [
+     "laubwald",
+     "nadelwald",
+     "kalk"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [
+    "Buche",
+    "Fichte",
+    "Tanne"
+   ],
+   "distribution": "In Mitteleuropa zerstreut, in Kalkgebieten.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "text": "August bis Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Erd-Ritterling (Tricholoma terreum)",
+     "dangerous": false,
+     "note": "Kleiner, zierlicher, mausgrau filzig, kaum Mehlgeruch."
+    }
+   ],
+   "keyFeatures": [
+    "Grauer Hut mit dunklen Schuppen",
+    "Mehlgeruch",
+    "Kalkboden"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "convex",
+    "cap": "#a8a6a0",
+    "cap2": "#6e6c66",
+    "scales": "#3a3a38",
+    "under": "#f1ede0",
+    "gills": "lamellen",
+    "stem": "#f1eee6",
+    "stemShape": "thick"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "grauer-faltentintling",
+   "name": "Grauer Faltentintling",
+   "scientific": "Coprinopsis atramentaria",
+   "family": "Psathyrellaceae",
+   "synonyms": [
+    "Faltentintling",
+    "Coprinus atramentarius"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz"
+   ],
+   "edibilityNote": "Giftig in Verbindung mit Alkohol (Coprin): Gesichtsrötung, Herzrasen, Übelkeit – auch wenn Alkohol bis zu mehreren Tagen vor oder nach dem Verzehr getrunken wird.",
+   "description": "Grauer, glockiger Tintling mit gefaltet-geriefter Huthaut, oft büschelig an vergrabenem Holz.",
+   "cap": {
+    "text": "3–7 cm, eiförmig bis glockig; grau bis graubraun, radial gefaltet, ohne Zottelschuppen.",
+    "shape": [
+     "kegelig",
+     "walze"
+    ],
+    "colors": [
+     "grau",
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Weiß, dann schwarz und zerfließend.",
+    "colors": [
+     "weiss",
+     "schwarz"
+    ]
+   },
+   "stem": {
+    "text": "Weiß, hohl, mit ringartiger Zone nahe der Basis.",
+    "colors": [
+     "weiss"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "buschelig",
+    "baseText": "Büschelig.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weißlich, dünn."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Schwarz",
+    "tags": [
+     "schwarz"
+    ]
+   },
+   "habitat": {
+    "text": "Gärten, Wegränder, Parks, an vergrabenem Holz und Stümpfen.",
+    "tags": [
+     "park",
+     "wiese",
+     "holz"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "Frühjahr bis Spätherbst"
+   },
+   "lookalikes": [
+    {
+     "id": "schopf-tintling",
+     "name": "Schopf-Tintling",
+     "dangerous": false,
+     "note": "Weiß und zottig geschuppt, höher, beweglicher Ring."
+    }
+   ],
+   "keyFeatures": [
+    "Grau, gefaltet, ohne Schuppen",
+    "Büschelig",
+    "Mit Alkohol giftig"
+   ],
+   "illustration": {
+    "type": "cluster",
+    "capShape": "bell",
+    "cap": "#a39c92",
+    "cap2": "#6e675e",
+    "under": "#3a3434",
+    "gills": "lamellen",
+    "stem": "#f1efe8"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "spitzkegeliger-kahlkopf",
+   "name": "Spitzkegeliger Kahlkopf",
+   "scientific": "Psilocybe semilanceata",
+   "family": "Hymenogastraceae",
+   "synonyms": [
+    "Spitzkegliger Kahlkopf",
+    "Spitzkegeliger Düngerling (volkstümlich)"
+   ],
+   "edibility": "giftig",
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum",
+    "giz",
+    "btmg"
+   ],
+   "edibilityNote": "Kein Speisepilz. Psychoaktiv (Psilocybin/Psilocin): kann Halluzinationen, Angst- und Panikzustände, Verwirrtheit und Kreislaufprobleme auslösen. Besitz, Anbau und Handel sind in Deutschland nach dem Betäubungsmittelgesetz verboten. Zudem besteht Verwechslungsgefahr mit tödlich giftigen kleinen braunen Lamellenpilzen.",
+   "description": "Kleiner, schlanker Lamellenpilz der Weiden und Wiesen mit spitzkegeligem, oft mit einer Papille versehenem Hut auf einem langen, dünnen, verbogenen Stiel.",
+   "cap": {
+    "text": "0,5–2,5 cm, spitzkegelig bis glockig, meist mit kleiner Papille; hygrophan: feucht oliv- bis ockerbraun und gerieft, trocken blass ocker bis cremegelb; Huthaut feucht schmierig und abziehbar.",
+    "shape": [
+     "kegelig",
+     "gebuckelt"
+    ],
+    "colors": [
+     "braun",
+     "oliv",
+     "creme",
+     "gelb"
+    ]
+   },
+   "hymenophore": {
+    "type": "lamellen",
+    "text": "Jung cremefarben bis graubraun, dann purpurbraun bis schwarz gefleckt, mit weißlicher Schneide.",
+    "colors": [
+     "creme",
+     "braun",
+     "schwarz"
+    ]
+   },
+   "stem": {
+    "text": "4–10 cm lang, sehr dünn (1–3 mm), zäh-biegsam, oft verbogen; blass cremefarben bis bräunlich, Basis mitunter bläulich.",
+    "colors": [
+     "creme",
+     "weiss",
+     "braun"
+    ],
+    "shape": [
+     "schlank"
+    ],
+    "base": "unauffaellig",
+    "baseText": "Ohne Knolle; Basis bisweilen blau verfärbt.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Dünn, blass."
+   },
+   "smell": {
+    "text": "Unauffällig, schwach.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Dunkel purpurbraun",
+    "tags": [
+     "purpurbraun"
+    ]
+   },
+   "habitat": {
+    "text": "Gras auf Weiden und Wiesen, besonders Schaf- und Rinderweiden, nicht direkt auf Dung.",
+    "tags": [
+     "wiese"
+    ],
+    "substrate": "boden"
+   },
+   "trees": [],
+   "distribution": "In Mitteleuropa verbreitet, regional häufiger in Weidegebieten des Berglands und küstennaher Regionen.",
+   "season": {
+    "months": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "August bis November, Hauptzeit September/Oktober"
+   },
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Häublinge (Galerina spp.)",
+     "dangerous": true,
+     "note": "Kleine braune Pilze mit rostbraunem Sporenpulver; einige Arten enthalten tödliche Amatoxine."
+    },
+    {
+     "id": null,
+     "name": "Samthäubchen (Conocybe/Pholiotina spp.)",
+     "dangerous": true,
+     "note": "Zarte, braune Rasenpilze mit rostbraunem Sporenpulver; einzelne Arten enthalten Amatoxine."
+    },
+    {
+     "id": null,
+     "name": "Heu-Düngerling (Panaeolina foenisecii)",
+     "dangerous": false,
+     "note": "Häufiger Rasenpilz mit gewölbtem, nicht spitzkegeligem Hut und braun gesprenkelten Lamellen; kein Speisepilz."
+    }
+   ],
+   "keyFeatures": [
+    "Spitzkegeliger Hut, oft mit Papille",
+    "Sehr langer, dünner, zäher Stiel",
+    "Purpurbraunes Sporenpulver",
+    "Auf Weiden im Gras, Herbst"
+   ],
+   "illustration": {
+    "type": "cap",
+    "capShape": "conical",
+    "cap": "#b49452",
+    "cap2": "#7a6232",
+    "under": "#5a4a44",
+    "gills": "lamellen",
+    "stem": "#e6dcc4",
+    "stemShape": "tall",
+    "scene": "wiese"
+   },
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "zunderschwamm",
+   "name": "Echter Zunderschwamm",
+   "scientific": "Fomes fomentarius",
+   "family": "Polyporaceae (Stielporlingsverwandte)",
+   "synonyms": [
+    "Zunderschwamm",
+    "Zunderpilz"
+   ],
+   "edibility": "ungeniessbar",
+   "edibilityNote": "Holzig-hart, kein Speisepilz. Historisch als Zunder zum Feuermachen genutzt.",
+   "description": "Mehrjähriger, huf- bis konsolenförmiger Baumpilz mit grauer, zonierter Kruste, vor allem an Buche und Birke.",
+   "cap": {
+    "text": "10–40 cm, hufförmig, mehrjährig; oberseits grau bis graubraun, deutlich gezont, hart verkrustet.",
+    "shape": [
+     "konsole"
+    ],
+    "colors": [
+     "grau",
+     "braun"
+    ]
+   },
+   "hymenophore": {
+    "type": "poren",
+    "text": "Feine Poren, graubraun.",
+    "colors": [
+     "grau",
+     "braun"
+    ]
+   },
+   "stem": {
+    "text": "Kein Stiel, seitlich angewachsen.",
+    "colors": [],
+    "shape": [
+     "fehlend"
+    ],
+    "base": "fehlend",
+    "baseText": "Sitzend.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Zäh-filzig, braun (Zunderschicht), mit einem harten Myzelialkern."
+   },
+   "smell": {
+    "text": "Angenehm säuerlich-pilzig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weißlich",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "An geschwächten und toten Laubbäumen.",
+    "tags": [
+     "holz",
+     "laubwald"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Buche",
+    "Birke"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "text": "Ganzjährig (mehrjährige Fruchtkörper)"
+   },
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Rotrandiger Baumschwamm (Fomitopsis pinicola)",
+     "dangerous": false,
+     "note": "Oft mit rötlichem Randwulst, auch an Nadelholz; ebenfalls ungenießbar."
+    }
+   ],
+   "keyFeatures": [
+    "Hufförmig, grau, gezont",
+    "Mehrjährig",
+    "Buche und Birke"
+   ],
+   "illustration": {
+    "type": "bracket",
+    "cap": "#9c958a",
+    "cap2": "#5e584e",
+    "under": "#7a6e5e",
+    "hoof": true,
+    "tiers": 2
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "birkenporling",
+   "name": "Birkenporling",
+   "scientific": "Fomitopsis betulina",
+   "family": "Fomitopsidaceae (Baumschwammverwandte)",
+   "synonyms": [
+    "Birkenzungenporling",
+    "Piptoporus betulinus"
+   ],
+   "edibility": "ungeniessbar",
+   "edibilityNote": "Kein Speisepilz (zäh, bitterlich).",
+   "description": "Halbkreis- bis nierenförmiger, weißlich bis hellbrauner Porling, der ausschließlich an Birken wächst.",
+   "cap": {
+    "text": "5–25 cm, halbkreis- bis nierenförmig, mit dickem, abgerundetem Rand; hell- bis graubraun, glatt.",
+    "shape": [
+     "konsole"
+    ],
+    "colors": [
+     "weiss",
+     "braun",
+     "creme"
+    ]
+   },
+   "hymenophore": {
+    "type": "poren",
+    "text": "Weiße, sehr feine Poren.",
+    "colors": [
+     "weiss"
+    ]
+   },
+   "stem": {
+    "text": "Kein oder nur ein stielartiger Ansatz.",
+    "colors": [],
+    "shape": [
+     "fehlend"
+    ],
+    "base": "fehlend",
+    "baseText": "Sitzend.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Weiß, korkig-zäh."
+   },
+   "smell": {
+    "text": "Angenehm säuerlich.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Ausschließlich an Birken (geschwächt oder abgestorben).",
+    "tags": [
+     "holz",
+     "laubwald"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Birke"
+   ],
+   "distribution": "In Mitteleuropa verbreitet und häufig.",
+   "season": {
+    "months": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "text": "Ganzjährig sichtbar, frisch vor allem Sommer bis Herbst"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Nur an Birke",
+    "Weiße Porenschicht",
+    "Dicker, wulstiger Rand"
+   ],
+   "illustration": {
+    "type": "bracket",
+    "cap": "#d9c4a2",
+    "cap2": "#a8875a",
+    "under": "#f7f3ea",
+    "tiers": 2
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  },
+  {
+   "id": "schmetterlings-tramete",
+   "name": "Schmetterlings-Tramete",
+   "scientific": "Trametes versicolor",
+   "family": "Polyporaceae (Stielporlingsverwandte)",
+   "synonyms": [
+    "Bunte Tramete",
+    "Schmetterlingsporling"
+   ],
+   "edibility": "ungeniessbar",
+   "edibilityNote": "Kein Speisepilz (lederig-zäh).",
+   "description": "Dünne, samtige, bunt gezonte Konsolen, die dachziegelig und in großen Gruppen an Laubholz wachsen.",
+   "cap": {
+    "text": "3–8 cm, dünn, fächer- bis halbkreisförmig, dachziegelig; samtig, bunt gezont (grau, blau, braun, schwarz, creme).",
+    "shape": [
+     "konsole"
+    ],
+    "colors": [
+     "grau",
+     "braun",
+     "schwarz",
+     "creme"
+    ]
+   },
+   "hymenophore": {
+    "type": "poren",
+    "text": "Feine, weiße bis cremefarbene Poren.",
+    "colors": [
+     "weiss",
+     "creme"
+    ]
+   },
+   "stem": {
+    "text": "Kein Stiel.",
+    "colors": [],
+    "shape": [
+     "fehlend"
+    ],
+    "base": "fehlend",
+    "baseText": "Sitzend.",
+    "ring": false
+   },
+   "flesh": {
+    "text": "Dünn, weiß, lederig-zäh."
+   },
+   "smell": {
+    "text": "Unauffällig.",
+    "tags": [
+     "unauffaellig"
+    ]
+   },
+   "spore": {
+    "text": "Weiß",
+    "tags": [
+     "weiss"
+    ]
+   },
+   "habitat": {
+    "text": "Totholz von Laubbäumen, Stümpfe, Äste.",
+    "tags": [
+     "holz",
+     "laubwald"
+    ],
+    "substrate": "holz"
+   },
+   "trees": [
+    "Buche",
+    "Eiche",
+    "Birke"
+   ],
+   "distribution": "In Mitteleuropa sehr häufig.",
+   "season": {
+    "months": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "text": "Ganzjährig"
+   },
+   "lookalikes": [],
+   "keyFeatures": [
+    "Dünn und bunt gezont",
+    "Samtige Oberfläche",
+    "Weiße Poren"
+   ],
+   "illustration": {
+    "type": "bracket",
+    "cap": "#7a8296",
+    "cap2": "#3e4258",
+    "under": "#f1ece0",
+    "tiers": 4,
+    "zones": true
+   },
+   "sources": [
+    "laux",
+    "gminder",
+    "flueck",
+    "dgfm",
+    "speciesfungorum"
+   ],
+   "updated": "2026-10",
+   "popular": false
+  }
+ ]
+}
