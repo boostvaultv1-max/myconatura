@@ -12,7 +12,8 @@
   },
   "flockenstieliger-hexen-roehrling": {
     "exclude": [
-      "File:Boletus erythropus-Milovy-SněžnéZR-Czech Republic1.jpg"
+      "File:Boletus erythropus-Milovy-SněžnéZR-Czech Republic1.jpg",
+      "File:Boletus erythropus-Milovy-SněžnéZR-Czech Republic2.jpg"
     ]
   },
   "herbsttrompete": {
@@ -23,6 +24,21 @@
   "violetter-roetelritterling": {
     "exclude": [
       "File:Blewits.jpg"
+    ]
+  },
+  "gruener-knollenblaetterpilz": {
+    "exclude": [
+      "File:Amanita phalloides -just emerging.JPG"
+    ]
+  },
+  "fliegenpilz": {
+    "exclude": [
+      "File:2015-09-26-SFERO (Foto Dietrich Michael Weidmann) (20).JPG"
+    ]
+  },
+  "zunderschwamm": {
+    "exclude": [
+      "File:Fomes fomentarius - National Museum of Nature and Science, Tokyo - DSC06757.JPG"
     ]
   }
 }
