@@ -529,3 +529,19 @@ h2 { font-size: 1.15rem; }
 .tabbar a[aria-current="page"] { color: var(--text); }
 .made-by .love { animation: none; color: inherit; }
 .section { margin-top: 32px; }
+
+/* ---------- Pilz-Assistent ---------- */
+.chat { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+.msg { max-width: 92%; padding: 10px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); line-height: 1.5; scroll-margin-top: 80px; }
+.msg p { margin: 0 0 .5em; } .msg p:last-child { margin-bottom: 0; }
+.msg ul { margin: 0 0 .5em; }
+.msg.user { align-self: flex-end; background: var(--text); color: var(--bg); border-color: var(--text); }
+.msg.bot { align-self: flex-start; }
+.msg .notice { margin-bottom: 8px; padding: 10px; }
+.suggestions { margin-bottom: 10px; }
+.chat-input { position: sticky; bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 8px); display: flex; gap: 8px; background: var(--bg); padding: 8px 0; }
+.chat-input .input { flex: 1; }
+.table-wrap { overflow-x: auto; margin: 6px 0; }
+table.cmp { border-collapse: collapse; font-size: .82rem; min-width: 480px; }
+table.cmp th, table.cmp td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
+table.cmp thead th { background: var(--surface-2); }

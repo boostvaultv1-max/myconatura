@@ -13,6 +13,7 @@ Reines HTML, CSS und JavaScript: **kein Framework, kein Build-Schritt, kein Back
 | **Lexikon** | 44 Arten mit Detailseite: Namen, Synonyme, Hut, Lamellen/Röhren, Stiel & Stielbasis, Fleisch, Geruch, Sporenpulver, Lebensraum, Begleitbäume, Verbreitung, Saisonkalender, Essbarkeit, Verwechslungspartner (gefährliche markiert), Unterscheidungsmerkmale, Quellen & Stand |
 | **Suche & Filter** | Live-Suche (deutsch, lateinisch, Synonyme, Lebensraum, Bäume, Farben, Monate); Filter nach Essbarkeit, Unterseite, Hut- und Lamellenfarbe, Lebensraum, Saison; Sortierung |
 | **Bestimmungshilfe** | 13 Schritte (Hutform, Hutfarbe, Lamellen/Röhren, Farbe der Unterseite, Stielfarbe, Stielform, Stielbasis, Ring, Geruch, Sporenpulver, Lebensraum, Begleitbäume, Monat). Zeigt je Kandidat, was passt und was dagegen spricht – **ohne** erfundene Wahrscheinlichkeiten |
+| **Pilz-Assistent** | Beantwortet Fragen offline aus der Datenbank (Essbarkeit, Verwechslungen, Saison, Fundort, Vergleiche, Beschreibung eines Fundes, Notfall). Keine generative KI, keine Verzehrfreigabe. Logik in `src/js/assistant.js` |
 | **Fundbuch** | Funde mit Fotos (automatisch verkleinert), Datum, optionalem Fundort/GPS, Merkmalen, Notizen; bearbeiten, löschen, Favoriten; Export/Import als JSON |
 | **Offline (PWA)** | Service Worker, Manifest, Installation über „Zum Home-Bildschirm“ |
 | **Design** | Mobile-First, Hell/Dunkel/Automatisch, eigenes Logo, barrierearme Bedienung (Fokus, ARIA, Skip-Link, reduzierte Bewegung) |

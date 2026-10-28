@@ -8,6 +8,7 @@ import { buildIndex, runSearch } from './search.js';
 import { STEPS, evaluate, labelFor } from './identify.js';
 import { illustrate, heroArt } from './illustration.js';
 import { DONATION } from './config.js';
+import { answer as assistantAnswer, buildAliases } from './assistant.js';
 
 const APP_VERSION = '1.2.0';
 const $view = document.getElementById('view');
@@ -19,6 +20,8 @@ const state = {
   lex: { q: '', edibility: new Set(), hymenophore: new Set(), capColor: new Set(), underColor: new Set(), habitat: new Set(), month: '', substrate: '', sort: 'name', showFilters: false },
   wizard: { step: 0, answers: {}, done: false },
   pendingFind: null,
+  chat: [],
+  aliases: [],
   draftPhotos: [],
 };
 
@@ -34,6 +37,7 @@ const ICON = {
   mush: '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 32C8 18 19 10 32 10s24 8 24 22c0 2-2 4-4 4H12c-2 0-4-2-4-4Z" fill="currentColor"/><path d="M25 36h14l-2 18c0 2-2 3-5 3s-5-1-5-3Z" fill="currentColor" opacity=".55"/></svg>',
   back: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3" fill="currentColor"/></svg>',
+  chat: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9Z"/></svg>',
 };
 
@@ -206,6 +210,8 @@ function viewHome() {
     <a class="quick" href="#fundbuch"><span class="q-ico">${ICON.book}</span><span><strong>Fundbuch</strong><span>Eigene Funde</span></span></a>
     <a class="quick" href="#favoriten"><span class="q-ico">${ICON.heartO}</span><span><strong>Favoriten</strong><span>${favs.length} gemerkt</span></span></a>
     <a class="quick" href="#sicherheit"><span class="q-ico">${ICON.shield}</span><span><strong>Sicherheit</strong><span>Giftnotruf</span></span></a>
+    <a class="quick" href="#assistent"><span class="q-ico">${ICON.chat}</span><span><strong>Pilz-Assistent</strong><span>Fragen stellen</span></span></a>
+    <a class="quick" href="#lexikon"><span class="q-ico">${ICON.book}</span><span><strong>Lexikon</strong><span>Alle Arten</span></span></a>
   </div>
 
   <section class="section">
@@ -789,6 +795,48 @@ function renderPhotos() {
   });
 }
 
+// ---------------------------------------------------------------- Pilz-Assistent
+const SUGGESTIONS = ['Ist der Perlpilz giftig?', 'Steinpilz oder Gallenröhrling?', 'Was wächst jetzt?', 'Welche tödlichen Pilze gibt es?', 'Pilze unter Buchen im Oktober', 'Brauner Pilz mit Röhren unter Fichten gefunden'];
+
+function viewAssistant() {
+  const html = `
+    <h1>Pilz-Assistent</h1>
+    <p class="muted small">Antwortet offline mit den Angaben aus der MycoNatura-Datenbank. Keine Bestimmung und keine Verzehrfreigabe.</p>
+    <div class="chat" id="chat" aria-live="polite">
+      ${state.chat.length ? '' : `<div class="msg bot">${assistantAnswer('', state.data, state.aliases)}</div>`}
+    </div>
+    <div class="chips suggestions" id="sugg">${SUGGESTIONS.map((t) => `<button type="button" class="chip" data-q="${esc(t)}">${esc(t)}</button>`).join('')}</div>
+    <form class="chat-input" id="chat-form">
+      <label class="visually-hidden" for="chat-q">Frage</label>
+      <input id="chat-q" class="input" maxlength="300" autocomplete="off" placeholder="Frage zu Pilzen stellen …" enterkeyhint="send">
+      <button class="btn" type="submit">Senden</button>
+    </form>`;
+  render(html, 'mehr', 'Pilz-Assistent');
+  const $chat = document.getElementById('chat');
+  const draw = () => {
+    if (!state.chat.length) return;
+    $chat.innerHTML = state.chat.map((m) => m.role === 'user'
+      ? `<div class="msg user">${esc(m.text)}</div>`
+      : `<div class="msg bot">${m.html}</div>`).join('');
+    const last = $chat.lastElementChild;
+    if (last) last.scrollIntoView({ block: 'start' });
+  };
+  const ask = (text) => {
+    const t = text.trim(); if (!t) return;
+    let html;
+    try { html = assistantAnswer(t, state.data, state.aliases); }
+    catch (e) { console.error(e); html = '<p>Da ist etwas schiefgelaufen. Bitte formuliere die Frage anders.</p>'; }
+    state.chat.push({ role: 'user', text: t }, { role: 'bot', html });
+    if (state.chat.length > 60) state.chat.splice(0, state.chat.length - 60);
+    draw();
+  };
+  draw();
+  document.getElementById('chat-form').addEventListener('submit', (e) => {
+    e.preventDefault(); const i = document.getElementById('chat-q'); ask(i.value); i.value = '';
+  });
+  document.getElementById('sugg').addEventListener('click', (e) => { const b = e.target.closest('[data-q]'); if (b) ask(b.dataset.q); });
+}
+
 // ---------------------------------------------------------------- Mehr & Info-Seiten
 async function viewMore() {
   const pref = ls.get('theme', 'system');
@@ -799,6 +847,7 @@ async function viewMore() {
   const html = `
     <h1>Mehr</h1>
     <div class="card menu-list">
+      <a href="#assistent"><span>Pilz-Assistent</span><span class="muted">›</span></a>
       <a href="#favoriten"><span>Favoriten</span><span class="muted">${favorites.all().length} ›</span></a>
       <a href="#sicherheit"><span>Sicherheit &amp; Giftnotruf</span><span class="muted">›</span></a>
       <a href="#installieren"><span>Auf dem iPhone installieren</span><span class="muted">›</span></a>
@@ -927,6 +976,7 @@ function route() {
     if (h.startsWith('fund-bearbeiten-')) return viewFindForm(safeId(h.slice(16)));
     if (h.startsWith('fund-')) return viewFindDetail(safeId(h.slice(5)));
     if (h === 'favoriten') return viewFavorites();
+    if (h === 'assistent') return viewAssistant();
     if (h === 'mehr') return viewMore();
     if (h === 'sicherheit') return viewSafety();
     if (h === 'quellen') return viewSources();
@@ -994,6 +1044,7 @@ async function init() {
   } catch { state.photos = {}; } // Fotos sind optional
   state.byId = new Map(state.data.mushrooms.map((m) => [m.id, m]));
   state.index = buildIndex(state.data.mushrooms);
+  state.aliases = buildAliases(state.data.mushrooms);
   route();
   registerSW();
 }
