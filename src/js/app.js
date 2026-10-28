@@ -203,66 +203,55 @@ function viewHome() {
   const month = new Date().getMonth() + 1;
   const seasonal = all.filter((m) => m.season?.months?.includes(month))
     .sort((a, b) => Number(b.popular) - Number(a.popular) || a.name.localeCompare(b.name, 'de')).slice(0, 12);
-  const popular = all.filter((m) => m.popular);
   const rec = recent.all().map((id) => state.byId.get(id)).filter(Boolean);
   const favs = favorites.all().map((id) => state.byId.get(id)).filter(Boolean);
   const catCount = (k) => all.filter(CATEGORIES[k].test).length;
+  const hero = state.byId.get('fliegenpilz');
+  const heroPhoto = hero && photoOf(hero);
 
   const html = `
-  <section class="hero">
-        <div class="hero-content">
-      <div class="eyebrow">Pilzlexikon für Mitteleuropa</div>
-      <h1>Pilze bestimmen, verstehen und sicher unterscheiden.</h1>
-      <p>${all.length} Arten mit Merkmalen, Verwechslungspartnern und Bestimmungshilfe. Funktioniert auch offline.</p>
+  <section class="hero-photo${heroPhoto ? '' : ' no-photo'}">
+    ${heroPhoto ? `<img src="${esc(heroPhoto.src)}" alt="Fliegenpilz im Herbstlaub" fetchpriority="high">` : ''}
+    <div class="hero-shade"></div>
+    <div class="hero-inner">
+      <a class="hero-tag" href="#pilz-fliegenpilz">Fliegenpilz · giftig</a>
+      <h1>Pilze erkennen.<br>Sicher unterscheiden.</h1>
       <form class="searchbox" id="home-search" role="search">
         <label class="visually-hidden" for="home-q">Pilz suchen</label>
         ${ICON.search}
-        <input id="home-q" type="search" placeholder="Pilz suchen, z. B. Steinpilz, Boletus, Fichte …" autocomplete="off" enterkeyhint="search">
+        <input id="home-q" type="search" placeholder="${all.length} Arten durchsuchen …" autocomplete="off" enterkeyhint="search">
       </form>
     </div>
+    ${heroPhoto ? `<p class="hero-credit">Foto: ${esc(heroPhoto.author)} · ${esc(heroPhoto.license)}</p>` : ''}
   </section>
 
-  <div class="quick-grid">
-    <a class="quick" href="#bestimmen"><span class="q-ico">${ICON.magnify}</span><span><strong>Bestimmen</strong><span>Merkmale wählen</span></span></a>
-    <a class="quick" href="#fundbuch"><span class="q-ico">${ICON.book}</span><span><strong>Fundbuch</strong><span>Eigene Funde</span></span></a>
-    <a class="quick" href="#favoriten"><span class="q-ico">${ICON.heartO}</span><span><strong>Favoriten</strong><span>${favs.length} gemerkt</span></span></a>
-    <a class="quick" href="#sicherheit"><span class="q-ico">${ICON.shield}</span><span><strong>Sicherheit</strong><span>Giftnotruf</span></span></a>
-    <a class="quick" href="#assistent"><span class="q-ico">${ICON.chat}</span><span><strong>Pilz-Assistent</strong><span>Fragen stellen</span></span></a>
-    <a class="quick" href="#wildnis"><span class="q-ico">${ICON.leaf}</span><span><strong>Wildnis</strong><span>Pflanzen &amp; Erste Hilfe</span></span></a>
+  <div class="quick-grid compact">
+    <a class="quick" href="#bestimmen"><span class="q-ico">${ICON.magnify}</span><strong>Bestimmen</strong></a>
+    <a class="quick" href="#assistent"><span class="q-ico">${ICON.chat}</span><strong>Assistent</strong></a>
+    <a class="quick" href="#wildnis"><span class="q-ico">${ICON.leaf}</span><strong>Wildnis</strong></a>
+    <a class="quick" href="#fundbuch"><span class="q-ico">${ICON.book}</span><strong>Fundbuch</strong></a>
   </div>
 
   <section class="section">
-    <div class="section-head"><h2>Jetzt in Saison · ${esc(MONTHS_LONG[month - 1])}</h2><a href="#saison">Alle anzeigen</a></div>
-    ${seasonal.length ? `<div class="hscroll">${seasonal.map(card).join('')}</div>` : emptyState('In diesem Monat sind kaum Arten aus der Datenbank aktiv.')}
+    <div class="section-head"><h2>Jetzt in Saison</h2><a href="#saison">Alle</a></div>
+    ${seasonal.length ? `<div class="hscroll">${seasonal.map(card).join('')}</div>` : ''}
   </section>
 
   <section class="section">
-    <div class="section-head"><h2>Kategorien</h2><a href="#lexikon">Lexikon</a></div>
+    <div class="section-head"><h2>Kategorien</h2></div>
     <div class="cat-grid">
       ${Object.entries(CATEGORIES).map(([k, c]) => `
-        <a class="cat ${c.cls}" href="#kategorie-${k}">
-          <svg class="cat-art" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 32C8 18 19 10 32 10s24 8 24 22c0 2-2 4-4 4H12c-2 0-4-2-4-4Z" fill="#fff" opacity=".16"/><path d="M25 36h14l-2 18c0 2-2 3-5 3s-5-1-5-3Z" fill="#fff" opacity=".12"/></svg>
-          <strong>${esc(c.label)}</strong><span>${catCount(k)} Arten · ${esc(c.desc)}</span>
-        </a>`).join('')}
+        <a class="cat ${c.cls}" href="#kategorie-${k}"><strong>${esc(c.label)}</strong><span>${catCount(k)} Arten</span></a>`).join('')}
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-head"><h2>Beliebte Pilze</h2></div>
-    <div class="hscroll">${popular.map(card).join('')}</div>
-  </section>
+  ${favs.length ? `<section class="section"><div class="section-head"><h2>Favoriten</h2><a href="#favoriten">Alle</a></div>
+    <div class="hscroll">${favs.map(card).join('')}</div></section>` : ''}
 
-  <section class="section">
-    <div class="section-head"><h2>Zuletzt angesehen</h2>${rec.length ? '<button class="btn ghost small" data-action="clear-recent" type="button">Leeren</button>' : ''}</div>
-    ${rec.length ? `<div class="hscroll">${rec.map(card).join('')}</div>` : emptyState('Noch nichts angesehen. Öffne eine Art im <a href="#lexikon">Lexikon</a>.')}
-  </section>
+  ${rec.length ? `<section class="section"><div class="section-head"><h2>Zuletzt angesehen</h2><button class="btn ghost small" data-action="clear-recent" type="button">Leeren</button></div>
+    <div class="hscroll">${rec.map(card).join('')}</div></section>` : ''}
 
-  <section class="section">
-    <div class="section-head"><h2>Deine Favoriten</h2>${favs.length ? '<a href="#favoriten">Alle</a>' : ''}</div>
-    ${favs.length ? `<div class="hscroll">${favs.map(card).join('')}</div>` : emptyState('Tippe auf einer Detailseite auf „Merken“, um Arten hier zu sammeln.')}
-  </section>
-
-  <section class="section">${safetyNotice()}</section>
+  <p class="safety-line"><a href="#sicherheit">Keine Pilze allein nach dieser App essen · Notfall 112</a></p>
   ${donationCard() ? `<div class="section">${donationCard()}</div>` : ''}`;
   render(html, 'start');
 
