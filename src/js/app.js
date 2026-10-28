@@ -144,8 +144,9 @@ function setTab(name) {
   });
 }
 
+const FOOTER = `<footer class="made-by">Made with <span class="love" aria-label="Liebe">♥</span> by Finn</footer>`;
 function render(html, tab, title) {
-  $view.innerHTML = html;
+  $view.innerHTML = html + FOOTER;
   $view.style.animation = 'none'; void $view.offsetWidth; $view.style.animation = '';
   setTab(tab);
   document.title = title ? `${title} – MycoNatura` : 'MycoNatura – Digitales Pilzlexikon';

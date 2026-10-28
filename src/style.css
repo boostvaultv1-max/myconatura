@@ -373,6 +373,11 @@ ul.clean li { margin: 4px 0; }
 .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
 .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; }
 
+/* ---------- Footer ---------- */
+.made-by { text-align: center; font-size: .85rem; color: var(--muted); margin: 32px 0 8px; letter-spacing: .02em; }
+.made-by .love { color: #c0392b; display: inline-block; animation: beat 1.6s ease-in-out infinite; }
+@keyframes beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } }
+
 /* ---------- Spenden ---------- */
 .donate { border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border)); background: linear-gradient(160deg, var(--accent-soft), var(--surface) 70%); }
 .donate h2 { margin-bottom: .3em; }

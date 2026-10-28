@@ -8,7 +8,7 @@
 
 export const DONATION = {
   url: 'https://www.paypal.me/MyCoNature', // z. B. 'https://www.paypal.me/DEINNAME' oder 'https://ko-fi.com/DEINNAME'
-  creator: '',        // z. B. 'Max Mustermann' (optional)
+  creator: 'Finn',      // z. B. 'Max Mustermann' (optional)
   buttonLabel: 'Jetzt spenden',
   text: 'MycoNatura ist kostenlos, werbefrei und sammelt keine Daten. Wenn dir die App gefällt, kannst du die Weiterentwicklung mit einer freiwilligen Spende unterstützen.',
 };

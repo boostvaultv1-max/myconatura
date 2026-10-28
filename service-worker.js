@@ -3,7 +3,7 @@
    Strategie: "Stale-While-Revalidate" – sofort aus dem Cache, im Hintergrund aktualisieren.
    Bei Änderungen an Dateien: CACHE_VERSION erhöhen. */
 
-const APP_VERSION = '1.1.1';
+const APP_VERSION = '1.1.2';
 const PHOTOS_REV = '202610281714'; // wird vom Foto-Workflow automatisch geändert
 const CACHE_VERSION = `myconatura-v${APP_VERSION}-${PHOTOS_REV}`;
 
