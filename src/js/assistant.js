@@ -10,6 +10,7 @@ import { evaluate } from './identify.js';
 const GENERIC = new Set(['gemeiner', 'gemeines', 'echter', 'echte', 'gruener', 'gruene', 'falscher', 'grauer', 'violetter', 'orangefuchsiger',
   'spitzgebuckelter', 'kahler', 'flockenstieliger', 'honiggelber', 'kegelhuetiger', 'spitzkegeliger', 'ziegelroter', 'gruenblaettriger', 'krause',
   'semmel', 'frauen', 'wiesen', 'fichten', 'schopf', 'austern', 'speise', 'riesen', 'karbol', 'tiger', 'mai', 'schmetterlings', 'fruehjahrs', 'pilz',
+  'europaeische', 'gewoehnliches', 'gewoehnlicher', 'gefleckter', 'schwarzer', 'schwarze', 'blauer', 'roter', 'grosse', 'wilde', 'hunds',
   'roehrling', 'weisser', 'brauner', 'roter', 'gelber', 'gemeine', 'nackter', 'rotlicher', 'roetender', 'grosse', 'grosser']);
 
 const MONTH_KEYS = MONTHS_LONG.map((m) => norm(m)); // januar … dezember (maerz)
@@ -27,7 +28,7 @@ const SMELL_ROOTS = { mehl: 'mehlartig', gurke: 'mehlartig', rettich: 'rettich',
   karbol: 'phenol', tinte: 'phenol', phenol: 'phenol', aas: 'unangenehm', stink: 'unangenehm', unangenehm: 'unangenehm', honig: 'suesslich', suess: 'suesslich' };
 
 const has = (q, re) => re.test(q);
-const link = (m) => `<a href="#pilz-${esc(m.id)}">${esc(m.name)}</a>`;
+const link = (m) => `<a href="#${m.type === 'pflanze' ? 'pflanze' : 'pilz'}-${esc(m.id)}">${esc(m.name)}</a>`;
 const badge = (m) => `<span class="badge e-${esc(m.edibility)}">${esc(EDIBILITY[m.edibility]?.label || '')}</span>`;
 const SAFETY = '<p class="small muted">Hinweis: Diese Antwort stammt aus der MycoNatura-Datenbank und ersetzt keine Pilzberatung. Verzehre nie einen Pilz, den nicht geprüfte Pilzsachverständige freigegeben haben.</p>';
 
@@ -166,6 +167,56 @@ function compareAnswer(a, b) {
     ${SAFETY}`;
 }
 
+function plantAnswer(m, q) {
+  const askEdible = has(q, /\b(ess|isst|verzehr|giftig|gift|toedlich|gefaehrlich|kochen|roh|sammeln|pfluecken)/);
+  const askLook = has(q, /(verwechs|aehnlich|doppelgaenger|unterscheid|unterschied|erkenn|merkmal)/);
+  const askSeason = has(q, /\b(wann|saison|monat|jahreszeit|zeit)\b/);
+  const askWhere = has(q, /\b(wo|waechst|wachsen|lebensraum|finde|finden|standort)\b/);
+  const specific = askEdible || askLook || askSeason || askWhere;
+  const out = [`<p><b>${link(m)}</b> <i>(${esc(m.scientific)})</i> ${badge(m)}</p>`];
+  if (!specific) out.push(`<p>${esc(m.description)}</p>`);
+  if (askEdible || !specific) out.push(`<p><b>Essbarkeit:</b> ${esc(m.edibilityNote)}</p>`);
+  if (askSeason) out.push(`<p><b>Saison:</b> ${esc(m.season?.text || 'unbekannt')}.</p>`);
+  if (askWhere) out.push(`<p><b>Lebensraum:</b> ${esc(m.habitat || 'unbekannt')}</p>`);
+  if (askLook || askEdible || !specific) {
+    if (m.features?.length) out.push(`<p><b>Erkennungsmerkmale:</b></p><ul class="clean">${m.features.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>`);
+    if (m.lookalikes?.length) out.push(`<p><b>Verwechslungsgefahr:</b></p><ul class="clean">${m.lookalikes.map((l) => `<li>${l.dangerous ? '⚠️ ' : ''}${l.id ? `<a href="#pflanze-${esc(l.id)}">${esc(l.name)}</a>` : `<b>${esc(l.name)}</b>`}: ${esc(l.note)}</li>`).join('')}</ul>`);
+  }
+  out.push(`<p><a href="#pflanze-${esc(m.id)}">Alle Angaben zu ${esc(m.name)} ansehen →</a></p>`);
+  out.push('<p class="small muted">Nur sammeln und essen, was du zu 100 % sicher bestimmt hast. Im Zweifel stehen lassen.</p>');
+  return out.join('');
+}
+
+function plantCompare(a, b) {
+  const la = (a.lookalikes || []).find((l) => l.id === b.id);
+  const lb = (b.lookalikes || []).find((l) => l.id === a.id);
+  const col = (m) => `<td><ul class="clean">${(m.features || []).map((f) => `<li>${esc(f)}</li>`).join('')}</ul></td>`;
+  return `<p>So unterscheiden sich ${link(a)} ${badge(a)} und ${link(b)} ${badge(b)}:</p>
+    <div class="table-wrap"><table class="cmp"><thead><tr><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead>
+    <tbody><tr>${col(a)}${col(b)}</tr>
+    <tr><td>${esc(a.habitat || '')}</td><td>${esc(b.habitat || '')}</td></tr>
+    <tr><td>${esc(a.season?.text || '')}</td><td>${esc(b.season?.text || '')}</td></tr></tbody></table></div>
+    ${la ? `<p><b>Wichtig:</b> ${esc(la.note)}</p>` : ''}${lb ? `<p><b>Wichtig:</b> ${esc(lb.note)}</p>` : ''}
+    <p class="small muted">Nur sammeln, was du zu 100 % sicher bestimmt hast.</p>`;
+}
+
+function guideAnswer(g) {
+  return `<p><b>${esc(g.title)}</b></p><p>${esc(g.summary)}</p>
+    <ol class="steps">${g.steps.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>
+    ${g.warnings?.length ? `<p><b>Wichtig:</b> ${g.warnings.map(esc).join(' ')}</p>` : ''}
+    <p><a href="#ratgeber-${esc(g.id)}">Ratgeber öffnen →</a> · Im Notfall: <b>112</b></p>`;
+}
+
+function findGuide(q, guides) {
+  const words = q.split(' ');
+  let best = null; let bestScore = 0;
+  for (const g of guides || []) {
+    const score = g.tags.reduce((n, t) => n + (words.some((w) => w.startsWith(t) || (t.length > 5 && w.includes(t))) ? 1 : 0), 0);
+    if (score > bestScore) { best = g; bestScore = score; }
+  }
+  return best;
+}
+
 function emergencyAnswer() {
   return `<div class="notice danger card"><strong>Bei Verdacht auf eine Pilzvergiftung sofort handeln:</strong>
     <ul class="clean"><li>Notruf <b>112</b> wählen oder den Giftnotruf deiner Region anrufen (z. B. Berlin 030 19240, München 089 19240; Österreich +43 1 406 43 43; Schweiz 145).</li>
@@ -183,14 +234,16 @@ function helpAnswer() {
       <li>„Welche Pilze wachsen im Oktober unter Buchen?“</li>
       <li>„Welche tödlichen Pilze gibt es?“</li>
       <li>„Ich habe einen braunen Pilz mit Röhren unter Fichten gefunden“</li>
+      <li>„Bärlauch oder Maiglöckchen?“ · „Welche Beeren sind giftig?“</li>
+      <li>„Wie entferne ich eine Zecke?“ · „Ich habe mich verlaufen“ · „Wasser trinkbar machen“</li>
     </ul>
-    <p class="small muted">Ich bin keine KI im eigentlichen Sinn und kenne nur die ${'{{count}}'} Arten der Datenbank.</p>`;
+    <p class="small muted">Ich bin keine KI im eigentlichen Sinn und antworte nur mit Inhalten aus MycoNatura (${'{{count}}'} Pilzarten, Wildpflanzen und Ratgeber).</p>`;
 }
 
 /**
  * @returns {string} HTML-Antwort (alle Inhalte escaped)
  */
-export function answer(question, data, aliasIndex) {
+export function answer(question, data, aliasIndex, wild = null) {
   const raw = String(question || '').slice(0, 500);
   const q = norm(raw);
   const all = data.mushrooms;
@@ -207,7 +260,34 @@ export function answer(question, data, aliasIndex) {
     return helpAnswer().replace('{{count}}', all.length);
   }
 
-  const species = findSpecies(q, aliasIndex);
+  const plants = wild ? findSpecies(q, wild.plantAliases) : [];
+  const isPlantTopic = has(q, /(pflanze|kraut|kraeuter|beere|wildpflanz|wildkraut|blaetter|blatt|bluete|strauch)/);
+
+  // Pflanzen
+  if (plants.length >= 2 && has(q, /(unterscheid|unterschied|vergleich|verwechs| oder | vs |und)/)) return plantCompare(plants[0], plants[1]);
+  if (plants.length === 1) return plantAnswer(plants[0], q);
+  if (plants.length > 1) return `<p>Dazu passen mehrere Pflanzen:</p><ul class="clean">${plants.map((m) => `<li>${link(m)} ${badge(m)}</li>`).join('')}</ul>`;
+
+  // Ratgeber (Erste Hilfe, Orientierung, Wasser …)
+  const species0 = findSpecies(q, aliasIndex);
+  const guide = wild && !species0.length ? findGuide(q, wild.guides) : null;
+  if (guide && !(isPlantTopic && has(q, /\b(welche|liste|alle|essbar|giftig)/))) return guideAnswer(guide);
+
+  // Pflanzen-Listen
+  if (wild && isPlantTopic && !species0.length) {
+    let list = wild.plants;
+    const d = [];
+    if (has(q, /toedlich/)) { list = list.filter((m) => m.edibility === 'toedlich'); d.push('tödlich giftig'); }
+    else if (has(q, /\b(giftig|gift)/)) { list = list.filter((m) => m.edibility === 'giftig' || m.edibility === 'toedlich'); d.push('giftig'); }
+    else if (has(q, /\b(essbar|essen|sammeln|lecker)/)) { list = list.filter((m) => m.edibility === 'essbar' || m.edibility === 'bedingt'); d.push('essbar oder bedingt essbar'); }
+    if (has(q, /beere/)) { list = list.filter((m) => m.group === 'Beeren & Nüsse' || /beere/i.test((m.features || []).join(' ') + m.description)); d.push('mit Beeren'); }
+    const mo = parseMonth(q);
+    if (mo) { list = list.filter((m) => m.season?.months?.includes(mo)); d.push(`Saison im ${MONTHS_LONG[mo - 1]}`); }
+    return listAnswer(`${list.length} Wildpflanzen${d.length ? ': ' + esc(d.join(', ')) : ''}.`, list,
+      '<p class="small muted">Nur sammeln und essen, was du zu 100 % sicher bestimmt hast.</p>');
+  }
+
+  const species = species0;
 
   // 3) Vergleich zweier Arten
   if (species.length >= 2 && has(q, /(unterscheid|unterschied|vergleich|verwechs| oder | vs |und)/)) {

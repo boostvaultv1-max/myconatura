@@ -32,6 +32,7 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "src", "data", "mushrooms.json")
+WILD = os.path.join(ROOT, "src", "data", "wildnis.json")
 OUT_JSON = os.path.join(ROOT, "src", "data", "photos.json")
 OUT_DIR = os.path.join(ROOT, "assets", "photos")
 OVERRIDES = os.path.join(ROOT, "tools", "photo-overrides.json")
@@ -40,7 +41,7 @@ UA = "MycoNatura/1.1 (freies Offline-Pilzlexikon; Foto-Abruf mit Lizenzangaben)"
 WIDTH = 1200
 
 ALLOWED = re.compile(r"^(cc0|public domain|pd\b|pd-|cc[ -]by(-sa)?[ -]?\d|cc[ -]by(-sa)?$)", re.I)
-BAD_TITLE = re.compile(r"micro|spore|basidi|cystid|drawing|illustration|plate|map|stamp|herbar|briefmarke|\.svg|\.tif|diagram|zeichnung|mikroskop|x400|x1000", re.I)
+BAD_TITLE = re.compile(r"herbarium|illustration|köhler|koehler|thomé|thome|flora von deutschland|micro|spore|basidi|cystid|drawing|illustration|plate|map|stamp|herbar|briefmarke|\.svg|\.tif|diagram|zeichnung|mikroskop|x400|x1000", re.I)
 
 
 def _open(url, timeout):
@@ -130,7 +131,7 @@ def find_photo(m, override):
         data = get_json({"action": "query", "titles": override, **IIPROP})
         cands = [c for c in candidates_from_pages(data.get("query", {}).get("pages")) if ALLOWED.search(c["license"] or "")]
         return cands[0] if cands else None
-    names = [m["scientific"]] + [s for s in m.get("synonyms", []) if re.fullmatch(r"[A-Z][a-z]+ [a-z-]+", s)]
+    names = [m["scientific"].replace(" agg.", "").replace(" sect. ", " sect. ")] + [s for s in m.get("synonyms", []) if re.fullmatch(r"[A-Z][a-z]+ [a-z-]+", s)]
     for name in names:
         data = get_json({"action": "query", "generator": "categorymembers", "gcmtitle": "Category:" + name,
                          "gcmtype": "file", "gcmlimit": "50", **IIPROP})
@@ -147,6 +148,9 @@ def find_photo(m, override):
 def main(argv):
     with open(DATA, encoding="utf-8") as f:
         species = json.load(f)["mushrooms"]
+    if os.path.exists(WILD):  # Wildpflanzen bekommen ebenfalls Fotos
+        with open(WILD, encoding="utf-8") as f:
+            species += json.load(f).get("plants", [])
     overrides = {}
     if os.path.exists(OVERRIDES):
         with open(OVERRIDES, encoding="utf-8") as f:

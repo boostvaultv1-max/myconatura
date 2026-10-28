@@ -545,3 +545,7 @@ h2 { font-size: 1.15rem; }
 table.cmp { border-collapse: collapse; font-size: .82rem; min-width: 480px; }
 table.cmp th, table.cmp td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; }
 table.cmp thead th { background: var(--surface-2); }
+
+/* ---------- Wildnis-Ratgeber ---------- */
+ol.steps { margin: 0; padding-left: 1.3em; }
+ol.steps li { margin: 8px 0; padding-left: 4px; }

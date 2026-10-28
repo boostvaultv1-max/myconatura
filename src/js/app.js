@@ -16,6 +16,9 @@ const state = {
   data: null,
   photos: {},
   byId: new Map(),
+  wild: null,
+  plantById: new Map(),
+  plantAliases: [],
   index: [],
   lex: { q: '', edibility: new Set(), hymenophore: new Set(), capColor: new Set(), underColor: new Set(), habitat: new Set(), month: '', substrate: '', sort: 'name', showFilters: false },
   wizard: { step: 0, answers: {}, done: false },
@@ -38,6 +41,7 @@ const ICON = {
   back: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3" fill="currentColor"/></svg>',
   chat: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  leaf: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15Z"/><path d="M5 19 13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9Z"/></svg>',
 };
 
@@ -94,11 +98,24 @@ function photoOf(m) {
 function picture(m, { title = true, eager = false } = {}) {
   const p = photoOf(m);
   if (p) return `<img src="${esc(p.src)}" alt="${title ? 'Foto: ' + esc(m.name) : ''}" ${eager ? '' : 'loading="lazy"'} decoding="async" data-mid="${esc(m.id)}">`;
-  return illustrate(m, { title });
+  return m.type === 'pflanze' ? plantArt(m) : illustrate(m, { title });
 }
+/** Schlichte Platzhaltergrafik für Pflanzen ohne Foto (eigene Grafik). */
+function plantArt(m) {
+  const toxic = m.edibility === 'giftig' || m.edibility === 'toedlich';
+  const leaf = toxic ? '#7d8c6a' : '#5f8a52';
+  return `<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img"><title>${esc(m.name)}</title>
+    <rect width="400" height="300" fill="#eef0ea"/>
+    <path d="M200 270 C 200 200, 200 150, 200 70" stroke="#4f6b45" stroke-width="5" fill="none"/>
+    <path d="M200 200 C 150 190, 120 150, 125 120 C 165 125, 195 160, 200 200 Z" fill="${leaf}"/>
+    <path d="M200 160 C 250 150, 280 110, 275 80 C 235 85, 205 120, 200 160 Z" fill="${leaf}"/>
+    <path d="M200 120 C 170 110, 160 80, 165 60 C 190 66, 200 90, 200 120 Z" fill="${leaf}" opacity=".85"/>
+    <rect y="268" width="400" height="32" fill="#d9ddd2"/></svg>`;
+}
+function itemById(id) { return state.byId.get(id) || state.plantById.get(id); }
 function photoCredit(m) {
   const p = photoOf(m);
-  if (!p) return 'Schematische Illustration (eigene Grafik) – kein Foto, nicht zur Bestimmung geeignet.';
+  if (!p) return m.type === 'pflanze' ? 'Platzhaltergrafik – noch kein Foto vorhanden.' : 'Schematische Illustration (eigene Grafik) – kein Foto, nicht zur Bestimmung geeignet.';
   const lic = p.licenseUrl && /^https:\/\//.test(p.licenseUrl) ? `<a href="${esc(p.licenseUrl)}" target="_blank" rel="noopener">${esc(p.license)}</a>` : esc(p.license);
   const src = p.sourceUrl && /^https:\/\//.test(p.sourceUrl) ? ` · <a href="${esc(p.sourceUrl)}" target="_blank" rel="noopener">Wikimedia Commons</a>` : '';
   return `Foto: ${esc(p.author)} · ${lic}${src}`;
@@ -116,7 +133,7 @@ function donationCard() {
 
 function card(m) {
   const fav = favorites.has(m.id);
-  return `<a class="m-card" href="#pilz-${esc(m.id)}">
+  return `<a class="m-card" href="#${m.type === 'pflanze' ? 'pflanze' : 'pilz'}-${esc(m.id)}">
     <div class="m-img">${picture(m, { title: false })}</div>
     ${fav ? `<span class="fav-dot" aria-label="Favorit">${ICON.heart}</span>` : ''}
     <div class="m-body">
@@ -211,7 +228,7 @@ function viewHome() {
     <a class="quick" href="#favoriten"><span class="q-ico">${ICON.heartO}</span><span><strong>Favoriten</strong><span>${favs.length} gemerkt</span></span></a>
     <a class="quick" href="#sicherheit"><span class="q-ico">${ICON.shield}</span><span><strong>Sicherheit</strong><span>Giftnotruf</span></span></a>
     <a class="quick" href="#assistent"><span class="q-ico">${ICON.chat}</span><span><strong>Pilz-Assistent</strong><span>Fragen stellen</span></span></a>
-    <a class="quick" href="#lexikon"><span class="q-ico">${ICON.book}</span><span><strong>Lexikon</strong><span>Alle Arten</span></span></a>
+    <a class="quick" href="#wildnis"><span class="q-ico">${ICON.leaf}</span><span><strong>Wildnis</strong><span>Pflanzen &amp; Erste Hilfe</span></span></a>
   </div>
 
   <section class="section">
@@ -796,19 +813,20 @@ function renderPhotos() {
 }
 
 // ---------------------------------------------------------------- Pilz-Assistent
-const SUGGESTIONS = ['Ist der Perlpilz giftig?', 'Steinpilz oder Gallenröhrling?', 'Was wächst jetzt?', 'Welche tödlichen Pilze gibt es?', 'Pilze unter Buchen im Oktober', 'Brauner Pilz mit Röhren unter Fichten gefunden'];
+const SUGGESTIONS = ['Ist der Perlpilz giftig?', 'Steinpilz oder Gallenröhrling?', 'Was wächst jetzt?', 'Bärlauch oder Maiglöckchen?', 'Zecke entfernen', 'Ich habe mich verlaufen', 'Welche Beeren sind giftig?'];
+const wildCtx = () => (state.wild ? { plants: state.wild.plants, guides: state.wild.guides, plantAliases: state.plantAliases } : null);
 
 function viewAssistant() {
   const html = `
-    <h1>Pilz-Assistent</h1>
-    <p class="muted small">Antwortet offline mit den Angaben aus der MycoNatura-Datenbank. Keine Bestimmung und keine Verzehrfreigabe.</p>
+    <h1>Assistent</h1>
+    <p class="muted small">Antwortet offline zu Pilzen, Wildpflanzen und Sicherheit in der Natur – nur mit geprüften Inhalten aus MycoNatura. Keine Bestimmung, keine Verzehrfreigabe. Im Notfall: 112.</p>
     <div class="chat" id="chat" aria-live="polite">
-      ${state.chat.length ? '' : `<div class="msg bot">${assistantAnswer('', state.data, state.aliases)}</div>`}
+      ${state.chat.length ? '' : `<div class="msg bot">${assistantAnswer('', state.data, state.aliases, wildCtx())}</div>`}
     </div>
     <div class="chips suggestions" id="sugg">${SUGGESTIONS.map((t) => `<button type="button" class="chip" data-q="${esc(t)}">${esc(t)}</button>`).join('')}</div>
     <form class="chat-input" id="chat-form">
       <label class="visually-hidden" for="chat-q">Frage</label>
-      <input id="chat-q" class="input" maxlength="300" autocomplete="off" placeholder="Frage zu Pilzen stellen …" enterkeyhint="send">
+      <input id="chat-q" class="input" maxlength="300" autocomplete="off" placeholder="Frage zu Pilzen, Pflanzen oder Erster Hilfe …" enterkeyhint="send">
       <button class="btn" type="submit">Senden</button>
     </form>`;
   render(html, 'mehr', 'Pilz-Assistent');
@@ -824,7 +842,7 @@ function viewAssistant() {
   const ask = (text) => {
     const t = text.trim(); if (!t) return;
     let html;
-    try { html = assistantAnswer(t, state.data, state.aliases); }
+    try { html = assistantAnswer(t, state.data, state.aliases, wildCtx()); }
     catch (e) { console.error(e); html = '<p>Da ist etwas schiefgelaufen. Bitte formuliere die Frage anders.</p>'; }
     state.chat.push({ role: 'user', text: t }, { role: 'bot', html });
     if (state.chat.length > 60) state.chat.splice(0, state.chat.length - 60);
@@ -848,6 +866,7 @@ async function viewMore() {
     <h1>Mehr</h1>
     <div class="card menu-list">
       <a href="#assistent"><span>Pilz-Assistent</span><span class="muted">›</span></a>
+      <a href="#wildnis"><span>Wildnis: Pflanzen &amp; Erste Hilfe</span><span class="muted">›</span></a>
       <a href="#favoriten"><span>Favoriten</span><span class="muted">${favorites.all().length} ›</span></a>
       <a href="#sicherheit"><span>Sicherheit &amp; Giftnotruf</span><span class="muted">›</span></a>
       <a href="#installieren"><span>Auf dem iPhone installieren</span><span class="muted">›</span></a>
@@ -957,6 +976,81 @@ function viewAbout() {
     </div>${donationCard() ? `<div class="section">${donationCard()}</div>` : ''}</div>`, 'mehr', 'Über');
 }
 
+// ---------------------------------------------------------------- Wildnis
+function viewWildnis() {
+  if (!state.wild) { viewNotFound('Der Wildnis-Bereich konnte nicht geladen werden.'); return; }
+  const P = state.wild.plants;
+  const edible = P.filter((p) => p.edibility === 'essbar' || p.edibility === 'bedingt');
+  const toxic = P.filter((p) => p.edibility === 'giftig' || p.edibility === 'toedlich');
+  const html = `
+    <h1>Wildnis</h1>
+    <p class="muted">Wildpflanzen und ihre giftigen Doppelgänger, Erste Hilfe und Sicherheit draußen – alles offline verfügbar.</p>
+    <div class="card notice danger"><strong>Notfall: 112</strong>Die Inhalte ersetzen keinen Erste-Hilfe-Kurs und keine fachkundige Bestimmung. <a href="#ratgeber-notruf">So setzt du einen Notruf ab →</a></div>
+    <section class="section"><div class="section-head"><h2>Erste Hilfe &amp; Sicherheit</h2></div>
+      <div class="card menu-list">${state.wild.guides.map((g) => `<a href="#ratgeber-${esc(g.id)}"><span>${esc(g.title)}</span><span class="muted">›</span></a>`).join('')}</div>
+    </section>
+    <section class="section"><div class="section-head"><h2>Essbare Wildpflanzen</h2><span class="muted small">${edible.length}</span></div>
+      <div class="grid">${edible.map(card).join('')}</div></section>
+    <section class="section"><div class="section-head"><h2>Giftpflanzen</h2><span class="muted small">${toxic.length}</span></div>
+      <div class="grid">${toxic.map(card).join('')}</div></section>
+    <p class="small muted" style="margin-top:20px">${esc(state.wild.meta.disclaimer)}</p>`;
+  render(html, 'mehr', 'Wildnis');
+}
+
+function viewPlant(id) {
+  const m = state.plantById.get(id);
+  if (!m) { viewNotFound('Diese Pflanze gibt es nicht.'); return; }
+  const dangerous = m.edibility === 'giftig' || m.edibility === 'toedlich';
+  const src = (m.sources || []).map((k) => state.wild.sources[k]).filter(Boolean);
+  const html = `
+  <p><a href="#wildnis" class="btn ghost small">${ICON.back} Wildnis</a></p>
+  <div class="detail-layout">
+    <div class="detail-hero">
+      <div class="d-img">${picture(m, { eager: true })}</div>
+      <p class="img-caption">${photoCredit(m)}</p>
+      <div class="d-head"><h1>${esc(m.name)}</h1><p class="d-sci">${esc(m.scientific)}</p>${badge(m)}
+        <p style="margin-top:12px">${esc(m.description)}</p></div>
+    </div>
+    <div class="facts">
+      <div class="card notice ${dangerous ? 'danger' : m.edibility === 'bedingt' ? 'warn' : ''}"><strong>${esc(EDIBILITY[m.edibility]?.label || '')}</strong>${esc(m.edibilityNote)}</div>
+      <section class="card fact-sec"><h2>Steckbrief</h2><dl class="fact-list">
+        ${fact('Wissenschaftlicher Name', `<i>${esc(m.scientific)}</i>`)}
+        ${fact('Weitere Namen', orUnknown(m.synonyms))}
+        ${fact('Familie', textOr(m.family))}
+        ${m.parts && m.parts !== '–' ? fact('Verwendbare Teile', esc(m.parts)) : ''}
+        ${fact('Lebensraum', textOr(m.habitat))}
+        ${fact('Saison', `${textOr(m.season?.text)}${monthsBar(m.season?.months)}`)}
+      </dl></section>
+      <section class="card fact-sec"><h2>Erkennungsmerkmale</h2><ul class="clean">${(m.features || []).map((f) => `<li>${esc(f)}</li>`).join('')}</ul></section>
+      <section class="card fact-sec"><h2>Verwechslungen</h2>
+        ${m.lookalikes?.length ? m.lookalikes.map((l) => {
+          const t = l.id && state.plantById.get(l.id);
+          return `<div class="look ${l.dangerous ? 'dangerous' : ''}"><span class="l-ico" aria-hidden="true">${l.dangerous ? '!' : '≈'}</span>
+            <div>${t ? `<a href="#pflanze-${esc(t.id)}">${esc(l.name)}</a>` : `<strong>${esc(l.name)}</strong>`}${l.dangerous ? ' <span class="badge e-toedlich">Gefährlich</span>' : ''}
+            <div class="small">${esc(l.note)}</div></div></div>`;
+        }).join('') : '<p class="muted">Keine nennenswerten Verwechslungen hinterlegt.</p>'}
+      </section>
+      <section class="card fact-sec"><h2>Quellen &amp; Stand</h2>
+        <ul class="clean small">${src.map((x) => `<li>${esc(x.title)}${x.url ? ` – <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.url.replace('https://', ''))}</a>` : ''}</li>`).join('')}</ul>
+        <p class="small muted" style="margin-top:8px">Stand: ${esc(m.updated)}. ${esc(state.wild.meta.sourceNote)}</p></section>
+    </div>
+  </div>`;
+  render(html, 'mehr', m.name);
+}
+
+function viewGuide(id) {
+  const g = state.wild?.guides.find((x) => x.id === id);
+  if (!g) { viewNotFound('Diesen Ratgeber gibt es nicht.'); return; }
+  const src = (g.sources || []).map((k) => state.wild.sources[k]).filter(Boolean);
+  render(`<p><a href="#wildnis" class="btn ghost small">${ICON.back} Wildnis</a></p>
+    <div class="prose"><h1>${esc(g.title)}</h1>
+    <p class="muted">${esc(g.summary)}</p>
+    <section class="card section"><ol class="steps">${g.steps.map((x) => `<li>${esc(x)}</li>`).join('')}</ol></section>
+    ${g.warnings?.length ? `<div class="card notice warn section"><strong>Wichtig</strong><ul class="clean">${g.warnings.map((w) => `<li>${esc(w)}</li>`).join('')}</ul></div>` : ''}
+    <div class="card notice danger section"><strong>Notfall: 112</strong>Bei Lebensgefahr sofort den Notruf wählen.</div>
+    <p class="small muted section">Quellen: ${src.map((x) => esc(x.title)).join('; ')}. ${esc(state.wild.meta.sourceNote)}</p></div>`, 'mehr', g.title);
+}
+
 function viewNotFound(msg = 'Diese Seite gibt es nicht.') {
   render(`<h1>Nicht gefunden</h1>${emptyState(esc(msg), '<a class="btn" href="#start">Zur Startseite</a>')}`, '', 'Nicht gefunden');
 }
@@ -977,6 +1071,9 @@ function route() {
     if (h.startsWith('fund-')) return viewFindDetail(safeId(h.slice(5)));
     if (h === 'favoriten') return viewFavorites();
     if (h === 'assistent') return viewAssistant();
+    if (h === 'wildnis') return viewWildnis();
+    if (h.startsWith('pflanze-')) return viewPlant(safeId(h.slice(8)));
+    if (h.startsWith('ratgeber-')) return viewGuide(safeId(h.slice(9)));
     if (h === 'mehr') return viewMore();
     if (h === 'sicherheit') return viewSafety();
     if (h === 'quellen') return viewSources();
@@ -1009,10 +1106,10 @@ $view.addEventListener('click', (e) => {
 document.addEventListener('error', (e) => {
   const img = e.target;
   if (img?.tagName !== 'IMG' || !img.dataset.mid) return;
-  const m = state.byId.get(img.dataset.mid);
+  const m = itemById(img.dataset.mid);
   if (!m) return;
   const t = document.createElement('template');
-  t.innerHTML = illustrate(m);
+  t.innerHTML = m.type === 'pflanze' ? plantArt(m) : illustrate(m);
   img.replaceWith(t.content.firstElementChild);
 }, true);
 
@@ -1045,6 +1142,16 @@ async function init() {
   state.byId = new Map(state.data.mushrooms.map((m) => [m.id, m]));
   state.index = buildIndex(state.data.mushrooms);
   state.aliases = buildAliases(state.data.mushrooms);
+  try {
+    const r = await fetch('src/data/wildnis.json', { cache: 'no-cache' });
+    if (r.ok) {
+      const w = await r.json();
+      w.plants.forEach((x) => { x.type = 'pflanze'; });
+      state.wild = w;
+      state.plantById = new Map(w.plants.map((x) => [x.id, x]));
+      state.plantAliases = buildAliases(w.plants);
+    }
+  } catch (e) { console.warn('[MycoNatura] Wildnis-Daten nicht verfügbar', e); }
   route();
   registerSW();
 }

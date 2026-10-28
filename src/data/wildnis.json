@@ -1,0 +1,1607 @@
+{
+ "meta": {
+  "version": "1.0.0",
+  "updated": "2026-10",
+  "disclaimer": "Die Wildnis-Inhalte fassen allgemein anerkanntes Wissen zusammen und ersetzen weder einen Erste-Hilfe-Kurs noch fachkundige Bestimmung oder ärztliche Hilfe. Im Notfall: 112.",
+  "sourceNote": "Die genannten Stellen sind Referenzen zum Nachprüfen; die Angaben wurden nicht Satz für Satz gegen sie abgeglichen."
+ },
+ "sources": {
+  "bfr": {
+   "title": "Bundesinstitut für Risikobewertung (BfR) – Informationen zu Giftpflanzen und Vergiftungen",
+   "url": "https://www.bfr.bund.de"
+  },
+  "giz": {
+   "title": "Giftinformationszentren (GIZ) in Deutschland, Österreich und der Schweiz",
+   "url": null
+  },
+  "flora": {
+   "title": "Botanische Standardliteratur für Mitteleuropa (z. B. Rothmaler – Exkursionsflora von Deutschland)",
+   "url": null
+  },
+  "drk": {
+   "title": "Deutsches Rotes Kreuz – Erste-Hilfe-Informationen",
+   "url": "https://www.drk.de"
+  },
+  "rki": {
+   "title": "Robert Koch-Institut – Zecken, FSME, Borreliose",
+   "url": "https://www.rki.de"
+  },
+  "bnatschg": {
+   "title": "Bundesnaturschutzgesetz § 39",
+   "url": "https://www.gesetze-im-internet.de/bnatschg_2009/__39.html"
+  }
+ },
+ "plants": [
+  {
+   "id": "baerlauch",
+   "name": "Bärlauch",
+   "scientific": "Allium ursinum",
+   "family": "Amaryllidaceae (Amaryllisgewächse)",
+   "synonyms": [
+    "Wilder Knoblauch",
+    "Waldknoblauch"
+   ],
+   "edibility": "essbar",
+   "group": "Kräuter",
+   "edibilityNote": "Blätter roh oder gegart essbar. Nur sammeln, wenn jedes Blatt sicher bestimmt ist – Verwechslungen mit Maiglöckchen und Herbstzeitlose führen jedes Jahr zu schweren Vergiftungen.",
+   "description": "Frühjahrspflanze feuchter Laubwälder mit weichen, lanzettlichen Blättern und intensivem Knoblauchgeruch. Bildet oft große, dichte Bestände.",
+   "features": [
+    "Blätter einzeln gestielt, jedes Blatt kommt mit eigenem Stiel aus dem Boden",
+    "Blattunterseite matt, Blatt weich und dünn",
+    "Beim Zerreiben deutlicher Knoblauchgeruch",
+    "Weiße, sternförmige Blüten in einer Dolde (April–Mai)"
+   ],
+   "parts": "Blätter (vor der Blüte am mildesten), Knospen, Blüten",
+   "season": {
+    "months": [
+     3,
+     4,
+     5
+    ],
+    "text": "März bis Mai"
+   },
+   "habitat": "Feuchte, nährstoffreiche Laub- und Auwälder, oft in großen Teppichen.",
+   "lookalikes": [
+    {
+     "id": "maigloeckchen",
+     "name": "Maiglöckchen",
+     "dangerous": true,
+     "note": "Meist zwei Blätter, die sich am Grund umfassen; Blattunterseite glänzend; kein Knoblauchgeruch."
+    },
+    {
+     "id": "herbstzeitlose",
+     "name": "Herbstzeitlose",
+     "dangerous": true,
+     "note": "Blätter ohne Stiel, fest und glänzend, wachsen büschelig aus einem Punkt; kein Geruch; tödlich giftig."
+    },
+    {
+     "id": "aronstab",
+     "name": "Aronstab",
+     "dangerous": true,
+     "note": "Pfeilförmige, netzaderige Blätter."
+    }
+   ],
+   "keyFeatures": [
+    "Jedes Blatt einzeln gestielt",
+    "Knoblauchgeruch – aber Vorsicht: Der Geruch bleibt an den Fingern und täuscht beim nächsten Blatt",
+    "Matte Blattunterseite"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "brennnessel",
+   "name": "Große Brennnessel",
+   "scientific": "Urtica dioica",
+   "family": "Urticaceae (Brennnesselgewächse)",
+   "synonyms": [
+    "Brennnessel"
+   ],
+   "edibility": "essbar",
+   "group": "Kräuter",
+   "edibilityNote": "Junge Blätter und Triebspitzen gegart (Brennhaare werden unschädlich) oder roh, wenn sie zuvor gewalzt/zerdrückt wurden. Samen essbar.",
+   "description": "Häufige Staude mit gesägten, gegenständigen Blättern und Brennhaaren, die bei Berührung brennen.",
+   "features": [
+    "Vierkantiger Stängel",
+    "Gegenständige, eiförmig-zugespitzte, grob gesägte Blätter",
+    "Brennhaare an Blättern und Stängel",
+    "Unscheinbare, hängende grünliche Blütenrispen"
+   ],
+   "parts": "Junge Blätter und Triebspitzen, Samen",
+   "season": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Junge Triebe März bis Juni, Samen Spätsommer"
+   },
+   "habitat": "Stickstoffreiche Standorte: Waldränder, Wegränder, Gärten, Auwälder.",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Taubnesseln (Lamium spp.)",
+     "dangerous": false,
+     "note": "Ohne Brennhaare, mit auffälligen Lippenblüten; ebenfalls essbar."
+    }
+   ],
+   "keyFeatures": [
+    "Brennhaare",
+    "Vierkantiger Stängel",
+    "Gesägte, gegenständige Blätter"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "loewenzahn",
+   "name": "Gewöhnlicher Löwenzahn",
+   "scientific": "Taraxacum sect. Ruderalia",
+   "family": "Asteraceae (Korbblütler)",
+   "synonyms": [
+    "Löwenzahn",
+    "Pusteblume",
+    "Kuhblume"
+   ],
+   "edibility": "essbar",
+   "group": "Kräuter",
+   "edibilityNote": "Blätter (jung milder), Blüten und Wurzeln essbar. Der Milchsaft kann bei empfindlichen Personen Haut reizen.",
+   "description": "Allgegenwärtige Rosettenpflanze mit tief gezähnten Blättern, gelben Korbblüten und kugeligem Samenstand (Pusteblume).",
+   "features": [
+    "Grundständige Blattrosette, Blätter tief und unregelmäßig gezähnt",
+    "Hohler, unverzweigter Blütenstiel mit weißem Milchsaft",
+    "Eine gelbe Blüte pro Stiel"
+   ],
+   "parts": "Blätter, Blüten, Wurzel",
+   "season": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Blätter März bis Oktober, Hauptblüte April/Mai"
+   },
+   "habitat": "Wiesen, Wegränder, Rasen, Äcker.",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Ferkelkraut, Pippau und andere gelbe Korbblütler",
+     "dangerous": false,
+     "note": "Oft verzweigte oder behaarte Stängel; gelten als harmlos."
+    }
+   ],
+   "keyFeatures": [
+    "Hohler Stiel mit Milchsaft",
+    "Eine Blüte pro Stiel",
+    "Tief gezähnte Rosettenblätter"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "giersch",
+   "name": "Giersch",
+   "scientific": "Aegopodium podagraria",
+   "family": "Apiaceae (Doldenblütler)",
+   "synonyms": [
+    "Geißfuß",
+    "Zipperleinskraut"
+   ],
+   "edibility": "bedingt",
+   "group": "Kräuter",
+   "edibilityNote": "Junge Blätter roh oder gegart essbar. Als Doldenblütler gibt es tödlich giftige Doppelgänger – nur sammeln, wenn alle Merkmale eindeutig passen.",
+   "description": "Weit verbreitete, oft lästige Gartenpflanze mit dreizählig gegliederten Blättern und weißen Dolden.",
+   "features": [
+    "„3-3-3-Regel“: dreikantiger Blattstiel, Blatt in 3 Abschnitte geteilt, jeder Abschnitt nochmals 3-teilig",
+    "Blattstiel mit Rinne",
+    "Riecht beim Zerreiben petersilien-/möhrenartig",
+    "Weiße Dolden ohne Hüllblätter (Mai–Juli)"
+   ],
+   "parts": "Junge Blätter",
+   "season": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Blätter März bis September, am besten jung im Frühjahr"
+   },
+   "habitat": "Gärten, Hecken, Waldränder, Auwälder, schattige feuchte Stellen.",
+   "lookalikes": [
+    {
+     "id": "gefleckter-schierling",
+     "name": "Gefleckter Schierling",
+     "dangerous": true,
+     "note": "Stängel rot gefleckt, bereift; Geruch nach Mäuseurin; Blätter fein gefiedert; tödlich giftig."
+    },
+    {
+     "id": "hundspetersilie",
+     "name": "Hundspetersilie",
+     "dangerous": true,
+     "note": "Fein zerteilte, glänzende Blätter; unangenehmer Geruch; giftig."
+    }
+   ],
+   "keyFeatures": [
+    "3-3-3-Regel",
+    "Dreikantiger Stiel",
+    "Würziger Petersiliengeruch"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "wilde-moehre",
+   "name": "Wilde Möhre",
+   "scientific": "Daucus carota",
+   "family": "Apiaceae (Doldenblütler)",
+   "synonyms": [
+    "Möhre (Wildform)"
+   ],
+   "edibility": "bedingt",
+   "group": "Kräuter",
+   "edibilityNote": "Wurzel, Blätter und Samen essbar – aber nur für sehr Erfahrene: Verwechslungen mit dem tödlich giftigen Gefleckten Schierling sind lebensgefährlich.",
+   "description": "Zweijähriger Doldenblütler magerer Wiesen mit borstig behaartem Stängel und weißer Dolde, oft mit einer dunkelroten Einzelblüte in der Mitte.",
+   "features": [
+    "Stängel borstig behaart (nicht kahl!)",
+    "Riecht beim Zerreiben deutlich nach Möhre",
+    "Weiße Dolde, oft mit dunkler „Mohrenblüte“ in der Mitte",
+    "Fruchtstand zieht sich vogelnestartig zusammen",
+    "Auffällige, fiedrig geteilte Hüllblätter unter der Dolde"
+   ],
+   "parts": "Wurzel (jung), Blätter, Samen als Gewürz",
+   "season": {
+    "months": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Blüte Juni bis September; Wurzel im ersten Jahr"
+   },
+   "habitat": "Magerwiesen, Wegränder, Brachen, trockene, sonnige Standorte.",
+   "lookalikes": [
+    {
+     "id": "gefleckter-schierling",
+     "name": "Gefleckter Schierling",
+     "dangerous": true,
+     "note": "Stängel kahl, bläulich bereift und rot gefleckt; Geruch nach Mäuseurin; tödlich giftig."
+    },
+    {
+     "id": "hundspetersilie",
+     "name": "Hundspetersilie",
+     "dangerous": true,
+     "note": "Kahl, glänzende Blätter, lange herabhängende Hüllchenblätter; giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Borstig behaarter Stängel",
+    "Möhrengeruch",
+    "Dunkle Mittelblüte (nicht immer vorhanden)"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "heidelbeere",
+   "name": "Heidelbeere",
+   "scientific": "Vaccinium myrtillus",
+   "family": "Ericaceae (Heidekrautgewächse)",
+   "synonyms": [
+    "Blaubeere",
+    "Schwarzbeere"
+   ],
+   "edibility": "essbar",
+   "group": "Beeren & Nüsse",
+   "edibilityNote": "Beeren roh oder gegart essbar. Bodennahe Beeren gründlich waschen; Erhitzen über 60 °C tötet mögliche Fuchsbandwurm-Eier sicher ab (Risiko gilt als gering).",
+   "description": "Niedriger Zwergstrauch saurer Wälder mit blau bereiften Beeren, deren Fruchtfleisch blau-violett färbt.",
+   "features": [
+    "Zwergstrauch, 20–50 cm hoch",
+    "Grüne, kantige Zweige",
+    "Beeren einzeln, blau bereift, mit kleinem „Krönchen“ (Kelchrest) oben",
+    "Fruchtfleisch dunkel violett"
+   ],
+   "parts": "Beeren",
+   "season": {
+    "months": [
+     7,
+     8,
+     9
+    ],
+    "text": "Juli bis September"
+   },
+   "habitat": "Saure Nadel- und Mischwälder, Heiden, Moore.",
+   "lookalikes": [
+    {
+     "id": "tollkirsche",
+     "name": "Tollkirsche",
+     "dangerous": true,
+     "note": "Strauch 1–2 m hoch; Beeren glänzend schwarz (nicht bereift) und sitzen auf einem fünfzipfligen grünen Kelchstern; tödlich giftig."
+    },
+    {
+     "id": null,
+     "name": "Rauschbeere (Vaccinium uliginosum)",
+     "dangerous": false,
+     "note": "Blaugrüne, ganzrandige Blätter, helles Fruchtfleisch; kann in Mengen Beschwerden verursachen."
+    }
+   ],
+   "keyFeatures": [
+    "Kniehoher Zwergstrauch",
+    "Bereifte Beeren mit Krönchen",
+    "Färbendes Fruchtfleisch"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "schwarzer-holunder",
+   "name": "Schwarzer Holunder",
+   "scientific": "Sambucus nigra",
+   "family": "Viburnaceae (Moschuskrautgewächse)",
+   "synonyms": [
+    "Holunder",
+    "Holler",
+    "Fliederbeere"
+   ],
+   "edibility": "bedingt",
+   "group": "Beeren & Nüsse",
+   "edibilityNote": "Beeren nur reif und gekocht essbar – roh oder unreif verursachen sie Übelkeit und Erbrechen. Blüten gegart oder als Sirup. Stiele, Blätter und unreife Beeren nicht verwenden.",
+   "description": "Großer Strauch mit weißen, flachen Blütenschirmen im Frühsommer und hängenden, schwarzvioletten Beerendolden im Spätsommer.",
+   "features": [
+    "Strauch oder kleiner Baum, 3–7 m",
+    "Gefiederte Blätter, meist 5 Teilblättchen",
+    "Weißes Mark in den Zweigen",
+    "Beerendolden hängen nach unten"
+   ],
+   "parts": "Blüten, reife Beeren (nur gekocht)",
+   "season": {
+    "months": [
+     5,
+     6,
+     8,
+     9,
+     10
+    ],
+    "text": "Blüte Mai/Juni, Beeren August bis Oktober"
+   },
+   "habitat": "Waldränder, Hecken, Auwälder, Siedlungsnähe, stickstoffreiche Böden.",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Zwerg-Holunder / Attich (Sambucus ebulus)",
+     "dangerous": true,
+     "note": "Krautig, nur bis ca. 2 m, Fruchtdolden stehen aufrecht; giftig."
+    },
+    {
+     "id": null,
+     "name": "Roter Holunder (Sambucus racemosa)",
+     "dangerous": true,
+     "note": "Rote Beeren in Rispen; Kerne giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Holziger Strauch",
+    "Hängende Fruchtdolden",
+    "Weißes Mark"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "brombeere",
+   "name": "Echte Brombeere",
+   "scientific": "Rubus fruticosus agg.",
+   "family": "Rosaceae (Rosengewächse)",
+   "synonyms": [
+    "Brombeere"
+   ],
+   "edibility": "essbar",
+   "group": "Beeren & Nüsse",
+   "edibilityNote": "Reife Beeren roh essbar; junge Blätter als Tee. Bodennahe Früchte waschen.",
+   "description": "Stachelige, rankende Sträucher mit schwarzen Sammelsteinfrüchten. Die Sammelart umfasst viele schwer unterscheidbare Kleinarten – alle sind essbar.",
+   "features": [
+    "Stachelige, bogige Triebe",
+    "3- bis 5-zählige Blätter",
+    "Frucht löst sich zusammen mit dem Zapfen (anders als bei der Himbeere)"
+   ],
+   "parts": "Beeren, junge Blätter",
+   "season": {
+    "months": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juli bis Oktober"
+   },
+   "habitat": "Waldränder, Lichtungen, Hecken, Brachen.",
+   "lookalikes": [],
+   "keyFeatures": [
+    "Schwarze Sammelfrucht",
+    "Stachelige Ranken"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "himbeere",
+   "name": "Himbeere",
+   "scientific": "Rubus idaeus",
+   "family": "Rosaceae (Rosengewächse)",
+   "synonyms": [
+    "Waldhimbeere"
+   ],
+   "edibility": "essbar",
+   "group": "Beeren & Nüsse",
+   "edibilityNote": "Reife Beeren roh essbar; Blätter als Tee.",
+   "description": "Aufrechte, fein bestachelte Ruten mit roten Sammelfrüchten, die sich hohl vom Fruchtboden lösen.",
+   "features": [
+    "Aufrechte, fein stachelige Ruten",
+    "Blätter unterseits weißfilzig",
+    "Frucht löst sich hohl (Zapfen bleibt an der Pflanze)"
+   ],
+   "parts": "Beeren, Blätter",
+   "season": {
+    "months": [
+     6,
+     7,
+     8
+    ],
+    "text": "Juni bis August"
+   },
+   "habitat": "Waldlichtungen, Kahlschläge, Waldränder.",
+   "lookalikes": [],
+   "keyFeatures": [
+    "Rote, hohle Sammelfrucht",
+    "Weißfilzige Blattunterseite"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "walderdbeere",
+   "name": "Wald-Erdbeere",
+   "scientific": "Fragaria vesca",
+   "family": "Rosaceae (Rosengewächse)",
+   "synonyms": [
+    "Walderdbeere"
+   ],
+   "edibility": "essbar",
+   "group": "Beeren & Nüsse",
+   "edibilityNote": "Früchte roh essbar, Blätter als Tee. Bodennahe Früchte waschen.",
+   "description": "Kleine Staude mit dreizähligen Blättern, weißen Blüten und kleinen, aromatischen roten Früchten.",
+   "features": [
+    "Dreizählige, gesägte Blätter",
+    "Weiße, fünfzählige Blüten",
+    "Ausläufer",
+    "Kleine rote Früchte mit außen sitzenden Nüsschen"
+   ],
+   "parts": "Früchte, Blätter",
+   "season": {
+    "months": [
+     5,
+     6,
+     7,
+     8
+    ],
+    "text": "Mai bis August"
+   },
+   "habitat": "Waldränder, Lichtungen, Wegränder.",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Indische Scheinerdbeere (Potentilla indica)",
+     "dangerous": false,
+     "note": "Gelbe Blüten, fade Früchte; gilt als ungiftig."
+    }
+   ],
+   "keyFeatures": [
+    "Dreizählige Blätter",
+    "Weiße Blüten",
+    "Aromatische Früchte"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "haselnuss",
+   "name": "Gemeine Hasel",
+   "scientific": "Corylus avellana",
+   "family": "Betulaceae (Birkengewächse)",
+   "synonyms": [
+    "Haselnuss",
+    "Haselstrauch"
+   ],
+   "edibility": "essbar",
+   "group": "Beeren & Nüsse",
+   "edibilityNote": "Reife Nüsse roh oder geröstet essbar. Vorsicht bei Nussallergie.",
+   "description": "Vielstämmiger Strauch mit rundlichen, doppelt gesägten Blättern; im Spätwinter hängende gelbe Kätzchen, im Herbst Nüsse in grüner Hülle.",
+   "features": [
+    "Vielstämmiger Strauch, 2–6 m",
+    "Rundliche, behaarte, doppelt gesägte Blätter",
+    "Nüsse in zerschlitzter Hülle, oft zu 2–4"
+   ],
+   "parts": "Nüsse",
+   "season": {
+    "months": [
+     8,
+     9,
+     10
+    ],
+    "text": "Nüsse August bis Oktober"
+   },
+   "habitat": "Waldränder, Hecken, lichte Wälder.",
+   "lookalikes": [],
+   "keyFeatures": [
+    "Nuss in grüner Hülle",
+    "Rundliche Blätter"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "hagebutte",
+   "name": "Hunds-Rose (Hagebutte)",
+   "scientific": "Rosa canina",
+   "family": "Rosaceae (Rosengewächse)",
+   "synonyms": [
+    "Hagebutte",
+    "Heckenrose"
+   ],
+   "edibility": "bedingt",
+   "group": "Beeren & Nüsse",
+   "edibilityNote": "Fruchtfleisch essbar (Mus, Tee). Die Kerne sind mit feinen Härchen besetzt, die Haut und Schleimhäute reizen – vorher entfernen.",
+   "description": "Kletternder Wildrosenstrauch mit rosa Blüten und leuchtend roten, länglichen Hagebutten im Herbst.",
+   "features": [
+    "Bogige Triebe mit hakigen Stacheln",
+    "Gefiederte Blätter mit 5–7 Blättchen",
+    "Rote, eiförmige Früchte"
+   ],
+   "parts": "Fruchtfleisch der Hagebutten",
+   "season": {
+    "months": [
+     9,
+     10,
+     11
+    ],
+    "text": "September bis November (nach Frost weicher)"
+   },
+   "habitat": "Hecken, Waldränder, Wegränder.",
+   "lookalikes": [
+    {
+     "id": "pfaffenhuetchen",
+     "name": "Pfaffenhütchen",
+     "dangerous": true,
+     "note": "Rosa-rote, vierlappige Kapseln mit orangem Samenmantel; giftig."
+    }
+   ],
+   "keyFeatures": [
+    "Hakenstacheln",
+    "Längliche rote Hagebutten"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "maigloeckchen",
+   "name": "Maiglöckchen",
+   "scientific": "Convallaria majalis",
+   "family": "Asparagaceae (Spargelgewächse)",
+   "synonyms": [],
+   "edibility": "giftig",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Giftig (herzwirksame Glykoside): Übelkeit, Herzrhythmusstörungen. Alle Pflanzenteile, auch die roten Beeren.",
+   "description": "Frühjahrsblüher lichter Laubwälder mit zwei breiten Blättern und weißen, duftenden Glöckchenblüten; im Spätsommer rote Beeren.",
+   "features": [
+    "Meist zwei Blätter, die am Grund ineinander gerollt sind (umfassen sich)",
+    "Blattunterseite glänzend",
+    "Kein Knoblauchgeruch",
+    "Weiße, nickende Glöckchen ab Mai"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Blätter ab April, Blüte Mai/Juni, Beeren Spätsommer"
+   },
+   "habitat": "Lichte Laubwälder, oft neben Bärlauch.",
+   "lookalikes": [
+    {
+     "id": "baerlauch",
+     "name": "Bärlauch",
+     "dangerous": false,
+     "note": "Jedes Blatt einzeln gestielt, matte Unterseite, Knoblauchgeruch."
+    }
+   ],
+   "keyFeatures": [
+    "Zwei Blätter umfassen sich",
+    "Glänzende Blattunterseite",
+    "Geruchlos"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "herbstzeitlose",
+   "name": "Herbstzeitlose",
+   "scientific": "Colchicum autumnale",
+   "family": "Colchicaceae (Zeitlosengewächse)",
+   "synonyms": [],
+   "edibility": "toedlich",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Tödlich giftig (Colchicin). Schon wenige Blätter können tödlich sein; Symptome oft erst nach Stunden. Einer der häufigsten Gründe für Verwechslungen beim Bärlauchsammeln.",
+   "description": "Wiesenpflanze, die im Herbst blattlos lila-rosa blüht und im Frühjahr tulpenähnliche, glänzende Blätter mit Fruchtkapsel treibt.",
+   "features": [
+    "Blätter im Frühjahr, ohne Stiel, fest, glänzend, büschelig aus einem Punkt",
+    "In der Blattmitte oft eine grüne Fruchtkapsel",
+    "Lila Blüten im Herbst ohne Blätter",
+    "Kein Geruch"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     3,
+     4,
+     5,
+     8,
+     9,
+     10
+    ],
+    "text": "Blätter Frühjahr, Blüte August bis Oktober"
+   },
+   "habitat": "Feuchte Wiesen, Auwiesen, lichte Auwälder.",
+   "lookalikes": [
+    {
+     "id": "baerlauch",
+     "name": "Bärlauch",
+     "dangerous": false,
+     "note": "Einzeln gestielte, weiche Blätter mit Knoblauchgeruch."
+    }
+   ],
+   "keyFeatures": [
+    "Stiellose, glänzende Blätter im Büschel",
+    "Herbstblüte ohne Blätter",
+    "Geruchlos"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "aronstab",
+   "name": "Gefleckter Aronstab",
+   "scientific": "Arum maculatum",
+   "family": "Araceae (Aronstabgewächse)",
+   "synonyms": [
+    "Aronstab"
+   ],
+   "edibility": "giftig",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Giftig: Scharfstoffe reizen Mund und Rachen stark; die roten Beeren sind für Kinder gefährlich.",
+   "description": "Schattenpflanze mit pfeilförmigen, oft dunkel gefleckten Blättern, einer tütenförmigen Blüte und später einem Kolben aus roten Beeren.",
+   "features": [
+    "Pfeil- oder spießförmige Blätter",
+    "Netzartige Blattadern (nicht parallel)",
+    "Tütenförmiges Hochblatt mit Kolben",
+    "Im Sommer Kolben mit roten Beeren"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Blätter ab März, Beeren Juli bis September"
+   },
+   "habitat": "Feuchte, schattige Laub- und Auwälder.",
+   "lookalikes": [
+    {
+     "id": "baerlauch",
+     "name": "Bärlauch",
+     "dangerous": false,
+     "note": "Lanzettliche Blätter mit parallelen Nerven, Knoblauchgeruch."
+    }
+   ],
+   "keyFeatures": [
+    "Pfeilform",
+    "Netzaderung",
+    "Rote Beerenkolben"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "gefleckter-schierling",
+   "name": "Gefleckter Schierling",
+   "scientific": "Conium maculatum",
+   "family": "Apiaceae (Doldenblütler)",
+   "synonyms": [
+    "Schierling"
+   ],
+   "edibility": "toedlich",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Tödlich giftig (Coniin): Lähmungen bis zur Atemlähmung. Alle Teile giftig.",
+   "description": "Hoher Doldenblütler (bis 2 m) mit kahlem, bläulich bereiftem, rot gefleckten Stängel und unangenehmem Geruch.",
+   "features": [
+    "Stängel kahl, bläulich bereift, unten rotbraun gefleckt",
+    "Beim Zerreiben Geruch nach Mäuseurin",
+    "Fein gefiederte, petersilienähnliche Blätter",
+    "Weiße Dolden Juni bis September"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Mai bis September"
+   },
+   "habitat": "Wegränder, Schuttplätze, Ufer, Brachen.",
+   "lookalikes": [
+    {
+     "id": "wilde-moehre",
+     "name": "Wilde Möhre",
+     "dangerous": false,
+     "note": "Borstig behaarter Stängel, Möhrengeruch."
+    },
+    {
+     "id": "giersch",
+     "name": "Giersch",
+     "dangerous": false,
+     "note": "Dreizählig geteilte Blätter, dreikantiger Stiel."
+    }
+   ],
+   "keyFeatures": [
+    "Rot gefleckter, kahler Stängel",
+    "Mäuseuringeruch"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "wasserschierling",
+   "name": "Wasserschierling",
+   "scientific": "Cicuta virosa",
+   "family": "Apiaceae (Doldenblütler)",
+   "synonyms": [
+    "Giftwüterich"
+   ],
+   "edibility": "toedlich",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Tödlich giftig (Cicutoxin): Krampfanfälle; besonders der Wurzelstock.",
+   "description": "Doldenblütler an Gewässern mit dickem, innen quer gekammertem Wurzelstock.",
+   "features": [
+    "Wächst am oder im Wasser",
+    "Wurzelstock knollig, im Längsschnitt mit Querkammern",
+    "Doppelt bis dreifach gefiederte Blätter mit schmalen Abschnitten"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Blüte Juli bis September"
+   },
+   "habitat": "Ufer, Gräben, Sümpfe, Verlandungszonen.",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Wasser-Doldenblütler allgemein",
+     "dangerous": true,
+     "note": "An Gewässern keine Doldenblütler sammeln."
+    }
+   ],
+   "keyFeatures": [
+    "Am Wasser",
+    "Gekammerter Wurzelstock"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "hundspetersilie",
+   "name": "Hundspetersilie",
+   "scientific": "Aethusa cynapium",
+   "family": "Apiaceae (Doldenblütler)",
+   "synonyms": [
+    "Gartenschierling"
+   ],
+   "edibility": "giftig",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Giftig (u. a. Polyine): Magen-Darm-Beschwerden, Krämpfe.",
+   "description": "Petersilienähnlicher Doldenblütler in Gärten und auf Äckern.",
+   "features": [
+    "Blätter unterseits glänzend",
+    "Unangenehmer, knoblauchartiger Geruch beim Zerreiben",
+    "Lange, nach unten hängende Hüllchenblätter an der Außenseite der Döldchen („Bart“)"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Juni bis Oktober"
+   },
+   "habitat": "Gärten, Äcker, Wegränder.",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Glatte Petersilie",
+     "dangerous": false,
+     "note": "Typischer Petersiliengeruch, keine herabhängenden Hüllchenblätter."
+    }
+   ],
+   "keyFeatures": [
+    "Herabhängende Hüllchenblätter",
+    "Unangenehmer Geruch"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "tollkirsche",
+   "name": "Schwarze Tollkirsche",
+   "scientific": "Atropa belladonna",
+   "family": "Solanaceae (Nachtschattengewächse)",
+   "synonyms": [
+    "Tollkirsche",
+    "Belladonna"
+   ],
+   "edibility": "toedlich",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Tödlich giftig (Atropin, Scopolamin): Pupillenerweiterung, Herzrasen, Verwirrtheit, Halluzinationen. Für Kinder können wenige Beeren tödlich sein.",
+   "description": "Hohe Staude (1–2 m) von Waldlichtungen mit braunvioletten Glockenblüten und glänzend schwarzen, kirschgroßen Beeren.",
+   "features": [
+    "Staude 1–2 m hoch (keine Zwergpflanze)",
+    "Beeren glänzend schwarz, nicht bereift, einzeln",
+    "Beere sitzt auf einem auffälligen, fünfzipfligen grünen Kelch",
+    "Glockige, braunviolette Blüten"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "text": "Blüte Juni/Juli, Beeren August bis Oktober"
+   },
+   "habitat": "Waldlichtungen, Kahlschläge, Waldwege, Kalkböden.",
+   "lookalikes": [
+    {
+     "id": "heidelbeere",
+     "name": "Heidelbeere",
+     "dangerous": false,
+     "note": "Zwergstrauch, bereifte blaue Beeren mit Krönchen, färbendes Fruchtfleisch."
+    }
+   ],
+   "keyFeatures": [
+    "Mannshohe Staude",
+    "Glänzend schwarze Beere auf Kelchstern"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "eibe",
+   "name": "Europäische Eibe",
+   "scientific": "Taxus baccata",
+   "family": "Taxaceae (Eibengewächse)",
+   "synonyms": [
+    "Eibe"
+   ],
+   "edibility": "toedlich",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Tödlich giftig (Taxine): Nadeln, Rinde und Samen. Nur der rote Samenmantel ist ungiftig – der Samen darin aber giftig; daher nichts davon essen.",
+   "description": "Immergrüner Nadelbaum oder Strauch mit weichen, flachen Nadeln und roten, becherförmigen Samenmänteln.",
+   "features": [
+    "Flache, weiche Nadeln, unterseits hellgrün, ohne weiße Streifen",
+    "Rote, becherförmige Samenmäntel mit dunklem Samen",
+    "Rotbraune, schuppige Rinde"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "text": "Ganzjährig; Samenmäntel August bis Oktober"
+   },
+   "habitat": "Wälder, Parks, Gärten, Hecken (oft gepflanzt).",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Tanne",
+     "dangerous": false,
+     "note": "Nadeln mit zwei weißen Streifen unterseits, aufrechte Zapfen."
+    }
+   ],
+   "keyFeatures": [
+    "Rote Samenbecher",
+    "Weiche, flache Nadeln"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "riesen-baerenklau",
+   "name": "Riesen-Bärenklau",
+   "scientific": "Heracleum mantegazzianum",
+   "family": "Apiaceae (Doldenblütler)",
+   "synonyms": [
+    "Herkulesstaude"
+   ],
+   "edibility": "giftig",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Hautkontakt plus Sonnenlicht verursacht schwere, verbrennungsartige Hautschäden (phototoxisch). Nicht berühren; betroffene Haut sofort waschen und vor Sonne schützen.",
+   "description": "Riesiger Doldenblütler (2–4 m) mit bis zu 50 cm breiten Dolden und rot gefleckten, dicken Stängeln.",
+   "features": [
+    "2–4 m hoch",
+    "Dicker, hohler, rot gefleckter Stängel",
+    "Riesige, tief eingeschnittene Blätter",
+    "Weiße Dolden bis 50 cm"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Mai bis September"
+   },
+   "habitat": "Bach- und Flussufer, Wegränder, Brachen.",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Wiesen-Bärenklau (Heracleum sphondylium)",
+     "dangerous": false,
+     "note": "Deutlich kleiner (bis 1,5 m); auch hier Hautreizungen möglich."
+    }
+   ],
+   "keyFeatures": [
+    "Riesenwuchs",
+    "Rot gefleckter Stängel",
+    "Nicht berühren"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "eisenhut",
+   "name": "Blauer Eisenhut",
+   "scientific": "Aconitum napellus",
+   "family": "Ranunculaceae (Hahnenfußgewächse)",
+   "synonyms": [
+    "Eisenhut"
+   ],
+   "edibility": "toedlich",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Gilt als giftigste Pflanze Europas (Aconitin). Schon Hautkontakt kann Beschwerden auslösen – nicht anfassen.",
+   "description": "Staude feuchter Bergwiesen und Bachufer mit tief handförmig geteilten Blättern und dunkelblauen, helmförmigen Blüten.",
+   "features": [
+    "Dunkelblaue, helmförmige Blüten in Trauben",
+    "Handförmig tief geteilte Blätter",
+    "0,5–1,5 m hoch"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "text": "Blüte Juni bis September"
+   },
+   "habitat": "Feuchte Bergwiesen, Hochstaudenfluren, Bachufer, Gärten.",
+   "lookalikes": [],
+   "keyFeatures": [
+    "Blaue Helmblüten",
+    "Handförmige Blätter"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "fingerhut",
+   "name": "Roter Fingerhut",
+   "scientific": "Digitalis purpurea",
+   "family": "Plantaginaceae (Wegerichgewächse)",
+   "synonyms": [
+    "Fingerhut"
+   ],
+   "edibility": "toedlich",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Tödlich giftig (Herzglykoside): Herzrhythmusstörungen. Die Blattrosette im ersten Jahr wird mitunter mit Beinwell oder anderen Wildkräutern verwechselt.",
+   "description": "Zweijährige Pflanze von Kahlschlägen mit einer Rosette behaarter Blätter im ersten Jahr und hohen Blütenständen purpurner Glocken im zweiten Jahr.",
+   "features": [
+    "Erstes Jahr: Rosette weich behaarter, runzeliger Blätter",
+    "Zweites Jahr: 1–2 m hohe Ähre mit purpurnen, innen gefleckten Röhrenblüten",
+    "Blüten einseitig hängend"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     5,
+     6,
+     7,
+     8
+    ],
+    "text": "Rosette ganzjährig, Blüte Juni bis August"
+   },
+   "habitat": "Kahlschläge, Waldlichtungen, saure Böden.",
+   "lookalikes": [
+    {
+     "id": null,
+     "name": "Beinwell (Symphytum officinale)",
+     "dangerous": true,
+     "note": "Ähnliche raue Blätter; Beinwell selbst ist wegen Pyrrolizidinalkaloiden ebenfalls nicht zum Essen geeignet."
+    }
+   ],
+   "keyFeatures": [
+    "Purpurne Glockenähren",
+    "Weich behaarte Rosette"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  },
+  {
+   "id": "pfaffenhuetchen",
+   "name": "Gewöhnliches Pfaffenhütchen",
+   "scientific": "Euonymus europaeus",
+   "family": "Celastraceae (Spindelbaumgewächse)",
+   "synonyms": [
+    "Pfaffenhütchen",
+    "Spindelstrauch"
+   ],
+   "edibility": "giftig",
+   "group": "Giftpflanzen",
+   "edibilityNote": "Giftig: Früchte und Samen verursachen Magen-Darm- und Kreislaufbeschwerden.",
+   "description": "Strauch mit auffälligen rosa-roten, vierlappigen Kapselfrüchten, aus denen orange umhüllte Samen hängen.",
+   "features": [
+    "Rosa-rote, vierlappige Kapseln (Form eines Priesterhuts)",
+    "Samen mit orangem Samenmantel",
+    "Junge Zweige vierkantig mit Korkleisten"
+   ],
+   "parts": "–",
+   "season": {
+    "months": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "text": "Früchte August bis November"
+   },
+   "habitat": "Hecken, Waldränder, Auwälder.",
+   "lookalikes": [
+    {
+     "id": "hagebutte",
+     "name": "Hagebutte",
+     "dangerous": false,
+     "note": "Längliche, glatte rote Früchte an stacheligen Rosen."
+    }
+   ],
+   "keyFeatures": [
+    "Vierlappige rosa Kapseln",
+    "Orange Samen"
+   ],
+   "sources": [
+    "bfr",
+    "giz",
+    "flora"
+   ],
+   "updated": "2026-10",
+   "type": "pflanze"
+  }
+ ],
+ "guides": [
+  {
+   "id": "notruf",
+   "title": "Notruf & Rettung im Wald",
+   "icon": "!",
+   "tags": [
+    "notruf",
+    "112",
+    "rettung",
+    "hilfe",
+    "verletzt",
+    "unfall",
+    "notfall",
+    "rettungspunkt",
+    "standort"
+   ],
+   "summary": "Im Notfall zählt jede Minute. In ganz Europa erreichst du die Rettung unter 112 – auch ohne Guthaben.",
+   "steps": [
+    "112 wählen (EU-weit, auch ohne SIM-Guthaben möglich).",
+    "Melden: Wo ist es passiert? Was ist passiert? Wie viele Verletzte? Welche Verletzungen? – Dann auf Rückfragen warten, nicht selbst auflegen.",
+    "Standort genau beschreiben: Wegname, Ortsnähe, Koordinaten aus der Karten-App. In vielen Wäldern gibt es nummerierte Rettungspunkte-Schilder – die Nummer durchgeben.",
+    "Auf dem iPhone: Notruf SOS (Seitentaste und eine Lautstärketaste gedrückt halten) ruft den Notruf und informiert anschließend deine Notfallkontakte mit Standort.",
+    "Verletzte warm halten, beruhigen, nicht allein lassen; Rettungskräfte einweisen, wenn möglich."
+   ],
+   "warnings": [
+    "Akku sparen: Displayhelligkeit herunterregeln und unnötige Apps schließen, damit du erreichbar bleibst."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "zecken",
+   "title": "Zecken richtig entfernen",
+   "icon": "Z",
+   "tags": [
+    "zecke",
+    "zecken",
+    "fsme",
+    "borreliose",
+    "wanderroete",
+    "biss",
+    "stich"
+   ],
+   "summary": "Zecken können Borreliose und FSME übertragen. Je schneller eine Zecke entfernt wird, desto geringer das Borreliose-Risiko.",
+   "steps": [
+    "Nach jedem Waldaufenthalt den ganzen Körper absuchen (Kniekehlen, Leiste, Achseln, Haaransatz).",
+    "Zecke mit Pinzette, Zeckenkarte oder -zange direkt über der Haut greifen und langsam gerade herausziehen.",
+    "Nicht quetschen, nicht mit Öl oder Klebstoff beträufeln.",
+    "Stichstelle desinfizieren und das Datum notieren.",
+    "Die Stelle mehrere Wochen beobachten."
+   ],
+   "warnings": [
+    "Ringförmige, sich ausbreitende Rötung (Wanderröte) oder grippeähnliche Beschwerden nach einem Zeckenstich: ärztlich abklären lassen.",
+    "FSME-Impfung für Risikogebiete beim Hausarzt erfragen."
+   ],
+   "sources": [
+    "rki",
+    "drk"
+   ]
+  },
+  {
+   "id": "insektenstich",
+   "title": "Insektenstiche & allergische Reaktion",
+   "icon": "W",
+   "tags": [
+    "wespe",
+    "biene",
+    "stich",
+    "allergie",
+    "allergisch",
+    "anaphylaxie",
+    "schwellung",
+    "hornisse"
+   ],
+   "summary": "Die meisten Stiche sind harmlos. Gefährlich sind Stiche im Mund-/Rachenraum und allergische Reaktionen.",
+   "steps": [
+    "Bienenstachel sofort herauskratzen (nicht drücken).",
+    "Stichstelle kühlen.",
+    "Bei Stich in Mund oder Rachen: Eis lutschen bzw. kühlen und sofort 112 rufen.",
+    "Bei Atemnot, Schwindel, Ausschlag am ganzen Körper oder Kreislaufproblemen: sofort 112 – Verdacht auf allergischen Schock. Ein vorhandenes Notfallset (Adrenalin-Autoinjektor) nach Anleitung anwenden."
+   ],
+   "warnings": [
+    "Allergiker sollten ihr Notfallset immer dabeihaben."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "kreuzotter",
+   "title": "Schlangenbiss (Kreuzotter)",
+   "icon": "S",
+   "tags": [
+    "schlange",
+    "kreuzotter",
+    "otter",
+    "biss",
+    "viper",
+    "aspisviper"
+   ],
+   "summary": "Bisse der Kreuzotter sind selten und für gesunde Erwachsene meist nicht lebensbedrohlich, müssen aber ärztlich behandelt werden.",
+   "steps": [
+    "Ruhe bewahren, Abstand zur Schlange.",
+    "Betroffene Gliedmaße ruhigstellen, Schmuck und enge Kleidung entfernen (Schwellung).",
+    "112 rufen oder zügig – ohne Anstrengung – ärztliche Hilfe aufsuchen.",
+    "Nicht aussaugen, nicht einschneiden, nicht abbinden, nicht kühlen mit Eis."
+   ],
+   "warnings": [
+    "Kinder, ältere und vorerkrankte Menschen besonders schnell versorgen."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "wunden",
+   "title": "Wunden & starke Blutungen",
+   "icon": "+",
+   "tags": [
+    "wunde",
+    "blutung",
+    "blutet",
+    "schnitt",
+    "verband",
+    "druckverband",
+    "verletzung"
+   ],
+   "summary": "Kleine Wunden reinigen und abdecken; starke Blutungen sofort mit Druck stoppen.",
+   "steps": [
+    "Kleine Wunden mit sauberem Wasser ausspülen und steril abdecken.",
+    "Starke Blutung: Verletzten hinlegen, direkten Druck auf die Wunde ausüben, Druckverband anlegen.",
+    "Verletzte Gliedmaße hochlagern, 112 rufen.",
+    "Fremdkörper in tiefen Wunden stecken lassen und umpolstern."
+   ],
+   "warnings": [
+    "Tetanus-Impfschutz prüfen (Auffrischung alle 10 Jahre)."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "unterkuehlung",
+   "title": "Unterkühlung",
+   "icon": "K",
+   "tags": [
+    "kalt",
+    "kaelte",
+    "unterkuehlung",
+    "frieren",
+    "zittern",
+    "nass",
+    "hypothermie"
+   ],
+   "summary": "Nässe und Wind kühlen den Körper auch bei Plusgraden schnell aus.",
+   "steps": [
+    "Windgeschützten Ort suchen, nasse Kleidung gegen trockene tauschen.",
+    "Körper mit Decken/Rettungsdecke einpacken, Kopf bedecken.",
+    "Bei klarem Bewusstsein warme, gezuckerte Getränke geben (kein Alkohol).",
+    "Arme und Beine nicht reiben oder massieren; Betroffene möglichst wenig bewegen.",
+    "Bei Verwirrtheit, aufhörendem Zittern oder Bewusstseinsstörung: 112."
+   ],
+   "warnings": [
+    "Immer eine Rettungsdecke und eine trockene Zusatzschicht mitnehmen."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "orientierung",
+   "title": "Orientierung ohne Netz",
+   "icon": "N",
+   "tags": [
+    "verlaufen",
+    "orientierung",
+    "weg",
+    "kompass",
+    "karte",
+    "norden",
+    "himmelsrichtung",
+    "verirrt",
+    "offline"
+   ],
+   "summary": "Wer sich verlaufen hat, sollte nicht planlos weitergehen. Vorbereitung ist der beste Schutz.",
+   "steps": [
+    "Vorher: Route jemandem mitteilen, Offline-Karte auf dem Handy speichern, Powerbank mitnehmen.",
+    "Verlaufen? Anhalten, ruhig werden, letzten bekannten Punkt überlegen.",
+    "Auf Wegen bleiben und zum letzten sicheren Punkt zurückgehen, statt querfeldein zu laufen.",
+    "Himmelsrichtung grob: Die Sonne steht in Mitteleuropa morgens im Osten, mittags im Süden, abends im Westen.",
+    "Bei Dunkelheit, Erschöpfung oder Verletzung: an Ort und Stelle bleiben, warm halten und 112 rufen."
+   ],
+   "warnings": [
+    "Moos an Bäumen ist keine verlässliche Nordrichtung.",
+    "Bachläufen nicht blind folgen – sie führen oft in unwegsame Schluchten."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "wasser",
+   "title": "Trinkwasser in der Natur",
+   "icon": "W",
+   "tags": [
+    "wasser",
+    "trinken",
+    "trinkwasser",
+    "bach",
+    "quelle",
+    "abkochen",
+    "filter",
+    "durst"
+   ],
+   "summary": "Auch klares Bachwasser kann Krankheitserreger enthalten.",
+   "steps": [
+    "Am sichersten: ausreichend Trinkwasser mitnehmen.",
+    "Notfalls Wasser oberhalb von Siedlungen, Weiden und Wegen aus fließenden Gewässern nehmen.",
+    "Trübes Wasser durch ein Tuch vorfiltern.",
+    "Wasser sprudelnd abkochen – das ist die zuverlässigste Methode gegen Bakterien, Viren und Parasiten.",
+    "Alternativ geprüfte Wasserfilter oder Desinfektionstabletten nach Herstellerangabe verwenden."
+   ],
+   "warnings": [
+    "Abkochen und Filter entfernen keine Chemikalien (z. B. aus Landwirtschaft)."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "gewitter",
+   "title": "Gewitter im Wald und Gebirge",
+   "icon": "G",
+   "tags": [
+    "gewitter",
+    "blitz",
+    "donner",
+    "unwetter",
+    "sturm"
+   ],
+   "summary": "Bei Gewitter drohen Blitzschlag und herabfallende Äste.",
+   "steps": [
+    "Wetterbericht vorher prüfen; bei Gewitterwarnung Tour verschieben.",
+    "Gipfel, Grate, einzeln stehende Bäume, Waldränder und Metallzäune meiden.",
+    "Im Wald: Abstand zu Stämmen halten, möglichst in jungem, gleichmäßig hohem Bestand.",
+    "Im Freien: in einer Mulde in die Hocke gehen, Füße eng zusammen, nicht hinlegen.",
+    "Bei Sturm Wald wegen Astbruch möglichst verlassen."
+   ],
+   "warnings": [
+    "Faustregel: Weniger als 10 Sekunden zwischen Blitz und Donner bedeutet akute Gefahr."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "wildtiere",
+   "title": "Begegnungen mit Wildtieren",
+   "icon": "T",
+   "tags": [
+    "wildschwein",
+    "wolf",
+    "tier",
+    "wildtier",
+    "fuchs",
+    "hirsch",
+    "angriff",
+    "begegnung"
+   ],
+   "summary": "Wildtiere meiden Menschen meist. Gefährlich wird es vor allem bei Überraschung oder Jungtieren.",
+   "steps": [
+    "Abstand halten, Tiere nie füttern oder bedrängen.",
+    "Wildschwein (besonders Bache mit Frischlingen): ruhig und langsam zurückziehen, Fluchtweg frei lassen.",
+    "Wolf: stehen bleiben, auf sich aufmerksam machen (laut sprechen, groß machen), langsam rückwärts weggehen, nicht wegrennen.",
+    "Hunde im Wald anleinen.",
+    "Zutrauliche oder auffällig kranke Tiere der Gemeinde, Polizei oder Försterei melden."
+   ],
+   "warnings": [
+    "Tote oder verletzte Wildtiere nicht anfassen."
+   ],
+   "sources": [
+    "drk"
+   ]
+  },
+  {
+   "id": "sammelregeln",
+   "title": "Sammeln in der Natur: Regeln",
+   "icon": "§",
+   "tags": [
+    "sammeln",
+    "erlaubt",
+    "gesetz",
+    "naturschutz",
+    "menge",
+    "handstrauss",
+    "verboten",
+    "schutzgebiet"
+   ],
+   "summary": "Wildpflanzen und Pilze dürfen in Deutschland in der Regel in geringen Mengen für den eigenen Bedarf gesammelt werden.",
+   "steps": [
+    "Nur kleine Mengen für den Eigenbedarf (sogenannte Handstraußregel, § 39 Bundesnaturschutzgesetz).",
+    "In Naturschutzgebieten und Nationalparks ist Sammeln meist verboten – Beschilderung beachten.",
+    "Geschützte Arten nicht sammeln.",
+    "Pflanzen nicht ausgraben, nur Teile ernten, Bestände schonen.",
+    "Für Pilze gelten eigene Mengenregeln nach der Bundesartenschutzverordnung – nur ein kleiner Korb für den Eigenbedarf."
+   ],
+   "warnings": [
+    "Landesrecht und örtliche Regeln können abweichen. Diese Übersicht ist keine Rechtsberatung."
+   ],
+   "sources": [
+    "bnatschg"
+   ]
+  },
+  {
+   "id": "grundregeln-wildkraeuter",
+   "title": "Goldene Regeln für Wildkräuter",
+   "icon": "✓",
+   "tags": [
+    "wildkraeuter",
+    "wildpflanzen",
+    "essbar",
+    "pflanzen",
+    "kraeuter",
+    "beeren",
+    "regeln",
+    "fuchsbandwurm"
+   ],
+   "summary": "Viele Wildpflanzen haben giftige Doppelgänger. Sicherheit geht immer vor.",
+   "steps": [
+    "Nur sammeln, was du zu 100 % sicher kennst – im Zweifel stehen lassen.",
+    "Jede Pflanze einzeln prüfen (bei Bärlauch jedes Blatt!).",
+    "Doldenblütler (Möhre, Giersch, Kerbel …) nur mit viel Erfahrung sammeln – hier gibt es tödlich giftige Arten.",
+    "Nicht an stark befahrenen Straßen, gespritzten Feldern oder Hundewegen sammeln.",
+    "Bodennahe Beeren und Kräuter waschen; Erhitzen über 60 °C tötet mögliche Fuchsbandwurm-Eier ab.",
+    "Neue Wildpflanzen erst in kleinen Mengen probieren."
+   ],
+   "warnings": [
+    "Bei Verdacht auf eine Pflanzenvergiftung: 112 oder Giftnotruf, Pflanzenreste aufbewahren."
+   ],
+   "sources": [
+    "bfr"
+   ]
+  }
+ ]
+}
