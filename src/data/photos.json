@@ -4,19 +4,19 @@
  "photos": {
   "fichten-steinpilz": {
    "src": "assets/photos/fichten-steinpilz.jpg",
-   "title": "File:3 species of Boletus edilus (Eekhoorntjebrood) just beside our home Schaarsbergen - panoramio.jpg",
-   "author": "Henk Monster",
-   "license": "CC BY 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:3_species_of_Boletus_edilus_(Eekhoorntjebrood)_just_beside_our_home_Schaarsbergen_-_panoramio.jpg"
+   "title": "File:Bolete, (41552959171).jpg",
+   "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bolete,_(41552959171).jpg"
   },
   "maronen-roehrling": {
    "src": "assets/photos/maronen-roehrling.jpg",
-   "title": "File:Bay Bolete, Boletus badius (21195318373).jpg",
-   "author": "AJC1 from UK",
-   "license": "CC BY-SA 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bay_Bolete,_Boletus_badius_(21195318373).jpg"
+   "title": "File:2025-10-08 D500-0912 Achim-Lammerts Imleria-badia.jpg",
+   "author": "Achim Lammerts (Syntaxys)",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025-10-08_D500-0912_Achim-Lammerts_Imleria-badia.jpg"
   },
   "birkenpilz": {
    "src": "assets/photos/birkenpilz.jpg",
@@ -28,11 +28,11 @@
   },
   "flockenstieliger-hexen-roehrling": {
    "src": "assets/photos/flockenstieliger-hexen-roehrling.jpg",
-   "title": "File:Boletus erythropus-Milovy-SněžnéZR-Czech Republic1.jpg",
+   "title": "File:Boletus erythropus-Milovy-SněžnéZR-Czech Republic2.jpg",
    "author": "Ben Skála",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_erythropus-Milovy-Sn%C4%9B%C5%BEn%C3%A9ZR-Czech_Republic1.jpg"
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_erythropus-Milovy-Sn%C4%9B%C5%BEn%C3%A9ZR-Czech_Republic2.jpg"
   },
   "satans-roehrling": {
    "src": "assets/photos/satans-roehrling.jpg",
@@ -68,11 +68,11 @@
   },
   "herbsttrompete": {
    "src": "assets/photos/herbsttrompete.jpg",
-   "title": "File:0.2014 Craterellus cornucopioides aus beskidischen Waldkarpaten.JPG",
-   "author": "Silar",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:0.2014_Craterellus_cornucopioides_aus_beskidischen_Waldkarpaten.JPG"
+   "title": "File:Craterellus cornucopioides (29282666045).jpg",
+   "author": "Björn S...",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Craterellus_cornucopioides_(29282666045).jpg"
   },
   "semmel-stoppelpilz": {
    "src": "assets/photos/semmel-stoppelpilz.jpg",
@@ -116,11 +116,11 @@
   },
   "violetter-roetelritterling": {
    "src": "assets/photos/violetter-roetelritterling.jpg",
-   "title": "File:Blewits.jpg",
-   "author": "Dmitry Brant",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blewits.jpg"
+   "title": "File:Clitocybe nuda (Fr.) H.E. Bigelow & A.H. Sm 267650.jpg",
+   "author": "This image was created by user Jimmie Veitch (jimmiev) at Mushroom Observer, a source for mycological images.You can contact this user here.",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_nuda_(Fr.)_H.E._Bigelow_%26_A.H._Sm_267650.jpg"
   },
   "mai-ritterling": {
    "src": "assets/photos/mai-ritterling.jpg",
@@ -161,6 +161,190 @@
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Auricularia_auricula-judae_(26084801796).jpg"
+  },
+  "krause-glucke": {
+   "src": "assets/photos/krause-glucke.jpg",
+   "title": "File:Krause Glucke (Sparassis crispa) 2010-09-25-4306.jpg",
+   "author": "Slick",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Krause_Glucke_(Sparassis_crispa)_2010-09-25-4306.jpg"
+  },
+  "parasol": {
+   "src": "assets/photos/parasol.jpg",
+   "title": "File:Champignon comestible dans la bruyère.jpg",
+   "author": "Xavier66",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Champignon_comestible_dans_la_bruy%C3%A8re.jpg"
+  },
+  "wiesen-champignon": {
+   "src": "assets/photos/wiesen-champignon.jpg",
+   "title": "File:Agaricus campestris 1.jpg",
+   "author": "Beko",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agaricus_campestris_1.jpg"
+  },
+  "schopf-tintling": {
+   "src": "assets/photos/schopf-tintling.jpg",
+   "title": "File:Breil-Brigels (actm) 18.jpg",
+   "author": "Agnes Monkelbaan",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Breil-Brigels_(actm)_18.jpg"
+  },
+  "austern-seitling": {
+   "src": "assets/photos/austern-seitling.jpg",
+   "title": "File:20191213 GT Pleurotus ostreatus var columbinus.jpg",
+   "author": "Ian Alexander",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:20191213_GT_Pleurotus_ostreatus_var_columbinus.jpg"
+  },
+  "gruener-knollenblaetterpilz": {
+   "src": "assets/photos/gruener-knollenblaetterpilz.jpg",
+   "title": "File:Amanita phalloides -just emerging.JPG",
+   "author": "Stu's Images",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_phalloides_-just_emerging.JPG"
+  },
+  "kegelhuetiger-knollenblaetterpilz": {
+   "src": "assets/photos/kegelhuetiger-knollenblaetterpilz.jpg",
+   "title": "File:Amanita virosa UL 03.jpg",
+   "author": "Cephas",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_virosa_UL_03.jpg"
+  },
+  "fliegenpilz": {
+   "src": "assets/photos/fliegenpilz.jpg",
+   "title": "File:2015-09-26-SFERO (Foto Dietrich Michael Weidmann) (20).JPG",
+   "author": "Dietrich Michael Weidmann",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015-09-26-SFERO_(Foto_Dietrich_Michael_Weidmann)_(20).JPG"
+  },
+  "pantherpilz": {
+   "src": "assets/photos/pantherpilz.jpg",
+   "title": "File:Amanita Ameripantherina.jpg",
+   "author": "Twelvizm",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_Ameripantherina.jpg"
+  },
+  "gifthaeubling": {
+   "src": "assets/photos/gifthaeubling.jpg",
+   "title": "File:Funeral Bell (Galerina marginata) - Gatineau Park 03.jpg",
+   "author": "Ryan Hodnett",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Funeral_Bell_(Galerina_marginata)_-_Gatineau_Park_03.jpg"
+  },
+  "orangefuchsiger-raukopf": {
+   "src": "assets/photos/orangefuchsiger-raukopf.jpg",
+   "title": "File:2013-10-16 Cortinarius orellanus 1b.jpg",
+   "author": "Andreas Kunze",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013-10-16_Cortinarius_orellanus_1b.jpg"
+  },
+  "spitzgebuckelter-raukopf": {
+   "src": "assets/photos/spitzgebuckelter-raukopf.jpg",
+   "title": "File:Cortinarius rubellus with Craterellus tubaeformis.jpg",
+   "author": "Wkee4ager",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cortinarius_rubellus_with_Craterellus_tubaeformis.jpg"
+  },
+  "fruehjahrs-giftlorchel": {
+   "src": "assets/photos/fruehjahrs-giftlorchel.jpg",
+   "title": "File:Gyromitra esculenta (8863644818).jpg",
+   "author": "Tatiana Bulyonkova from Novosibirsk, Russia",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gyromitra_esculenta_(8863644818).jpg"
+  },
+  "karbol-champignon": {
+   "src": "assets/photos/karbol-champignon.jpg",
+   "title": "File:Agaricus xanthodermus 170723wa.JPG",
+   "author": "Strobilomyces",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agaricus_xanthodermus_170723wa.JPG"
+  },
+  "gruenblaettriger-schwefelkopf": {
+   "src": "assets/photos/gruenblaettriger-schwefelkopf.jpg",
+   "title": "File:Clustered woodlover - Hypholoma fasciculare - Grünblättriger Schwefelkopf - sulfur tuft - 04.jpg",
+   "author": "Norbert Nagel",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clustered_woodlover_-_Hypholoma_fasciculare_-_Gr%C3%BCnbl%C3%A4ttriger_Schwefelkopf_-_sulfur_tuft_-_04.jpg"
+  },
+  "kahler-krempling": {
+   "src": "assets/photos/kahler-krempling.jpg",
+   "title": "File:20201019 gewone krulzoom.jpeg",
+   "author": "Gouwenaar",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:20201019_gewone_krulzoom.jpeg"
+  },
+  "riesen-roetling": {
+   "src": "assets/photos/riesen-roetling.jpg",
+   "title": "File:Entoloma sinuatum bat.jpg",
+   "author": "Jose Angel Urquia Goitia",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_bat.jpg"
+  },
+  "tiger-ritterling": {
+   "src": "assets/photos/tiger-ritterling.jpg",
+   "title": "File:2012-03-28 Tricholoma pardinum Quél 208648.jpg",
+   "author": "This image was created by user David Rust (incredulis) at Mushroom Observer, a source for mycological images.You can contact this user here.",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012-03-28_Tricholoma_pardinum_Qu%C3%A9l_208648.jpg"
+  },
+  "grauer-faltentintling": {
+   "src": "assets/photos/grauer-faltentintling.jpg",
+   "title": "File:Common Inkcap (Coprinopsis atramentaria).jpg",
+   "author": "AnemoneProjectors (talk) (Flickr)",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Common_Inkcap_(Coprinopsis_atramentaria).jpg"
+  },
+  "spitzkegeliger-kahlkopf": {
+   "src": "assets/photos/spitzkegeliger-kahlkopf.jpg",
+   "title": "File:Psilocybe semilanceata (49152848998).jpg",
+   "author": "Lukas from London, England",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psilocybe_semilanceata_(49152848998).jpg"
+  },
+  "zunderschwamm": {
+   "src": "assets/photos/zunderschwamm.jpg",
+   "title": "File:Fomes fomentarius - National Museum of Nature and Science, Tokyo - DSC06757.JPG",
+   "author": "Daderot",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fomes_fomentarius_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC06757.JPG"
+  },
+  "birkenporling": {
+   "src": "assets/photos/birkenporling.jpg",
+   "title": "File:Birkenporling (07) (31010677323).jpg",
+   "author": "Rüdiger Stehn from Kiel, Deutschland",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Birkenporling_(07)_(31010677323).jpg"
+  },
+  "schmetterlings-tramete": {
+   "src": "assets/photos/schmetterlings-tramete.jpg",
+   "title": "File:2015-11 - Terril Sainte-Pauline - 22.JPG",
+   "author": "A.BourgeoisP",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015-11_-_Terril_Sainte-Pauline_-_22.JPG"
   }
  }
 }
