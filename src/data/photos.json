@@ -28,11 +28,11 @@
   },
   "flockenstieliger-hexen-roehrling": {
    "src": "assets/photos/flockenstieliger-hexen-roehrling.jpg",
-   "title": "File:Boletus erythropus-Milovy-SněžnéZR-Czech Republic2.jpg",
-   "author": "Ben Skála",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_erythropus-Milovy-Sn%C4%9B%C5%BEn%C3%A9ZR-Czech_Republic2.jpg"
+   "title": "File:Boletus-erythropus-Flockenstieliger-Hexenröhrling.jpg",
+   "author": "Holger Krisp",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus-erythropus-Flockenstieliger-Hexenr%C3%B6hrling.jpg"
   },
   "satans-roehrling": {
    "src": "assets/photos/satans-roehrling.jpg",
@@ -204,11 +204,11 @@
   },
   "gruener-knollenblaetterpilz": {
    "src": "assets/photos/gruener-knollenblaetterpilz.jpg",
-   "title": "File:Amanita phalloides -just emerging.JPG",
+   "title": "File:Amanita phalloides - young.JPG",
    "author": "Stu's Images",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_phalloides_-just_emerging.JPG"
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_phalloides_-_young.JPG"
   },
   "kegelhuetiger-knollenblaetterpilz": {
    "src": "assets/photos/kegelhuetiger-knollenblaetterpilz.jpg",
@@ -220,11 +220,11 @@
   },
   "fliegenpilz": {
    "src": "assets/photos/fliegenpilz.jpg",
-   "title": "File:2015-09-26-SFERO (Foto Dietrich Michael Weidmann) (20).JPG",
+   "title": "File:2015-09-26-SFERO (Foto Dietrich Michael Weidmann) (16).JPG",
    "author": "Dietrich Michael Weidmann",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015-09-26-SFERO_(Foto_Dietrich_Michael_Weidmann)_(20).JPG"
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015-09-26-SFERO_(Foto_Dietrich_Michael_Weidmann)_(16).JPG"
   },
   "pantherpilz": {
    "src": "assets/photos/pantherpilz.jpg",
@@ -324,11 +324,11 @@
   },
   "zunderschwamm": {
    "src": "assets/photos/zunderschwamm.jpg",
-   "title": "File:Fomes fomentarius - National Museum of Nature and Science, Tokyo - DSC06757.JPG",
-   "author": "Daderot",
-   "license": "CC0",
-   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fomes_fomentarius_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC06757.JPG"
+   "title": "File:Echte tonderzwam (Fomes fomentarius) 03.JPG",
+   "author": "Heinonlein",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echte_tonderzwam_(Fomes_fomentarius)_03.JPG"
   },
   "birkenporling": {
    "src": "assets/photos/birkenporling.jpg",
@@ -345,6 +345,14 @@
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015-11_-_Terril_Sainte-Pauline_-_22.JPG"
+  },
+  "ziegelroter-risspilz": {
+   "src": "assets/photos/ziegelroter-risspilz.jpg",
+   "title": "File:Inocybe erubescens (19417855088).jpg",
+   "author": "Tatiana Bulyonkova from Novosibirsk, Russia",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inocybe_erubescens_(19417855088).jpg"
   }
  }
 }
