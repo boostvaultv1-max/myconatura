@@ -1,5 +1,5 @@
 {
-  "_hinweis": "Foto festlegen: \"pilz-id\": \"File:Dateiname.jpg\". Ungeeignetes Foto ausschließen: \"pilz-id\": {\"exclude\": [\"File:Dateiname.jpg\"]}. Nur CC0, Public Domain, CC BY oder CC BY-SA werden übernommen.",
+  "_hinweis": "Foto festlegen: \"pilz-id\": \"File:Dateiname.jpg\". Ungeeignetes Foto ausschließen: \"pilz-id\": {\"exclude\": [\"File:Dateiname.jpg\"]}. Nur CC0, Public Domain, CC BY oder CC BY-SA werden übernommen. Gezielte Suche: \"pilz-id\": {\"search\": \"Vaccinium myrtillus fruit\"}.",
   "fichten-steinpilz": {
     "exclude": [
       "File:3 species of Boletus edilus (Eekhoorntjebrood) just beside our home Schaarsbergen - panoramio.jpg"
@@ -48,23 +48,31 @@
   },
   "heidelbeere": {
     "exclude": [
-      "File:Høstblåbærlyng mellom reinlav eller reinmose.JPG"
-    ]
+      "File:Høstblåbærlyng mellom reinlav eller reinmose.JPG",
+      "File:Vacc myrt kz4.jpg"
+    ],
+    "search": "Vaccinium myrtillus fruit"
   },
   "schwarzer-holunder": {
     "exclude": [
-      "File:Cesta do Chodovlic.JPG"
-    ]
+      "File:Cesta do Chodovlic.JPG",
+      "File:Alte Schanzen sl5.jpg"
+    ],
+    "search": "Sambucus nigra fruit"
   },
   "hagebutte": {
     "exclude": [
-      "File:PR Kopeč, pohled na východ s šípkem (Rosa canina).JPG"
-    ]
+      "File:PR Kopeč, pohled na východ s šípkem (Rosa canina).JPG",
+      "File:Chornobyl DSC 0226 14.JPG"
+    ],
+    "search": "Rosa canina hips"
   },
   "haselnuss": {
     "exclude": [
-      "File:NPR Kněžičky, líska.jpg"
-    ]
+      "File:NPR Kněžičky, líska.jpg",
+      "File:Lathraea clandestina parasitising a hazel.JPG"
+    ],
+    "search": "Corylus avellana nuts"
   },
   "brennnessel": {
     "exclude": [

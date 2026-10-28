@@ -18,7 +18,8 @@ Bitte die Ergebnisse ansehen: Automatisch gewählte Fotos können ungeeignet sei
 (z. B. Mikroskopbild). Dann in tools/photo-overrides.json eine bessere Datei eintragen
 oder ein ungeeignetes Foto ausschließen (dann wird das nächstbeste gewählt):
     { "fichten-steinpilz": "File:Dateiname_auf_Commons.jpg",
-      "herbsttrompete": { "exclude": ["File:Ungeeignet.jpg"] } }
+      "herbsttrompete": { "exclude": ["File:Ungeeignet.jpg"] },
+      "heidelbeere": { "search": "Vaccinium myrtillus fruit" } }
 """
 import html
 import json
@@ -123,14 +124,23 @@ def score(c):
 
 def find_photo(m, override):
     exclude = set()
+    search = None
     if isinstance(override, dict):
         exclude = set(override.get("exclude", []))
+        search = override.get("search")
         override = override.get("file")
     ok = lambda c: acceptable(c) and c["title"] not in exclude
     if override:
         data = get_json({"action": "query", "titles": override, **IIPROP})
         cands = [c for c in candidates_from_pages(data.get("query", {}).get("pages")) if ALLOWED.search(c["license"] or "")]
         return cands[0] if cands else None
+    if search:  # gezielte Suche, z. B. "Vaccinium myrtillus fruit"
+        data = get_json({"action": "query", "generator": "search", "gsrsearch": f"{search} filetype:bitmap",
+                         "gsrnamespace": "6", "gsrlimit": "20", **IIPROP})
+        pages = sorted(data.get("query", {}).get("pages") or [], key=lambda x: x.get("index", 99))
+        cands = [c for c in candidates_from_pages(pages) if ok(c)]
+        if cands:
+            return cands[0]  # Relevanzreihenfolge der Suche beibehalten
     names = [m["scientific"].replace(" agg.", "").replace(" sect. ", " sect. ")] + [s for s in m.get("synonyms", []) if re.fullmatch(r"[A-Z][a-z]+ [a-z-]+", s)]
     for name in names:
         data = get_json({"action": "query", "generator": "categorymembers", "gcmtitle": "Category:" + name,
@@ -173,7 +183,8 @@ def main(argv):
         ov = overrides.get(sid)
         ov_file = ov.get("file") if isinstance(ov, dict) else ov
         ov_excl = ov.get("exclude", []) if isinstance(ov, dict) else []
-        changed_override = (ov_file and photos.get(sid, {}).get("title") != ov_file) or photos.get(sid, {}).get("title") in ov_excl
+        changed_override = (ov_file and photos.get(sid, {}).get("title") != ov_file) or photos.get(sid, {}).get("title") in ov_excl \
+            or (isinstance(ov, dict) and ov.get("search") and photos.get(sid, {}).get("search") != ov.get("search"))
         if have and not refresh and not changed_override and not only:
             continue
         try:
@@ -189,6 +200,8 @@ def main(argv):
                 "src": rel, "title": c["title"], "author": c["author"][:200], "license": c["license"],
                 "licenseUrl": c["licenseUrl"], "sourceUrl": c["page"],
             }
+            if isinstance(overrides.get(sid), dict) and overrides[sid].get("search"):
+                photos[sid]["search"] = overrides[sid]["search"]
             print(f"✓  {sid}: {c['title']}  ({c['license']}, {c['author'][:60]})")
             ok += 1
         except Exception as e:  # Netzwerk- oder API-Fehler: weiter mit der nächsten Art
