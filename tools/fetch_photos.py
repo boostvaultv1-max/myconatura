@@ -15,8 +15,10 @@ Aufruf (Python 3.8+, keine Zusatzpakete):
     python3 tools/fetch_photos.py --only fichten-steinpilz parasol
 
 Bitte die Ergebnisse ansehen: Automatisch gewählte Fotos können ungeeignet sein
-(z. B. Mikroskopbild). Dann in tools/photo-overrides.json eine bessere Datei eintragen:
-    { "fichten-steinpilz": "File:Dateiname_auf_Commons.jpg" }
+(z. B. Mikroskopbild). Dann in tools/photo-overrides.json eine bessere Datei eintragen
+oder ein ungeeignetes Foto ausschließen (dann wird das nächstbeste gewählt):
+    { "fichten-steinpilz": "File:Dateiname_auf_Commons.jpg",
+      "herbsttrompete": { "exclude": ["File:Ungeeignet.jpg"] } }
 """
 import html
 import json
@@ -25,6 +27,7 @@ import re
 import sys
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,18 +43,28 @@ ALLOWED = re.compile(r"^(cc0|public domain|pd\b|pd-|cc[ -]by(-sa)?[ -]?\d|cc[ -]
 BAD_TITLE = re.compile(r"micro|spore|basidi|cystid|drawing|illustration|plate|map|stamp|herbar|briefmarke|\.svg|\.tif|diagram|zeichnung|mikroskop|x400|x1000", re.I)
 
 
+def _open(url, timeout):
+    """HTTP-Abruf mit Wiederholung bei Drosselung (429) oder Serverfehlern."""
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    for attempt in range(6):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 500, 502, 503, 504) or attempt == 5:
+                raise
+            wait = int(e.headers.get("Retry-After") or 0) or min(60, 5 * 2 ** attempt)
+            print(f"   … Commons drosselt (HTTP {e.code}), warte {wait} s")
+            time.sleep(wait)
+
+
 def get_json(params):
     params = {**params, "format": "json", "formatversion": "2"}
-    url = API + "?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)
+    return json.loads(_open(API + "?" + urllib.parse.urlencode(params), 30))
 
 
 def download(url, path):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        data = r.read()
+    data = _open(url, 60)
     if len(data) < 5000:
         raise ValueError("Bild zu klein / fehlerhaft")
     with open(path, "wb") as f:
@@ -108,6 +121,11 @@ def score(c):
 
 
 def find_photo(m, override):
+    exclude = set()
+    if isinstance(override, dict):
+        exclude = set(override.get("exclude", []))
+        override = override.get("file")
+    ok = lambda c: acceptable(c) and c["title"] not in exclude
     if override:
         data = get_json({"action": "query", "titles": override, **IIPROP})
         cands = [c for c in candidates_from_pages(data.get("query", {}).get("pages")) if ALLOWED.search(c["license"] or "")]
@@ -116,13 +134,13 @@ def find_photo(m, override):
     for name in names:
         data = get_json({"action": "query", "generator": "categorymembers", "gcmtitle": "Category:" + name,
                          "gcmtype": "file", "gcmlimit": "50", **IIPROP})
-        cands = [c for c in candidates_from_pages(data.get("query", {}).get("pages")) if acceptable(c)]
+        cands = [c for c in candidates_from_pages(data.get("query", {}).get("pages")) if ok(c)]
         if cands:
             return max(cands, key=score)
         time.sleep(0.5)
     data = get_json({"action": "query", "generator": "search", "gsrsearch": f'"{m["scientific"]}" filetype:bitmap',
                      "gsrnamespace": "6", "gsrlimit": "30", **IIPROP})
-    cands = [c for c in candidates_from_pages(data.get("query", {}).get("pages")) if acceptable(c)]
+    cands = [c for c in candidates_from_pages(data.get("query", {}).get("pages")) if ok(c)]
     return max(cands, key=score) if cands else None
 
 
@@ -138,7 +156,7 @@ def main(argv):
         with open(OUT_JSON, encoding="utf-8") as f:
             existing = json.load(f)
     photos = existing.get("photos", {})
-    only = argv[argv.index("--only") + 1:] if "--only" in argv else None
+    only = [a for a in argv[argv.index("--only") + 1:] if not a.startswith("--")] if "--only" in argv else None
     refresh = "--all" in argv
     os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -148,7 +166,10 @@ def main(argv):
         if only and sid not in only:
             continue
         have = sid in photos and os.path.exists(os.path.join(ROOT, photos[sid]["src"]))
-        changed_override = sid in overrides and photos.get(sid, {}).get("title") != overrides[sid]
+        ov = overrides.get(sid)
+        ov_file = ov.get("file") if isinstance(ov, dict) else ov
+        ov_excl = ov.get("exclude", []) if isinstance(ov, dict) else []
+        changed_override = (ov_file and photos.get(sid, {}).get("title") != ov_file) or photos.get(sid, {}).get("title") in ov_excl
         if have and not refresh and not changed_override and not only:
             continue
         try:
@@ -169,7 +190,7 @@ def main(argv):
         except Exception as e:  # Netzwerk- oder API-Fehler: weiter mit der nächsten Art
             print(f"!  {sid}: Fehler – {e}")
             fail += 1
-        time.sleep(1)  # Commons schonen
+        time.sleep(3)  # Commons schonen
 
     photos = {k: v for k, v in photos.items() if any(m["id"] == k for m in species)}
     with open(OUT_JSON, "w", encoding="utf-8") as f:

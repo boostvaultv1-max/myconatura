@@ -1,3 +1,28 @@
 {
-  "_hinweis": "Hier kannst du für einzelne Arten ein bestimmtes Foto von Wikimedia Commons festlegen. Format: \"pilz-id\": \"File:Dateiname.jpg\". Nur Dateien mit CC0-, Public-Domain-, CC-BY- oder CC-BY-SA-Lizenz werden übernommen."
+  "_hinweis": "Foto festlegen: \"pilz-id\": \"File:Dateiname.jpg\". Ungeeignetes Foto ausschließen: \"pilz-id\": {\"exclude\": [\"File:Dateiname.jpg\"]}. Nur CC0, Public Domain, CC BY oder CC BY-SA werden übernommen.",
+  "fichten-steinpilz": {
+    "exclude": [
+      "File:3 species of Boletus edilus (Eekhoorntjebrood) just beside our home Schaarsbergen - panoramio.jpg"
+    ]
+  },
+  "maronen-roehrling": {
+    "exclude": [
+      "File:Bay Bolete, Boletus badius (21195318373).jpg"
+    ]
+  },
+  "flockenstieliger-hexen-roehrling": {
+    "exclude": [
+      "File:Boletus erythropus-Milovy-SněžnéZR-Czech Republic1.jpg"
+    ]
+  },
+  "herbsttrompete": {
+    "exclude": [
+      "File:0.2014 Craterellus cornucopioides aus beskidischen Waldkarpaten.JPG"
+    ]
+  },
+  "violetter-roetelritterling": {
+    "exclude": [
+      "File:Blewits.jpg"
+    ]
+  }
 }

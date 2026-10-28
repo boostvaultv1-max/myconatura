@@ -11,6 +11,10 @@ on:
         default: "fehlende"
         type: choice
         options: [fehlende, alle]
+      arten:
+        description: "Optional: nur diese Arten (IDs mit Leerzeichen getrennt) neu laden"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -25,7 +29,9 @@ jobs:
           python-version: "3.12"
       - name: Fotos von Wikimedia Commons laden
         run: |
-          if [ "${{ inputs.modus }}" = "alle" ]; then
+          if [ -n "${{ inputs.arten }}" ]; then
+            python3 tools/fetch_photos.py --only ${{ inputs.arten }}
+          elif [ "${{ inputs.modus }}" = "alle" ]; then
             python3 tools/fetch_photos.py --all
           else
             python3 tools/fetch_photos.py
