@@ -353,6 +353,198 @@
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inocybe_erubescens_(19417855088).jpg"
+  },
+  "baerlauch": {
+   "src": "assets/photos/baerlauch.jpg",
+   "title": "File:Allium ursinum - Karhunlaukka, Ramslök, Bear leek, Karulauk C IMG 7686.JPG",
+   "author": "Anneli Salo",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Allium_ursinum_-_Karhunlaukka,_Ramsl%C3%B6k,_Bear_leek,_Karulauk_C_IMG_7686.JPG"
+  },
+  "brennnessel": {
+   "src": "assets/photos/brennnessel.jpg",
+   "title": "File:Arundo donax - Urtica dioica 3825.JPG",
+   "author": "Assianir",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arundo_donax_-_Urtica_dioica_3825.JPG"
+  },
+  "loewenzahn": {
+   "src": "assets/photos/loewenzahn.jpg",
+   "title": "File:Fly drops.jpg",
+   "author": "Tony Wills",
+   "license": "CC BY 2.5",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fly_drops.jpg"
+  },
+  "giersch": {
+   "src": "assets/photos/giersch.jpg",
+   "title": "File:Aegopodium (14243715519).jpg",
+   "author": "Donald Hobern from Copenhagen, Denmark",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aegopodium_(14243715519).jpg"
+  },
+  "wilde-moehre": {
+   "src": "assets/photos/wilde-moehre.jpg",
+   "title": "File:Daucus carota - 01.jpg",
+   "author": "Jeangagnon",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daucus_carota_-_01.jpg"
+  },
+  "heidelbeere": {
+   "src": "assets/photos/heidelbeere.jpg",
+   "title": "File:Høstblåbærlyng mellom reinlav eller reinmose.JPG",
+   "author": "Øyvind Holmstad",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B8stbl%C3%A5b%C3%A6rlyng_mellom_reinlav_eller_reinmose.JPG"
+  },
+  "schwarzer-holunder": {
+   "src": "assets/photos/schwarzer-holunder.jpg",
+   "title": "File:Cesta do Chodovlic.JPG",
+   "author": "Juan de Vojníkov",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cesta_do_Chodovlic.JPG"
+  },
+  "brombeere": {
+   "src": "assets/photos/brombeere.jpg",
+   "title": "File:Blackberry bush flowers on St George's Down.JPG",
+   "author": "Editor5807",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blackberry_bush_flowers_on_St_George%27s_Down.JPG"
+  },
+  "himbeere": {
+   "src": "assets/photos/himbeere.jpg",
+   "title": "File:2 Reife Himbeeren.jpg",
+   "author": "Peace656",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2_Reife_Himbeeren.jpg"
+  },
+  "walderdbeere": {
+   "src": "assets/photos/walderdbeere.jpg",
+   "title": "File:Fragaria vesca 1.JPG",
+   "author": "Dalgial",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fragaria_vesca_1.JPG"
+  },
+  "haselnuss": {
+   "src": "assets/photos/haselnuss.jpg",
+   "title": "File:NPR Kněžičky, líska.jpg",
+   "author": "Juandev",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:NPR_Kn%C4%9B%C5%BEi%C4%8Dky,_l%C3%ADska.jpg"
+  },
+  "hagebutte": {
+   "src": "assets/photos/hagebutte.jpg",
+   "title": "File:PR Kopeč, pohled na východ s šípkem (Rosa canina).JPG",
+   "author": "Juandev",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:PR_Kope%C4%8D,_pohled_na_v%C3%BDchod_s_%C5%A1%C3%ADpkem_(Rosa_canina).JPG"
+  },
+  "maigloeckchen": {
+   "src": "assets/photos/maigloeckchen.jpg",
+   "title": "File:Convallaria majalis in nature reserve Kralovicke louky in 2011 (1).JPG",
+   "author": "Chmee2",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Convallaria_majalis_in_nature_reserve_Kralovicke_louky_in_2011_(1).JPG"
+  },
+  "herbstzeitlose": {
+   "src": "assets/photos/herbstzeitlose.jpg",
+   "title": "File:Autumn flowers 01.jpg",
+   "author": "Meneerke bloem",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Autumn_flowers_01.jpg"
+  },
+  "aronstab": {
+   "src": "assets/photos/aronstab.jpg",
+   "title": "File:Arum maculatum leaves.JPG",
+   "author": "Walcoford",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arum_maculatum_leaves.JPG"
+  },
+  "gefleckter-schierling": {
+   "src": "assets/photos/gefleckter-schierling.jpg",
+   "title": "File:Conium maculatum - lulja dhe kërcelli.jpg",
+   "author": "Ulisi",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Conium_maculatum_-_lulja_dhe_k%C3%ABrcelli.jpg"
+  },
+  "wasserschierling": {
+   "src": "assets/photos/wasserschierling.jpg",
+   "title": "File:Cicuta virosa Myrkkykeiso C IMG 0677.JPG",
+   "author": "Anneli Salo",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cicuta_virosa_Myrkkykeiso_C_IMG_0677.JPG"
+  },
+  "hundspetersilie": {
+   "src": "assets/photos/hundspetersilie.jpg",
+   "title": "File:Aethusa cynapium subsp. cynapium s. lat. sl1.jpg",
+   "author": "Stefan.lefnaer",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aethusa_cynapium_subsp._cynapium_s._lat._sl1.jpg"
+  },
+  "tollkirsche": {
+   "src": "assets/photos/tollkirsche.jpg",
+   "title": "File:Atropa belladonna Pokrzyk wilcza jagoda 2016-07-23 02.jpg",
+   "author": "Agnieszka Kwiecień, Nova",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atropa_belladonna_Pokrzyk_wilcza_jagoda_2016-07-23_02.jpg"
+  },
+  "eibe": {
+   "src": "assets/photos/eibe.jpg",
+   "title": "File:Greenwood forest farming 01.JPG",
+   "author": "c.m.m. buur",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Greenwood_forest_farming_01.JPG"
+  },
+  "riesen-baerenklau": {
+   "src": "assets/photos/riesen-baerenklau.jpg",
+   "title": "File:Heracleum mantegazzianum sl37.jpg",
+   "author": "Stefan.lefnaer",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heracleum_mantegazzianum_sl37.jpg"
+  },
+  "eisenhut": {
+   "src": "assets/photos/eisenhut.jpg",
+   "title": "File:2011-08-04 13-21-10 Switzerland Unterwasser.jpg",
+   "author": "Hansueli Krapf This file was uploaded with Commonist.",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-08-04_13-21-10_Switzerland_Unterwasser.jpg"
+  },
+  "fingerhut": {
+   "src": "assets/photos/fingerhut.jpg",
+   "title": "File:Digitalis purpurea 002.jpg",
+   "author": "Orikrin1998",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Digitalis_purpurea_002.jpg"
+  },
+  "pfaffenhuetchen": {
+   "src": "assets/photos/pfaffenhuetchen.jpg",
+   "title": "File:Euonymus europaeus 001.jpg",
+   "author": "Meneerke bloem",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Euonymus_europaeus_001.jpg"
   }
  }
 }
