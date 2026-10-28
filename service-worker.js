@@ -4,7 +4,7 @@
    Bei Änderungen an Dateien: CACHE_VERSION erhöhen. */
 
 const APP_VERSION = '1.1.1';
-const PHOTOS_REV = 'initial'; // wird vom Foto-Workflow automatisch geändert
+const PHOTOS_REV = '202610281708'; // wird vom Foto-Workflow automatisch geändert
 const CACHE_VERSION = `myconatura-v${APP_VERSION}-${PHOTOS_REV}`;
 
 const PRECACHE = [
