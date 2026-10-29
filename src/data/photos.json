@@ -1,14 +1,15 @@
 {
  "source": "Wikimedia Commons",
- "generatedAt": "2026-10-28",
+ "generatedAt": "2026-10-29",
  "photos": {
   "fichten-steinpilz": {
    "src": "assets/photos/fichten-steinpilz.jpg",
-   "title": "File:Bolete, (41552959171).jpg",
-   "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
-   "license": "CC0",
-   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bolete,_(41552959171).jpg"
+   "title": "File:, Boletus edulis, cèpe de Bordeaux 2.jpg",
+   "author": "Kean10",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:,_Boletus_edulis,_c%C3%A8pe_de_Bordeaux_2.jpg",
+   "search": "Boletus edulis Steinpilz forest"
   },
   "maronen-roehrling": {
    "src": "assets/photos/maronen-roehrling.jpg",
