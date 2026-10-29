@@ -578,3 +578,19 @@ ol.steps li { margin: 8px 0; padding-left: 4px; }
 .safety-line a { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .hero-photo img, .hero-inner { animation: none; } }
 :root[data-theme="dark"] .hero-photo .hero-tag { color: #fff; }
+
+/* ---------- Notvorrat ---------- */
+.seg.wrap { display: flex; flex-wrap: wrap; }
+.vorrat-cfg { gap: 14px; }
+.stepper { display: flex; gap: 8px; align-items: center; }
+.stepper .input { width: 80px; text-align: center; }
+.checklist { padding: 0; }
+.check-item { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 12px 14px; border-top: 1px solid var(--border); cursor: pointer; }
+.check-item:first-child { border-top: 0; }
+.check-item input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--primary); }
+.check-item > span { display: flex; flex-direction: column; gap: 2px; }
+.check-item .amount { font-weight: 600; }
+.check-item:has(input:checked) strong { text-decoration: line-through; color: var(--muted); }
+.vorrat-teaser { display: flex; gap: 12px; align-items: center; text-decoration: none; color: var(--text); margin-top: 14px; }
+.vorrat-teaser svg { width: 28px; height: 28px; flex: none; }
+.vorrat-teaser > span { display: flex; flex-direction: column; }

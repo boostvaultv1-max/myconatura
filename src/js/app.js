@@ -8,6 +8,7 @@ import { buildIndex, runSearch } from './search.js';
 import { STEPS, evaluate, labelFor } from './identify.js';
 import { illustrate, heroArt } from './illustration.js';
 import { DONATION, HERO_SPECIES } from './config.js';
+import { STORES, SCENARIOS, DURATIONS, buildList } from './vorrat.js';
 import { answer as assistantAnswer, buildAliases } from './assistant.js';
 
 const APP_VERSION = '1.2.0';
@@ -42,6 +43,7 @@ const ICON = {
   pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3" fill="currentColor"/></svg>',
   chat: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   leaf: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15Z"/><path d="M5 19 13 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  box: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5zM3 7.5l9 4.5 9-4.5M12 12v9"/></svg>',
   star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9Z"/></svg>',
 };
 
@@ -229,7 +231,7 @@ function viewHome() {
     <a class="quick" href="#bestimmen"><span class="q-ico">${ICON.magnify}</span><strong>Bestimmen</strong></a>
     <a class="quick" href="#assistent"><span class="q-ico">${ICON.chat}</span><strong>Assistent</strong></a>
     <a class="quick" href="#wildnis"><span class="q-ico">${ICON.leaf}</span><strong>Wildnis</strong></a>
-    <a class="quick" href="#fundbuch"><span class="q-ico">${ICON.book}</span><strong>Fundbuch</strong></a>
+    <a class="quick" href="#vorrat"><span class="q-ico">${ICON.box}</span><strong>Vorrat</strong></a>
   </div>
 
   <section class="section">
@@ -856,6 +858,7 @@ async function viewMore() {
     <div class="card menu-list">
       <a href="#assistent"><span>Pilz-Assistent</span><span class="muted">›</span></a>
       <a href="#wildnis"><span>Wildnis: Pflanzen &amp; Erste Hilfe</span><span class="muted">›</span></a>
+      <a href="#vorrat"><span>Notvorrat-Checkliste</span><span class="muted">›</span></a>
       <a href="#favoriten"><span>Favoriten</span><span class="muted">${favorites.all().length} ›</span></a>
       <a href="#sicherheit"><span>Sicherheit &amp; Giftnotruf</span><span class="muted">›</span></a>
       <a href="#installieren"><span>Auf dem iPhone installieren</span><span class="muted">›</span></a>
@@ -975,6 +978,7 @@ function viewWildnis() {
     <h1>Wildnis</h1>
     <p class="muted">Wildpflanzen und ihre giftigen Doppelgänger, Erste Hilfe und Sicherheit draußen – alles offline verfügbar.</p>
     <div class="card notice danger"><strong>Notfall: 112</strong>Die Inhalte ersetzen keinen Erste-Hilfe-Kurs und keine fachkundige Bestimmung. <a href="#ratgeber-notruf">So setzt du einen Notruf ab →</a></div>
+    <a class="card vorrat-teaser" href="#vorrat">${ICON.box}<span><strong>Notvorrat-Checkliste</strong><span class="muted small">Einkaufsliste für Strom- und Wasserausfall – nach Laden, Personen und Dauer</span></span></a>
     <section class="section"><div class="section-head"><h2>Erste Hilfe &amp; Sicherheit</h2></div>
       <div class="card menu-list">${state.wild.guides.map((g) => `<a href="#ratgeber-${esc(g.id)}"><span>${esc(g.title)}</span><span class="muted">›</span></a>`).join('')}</div>
     </section>
@@ -1040,6 +1044,69 @@ function viewGuide(id) {
     <p class="small muted section">Quellen: ${src.map((x) => esc(x.title)).join('; ')}. ${esc(state.wild.meta.sourceNote)}</p></div>`, 'mehr', g.title);
 }
 
+// ---------------------------------------------------------------- Notvorrat
+function viewVorrat() {
+  const cfg = ls.get('vorrat.cfg', { store: 'edeka', scenario: 'beides', days: 10, persons: 1 });
+  if (!STORES[cfg.store]) cfg.store = 'edeka';
+  if (!SCENARIOS[cfg.scenario]) cfg.scenario = 'beides';
+  if (!DURATIONS[cfg.days]) cfg.days = 10;
+  cfg.persons = Math.min(12, Math.max(1, parseInt(cfg.persons, 10) || 1));
+  const key = `vorrat.done.${cfg.store}.${cfg.scenario}.${cfg.days}.${cfg.persons}`;
+  const done = new Set(ls.get(key, []));
+  const { groups, notes } = buildList(cfg);
+  const total = groups.reduce((n, g) => n + g.items.length, 0);
+  const st = STORES[cfg.store];
+  const seg = (name, dict, cur) => `<div class="seg wrap" role="group" aria-label="${esc(name)}">${Object.entries(dict).map(([k, v]) =>
+    `<button type="button" data-set="${esc(name)}" data-v="${esc(k)}" aria-pressed="${String(cur) === String(k)}">${esc(typeof v === 'string' ? v : v.label || v.name)}</button>`).join('')}</div>`;
+  const html = `
+    <h1>Notvorrat</h1>
+    <p class="muted">Einkaufsliste zum Abhaken – berechnet nach dem Beispiel-Grundvorrat des Bundesamts für Bevölkerungsschutz (BBK).</p>
+    <div class="card form vorrat-cfg">
+      <div class="field"><span class="label">Dein Laden</span>${seg('store', STORES, cfg.store)}</div>
+      <div class="field"><span class="label">Szenario</span>${seg('scenario', SCENARIOS, cfg.scenario)}</div>
+      <div class="field"><span class="label">Zeitraum</span>${seg('days', DURATIONS, cfg.days)}</div>
+      <div class="field"><label for="v-persons">Personen im Haushalt</label>
+        <div class="stepper"><button type="button" class="btn secondary small" data-p="-1" aria-label="Weniger">−</button>
+        <input id="v-persons" class="input" type="number" min="1" max="12" value="${cfg.persons}" inputmode="numeric">
+        <button type="button" class="btn secondary small" data-p="1" aria-label="Mehr">+</button></div></div>
+    </div>
+    <div class="toolbar"><span class="result-count"><b id="v-count">${done.size}</b> von ${total} erledigt</span>
+      <div class="btn-row"><a class="btn secondary small" href="${esc(st.url)}" target="_blank" rel="noopener">${esc(st.name)}-Website</a>
+      <button type="button" class="btn ghost small" id="v-copy">Liste kopieren</button>
+      <button type="button" class="btn ghost small" id="v-reset">Zurücksetzen</button></div></div>
+    <div class="wizard-progress" aria-hidden="true"><div id="v-bar" style="width:${(done.size / total) * 100}%"></div></div>
+    ${notes.map((n) => `<div class="card notice warn" style="margin-bottom:10px">${esc(n)}</div>`).join('')}
+    ${groups.map((g) => `<section class="section"><h2>${esc(g.title)}</h2><div class="card checklist">
+      ${g.items.map((it) => `<label class="check-item">
+        <input type="checkbox" data-id="${esc(it.id)}" ${done.has(it.id) ? 'checked' : ''}>
+        <span><strong>${esc(it.name)}</strong><span class="amount">${esc(it.amount)}</span>
+        ${it.brand ? `<span class="small muted">${esc(it.brand)}</span>` : ''}${it.hint ? `<span class="small muted">${esc(it.hint)}</span>` : ''}</span>
+      </label>`).join('')}</div></section>`).join('')}
+    <p class="small muted section">Preise und Sortiment ändern sich wöchentlich – aktuelle Angebote im Prospekt oder in der App deines Ladens prüfen. Eigenmarken-Namen sind Beispiele; jedes vergleichbare Produkt erfüllt denselben Zweck. Quelle der Mengen: BBK, Ratgeber für Notfallvorsorge (10-Tage-Grundvorrat, ca. 2.200 kcal/Tag pro Person).</p>`;
+  render(html, 'mehr', 'Notvorrat');
+
+  const save = (patch) => { ls.set('vorrat.cfg', { ...cfg, ...patch }); viewVorrat(); };
+  $view.querySelectorAll('[data-set]').forEach((b) => b.addEventListener('click', () => save({ [b.dataset.set]: b.dataset.set === 'days' ? Number(b.dataset.v) : b.dataset.v })));
+  $view.querySelectorAll('[data-p]').forEach((b) => b.addEventListener('click', () => save({ persons: cfg.persons + Number(b.dataset.p) })));
+  document.getElementById('v-persons').addEventListener('change', (e) => save({ persons: e.target.value }));
+  $view.querySelectorAll('.checklist input[type=checkbox]').forEach((c) => c.addEventListener('change', () => {
+    if (c.checked) done.add(c.dataset.id); else done.delete(c.dataset.id);
+    ls.set(key, [...done]);
+    document.getElementById('v-count').textContent = done.size;
+    document.getElementById('v-bar').style.width = `${(done.size / total) * 100}%`;
+  }));
+  document.getElementById('v-reset').addEventListener('click', async () => {
+    if (!(await confirmDialog('Haken zurücksetzen?', 'Alle Häkchen dieser Liste werden entfernt.', 'Zurücksetzen'))) return;
+    ls.set(key, []); viewVorrat();
+  });
+  document.getElementById('v-copy').addEventListener('click', async () => {
+    const text = `Notvorrat (${st.name}, ${SCENARIOS[cfg.scenario].label}, ${DURATIONS[cfg.days]}, ${cfg.persons} Pers.)\n\n`
+      + groups.map((g) => `${g.title}\n${g.items.map((i) => `${done.has(i.id) ? '[x]' : '[ ]'} ${i.name}: ${i.amount}`).join('\n')}`).join('\n\n');
+    try { await navigator.clipboard.writeText(text); toast('Liste kopiert – z. B. in Notizen einfügen.'); }
+    catch { await dialog({ title: 'Liste', html: `<textarea class="code" readonly>${esc(text)}</textarea>` }); }
+  });
+}
+
 function viewNotFound(msg = 'Diese Seite gibt es nicht.') {
   render(`<h1>Nicht gefunden</h1>${emptyState(esc(msg), '<a class="btn" href="#start">Zur Startseite</a>')}`, '', 'Nicht gefunden');
 }
@@ -1061,6 +1128,7 @@ function route() {
     if (h === 'favoriten') return viewFavorites();
     if (h === 'assistent') return viewAssistant();
     if (h === 'wildnis') return viewWildnis();
+    if (h === 'vorrat') return viewVorrat();
     if (h.startsWith('pflanze-')) return viewPlant(safeId(h.slice(8)));
     if (h.startsWith('ratgeber-')) return viewGuide(safeId(h.slice(9)));
     if (h === 'mehr') return viewMore();
