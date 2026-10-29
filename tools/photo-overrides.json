@@ -2,8 +2,10 @@
   "_hinweis": "Foto festlegen: \"pilz-id\": \"File:Dateiname.jpg\". Ungeeignetes Foto ausschließen: \"pilz-id\": {\"exclude\": [\"File:Dateiname.jpg\"]}. Nur CC0, Public Domain, CC BY oder CC BY-SA werden übernommen. Gezielte Suche: \"pilz-id\": {\"search\": \"Vaccinium myrtillus fruit\"}.",
   "fichten-steinpilz": {
     "exclude": [
-      "File:3 species of Boletus edilus (Eekhoorntjebrood) just beside our home Schaarsbergen - panoramio.jpg"
-    ]
+      "File:3 species of Boletus edilus (Eekhoorntjebrood) just beside our home Schaarsbergen - panoramio.jpg",
+      "File:Bolete, (41552959171).jpg"
+    ],
+    "search": "Boletus edulis Steinpilz forest"
   },
   "maronen-roehrling": {
     "exclude": [
