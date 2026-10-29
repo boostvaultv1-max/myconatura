@@ -12,3 +12,6 @@ export const DONATION = {
   buttonLabel: 'Jetzt spenden',
   text: 'MycoNatura ist kostenlos, werbefrei und sammelt keine Daten. Wenn dir die App gefällt, kannst du die Weiterentwicklung mit einer freiwilligen Spende unterstützen.',
 };
+
+// Titelbild der Startseite: ID einer Art aus src/data/mushrooms.json (braucht ein Foto in photos.json)
+export const HERO_SPECIES = 'fichten-steinpilz';

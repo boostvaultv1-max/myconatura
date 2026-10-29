@@ -7,7 +7,7 @@ import { ls, favorites, recent, finds, buildExport, importData, requestPersisten
 import { buildIndex, runSearch } from './search.js';
 import { STEPS, evaluate, labelFor } from './identify.js';
 import { illustrate, heroArt } from './illustration.js';
-import { DONATION } from './config.js';
+import { DONATION, HERO_SPECIES } from './config.js';
 import { answer as assistantAnswer, buildAliases } from './assistant.js';
 
 const APP_VERSION = '1.2.0';
@@ -206,15 +206,15 @@ function viewHome() {
   const rec = recent.all().map((id) => state.byId.get(id)).filter(Boolean);
   const favs = favorites.all().map((id) => state.byId.get(id)).filter(Boolean);
   const catCount = (k) => all.filter(CATEGORIES[k].test).length;
-  const hero = state.byId.get('fliegenpilz');
+  const hero = state.byId.get(HERO_SPECIES) || state.byId.get('fliegenpilz');
   const heroPhoto = hero && photoOf(hero);
 
   const html = `
   <section class="hero-photo${heroPhoto ? '' : ' no-photo'}">
-    ${heroPhoto ? `<img src="${esc(heroPhoto.src)}" alt="Fliegenpilz im Herbstlaub" fetchpriority="high">` : ''}
+    ${heroPhoto ? `<img src="${esc(heroPhoto.src)}" alt="${esc(hero.name)}" fetchpriority="high">` : ''}
     <div class="hero-shade"></div>
     <div class="hero-inner">
-      <a class="hero-tag" href="#pilz-fliegenpilz">Fliegenpilz · giftig</a>
+      <a class="hero-tag" href="#pilz-${esc(hero?.id || '')}">${esc(hero?.name.replace(/^Fichten-/, '') || '')} · ${esc(EDIBILITY[hero?.edibility]?.label || '')}</a>
       <h1>Pilze erkennen.<br>Sicher unterscheiden.</h1>
       <form class="searchbox" id="home-search" role="search">
         <label class="visually-hidden" for="home-q">Pilz suchen</label>
