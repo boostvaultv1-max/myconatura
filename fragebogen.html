@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Himmelwerk – Kurze Umfrage</title>
+<meta name="description" content="2 Minuten Umfrage: Wie soll dein Sonnenfenster von Himmelwerk aussehen?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#1b1712;--muted:#6d6457;--paper:#f6f1e8;--sky:#1e6fd9;--line:rgba(27,23,18,.12);--accent:#e8a33d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;max-width:760px;margin:0 auto}
+  .logo{font-family:Fraunces,serif;font-size:22px;font-weight:600;display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+  .logo i{width:22px;height:22px;border-radius:5px;background:linear-gradient(160deg,#5aa6f2,#1e6fd9);box-shadow:inset 0 0 0 3px #e9dfcc;position:relative}
+  .logo i::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#fff6dc;top:4px;right:4px}
+  .back{font-size:14px;color:var(--muted)}
+  main{max-width:760px;margin:0 auto;padding:10px 22px 80px}
+  .intro h1{font-size:clamp(30px,5vw,44px)}
+  .intro p{color:var(--muted);margin:10px 0 8px}
+  .progress{height:6px;background:rgba(27,23,18,.08);border-radius:99px;margin:22px 0 26px;overflow:hidden;position:sticky;top:0}
+  .progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#5aa6f2,var(--sky));transition:width .3s}
+  fieldset{border:1px solid var(--line);background:#fff;border-radius:18px;padding:20px;margin-bottom:16px}
+  legend{float:left;width:100%;font-weight:600;font-size:17px;margin-bottom:4px}
+  .hint{clear:both;font-size:13px;color:var(--muted);margin-bottom:12px}
+  .opts{clear:both;display:flex;flex-wrap:wrap;gap:8px}
+  .opts label{cursor:pointer}
+  .opts input{position:absolute;opacity:0;pointer-events:none}
+  .opts span{display:inline-block;padding:10px 14px;border:1px solid var(--line);border-radius:999px;font-size:15px;background:#fbf8f2;transition:.15s}
+  .opts input:checked+span{background:var(--sky);border-color:var(--sky);color:#fff}
+  .opts input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+  textarea,input[type=email],input[type=text]{clear:both;display:block;width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fbf8f2}
+  textarea{min-height:110px;resize:vertical}
+  .row{clear:both;display:grid;grid-template-columns:2fr 1fr;gap:10px}
+  .consent{display:flex;gap:8px;font-size:13px;color:var(--muted);margin:6px 0 18px}
+  button{border:0;font:inherit;font-weight:600;font-size:16px;padding:15px 26px;border-radius:999px;background:var(--ink);color:var(--paper);cursor:pointer;width:100%}
+  button:disabled{opacity:.6}
+  .msg{margin-top:14px;font-weight:500;min-height:22px}
+  .msg.ok{color:#2f7a3b}.msg.err{color:#b23b2b}
+  .done{display:none;text-align:center;padding:60px 10px}
+  .done h2{font-size:34px;margin-bottom:10px}
+  .done p{color:var(--muted)}
+  .done a{display:inline-block;margin-top:22px;color:var(--sky);font-weight:600}
+  @media(max-width:520px){.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="./"><i></i>Himmelwerk</a>
+  <a class="back" href="./">← Zur Startseite</a>
+</nav>
+
+<main>
+  <div id="formwrap">
+    <div class="intro">
+      <h1>Wie soll dein Sonnenfenster aussehen?</h1>
+      <p>10 kurze Fragen, ca. 2 Minuten. Deine Antworten helfen uns, genau das Produkt zu bauen, das du dir wünschst.</p>
+    </div>
+    <div class="progress"><span id="bar"></span></div>
+
+    <form id="survey" novalidate>
+      <fieldset data-q>
+        <legend>1. Wo würdest du ein Sonnenfenster einsetzen?</legend>
+        <p class="hint">Mehrere Antworten möglich</p>
+        <div class="opts">
+          <label><input type="checkbox" name="einsatzort" value="Büro"><span>Büro</span></label>
+          <label><input type="checkbox" name="einsatzort" value="Keller / Hobbyraum"><span>Keller / Hobbyraum</span></label>
+          <label><input type="checkbox" name="einsatzort" value="Badezimmer"><span>Badezimmer</span></label>
+          <label><input type="checkbox" name="einsatzort" value="Praxis / Laden"><span>Praxis / Laden</span></label>
+          <label><input type="checkbox" name="einsatzort" value="Yacht / Boot"><span>Yacht / Boot</span></label>
+          <label><input type="checkbox" name="einsatzort" value="Wohnmobil"><span>Wohnmobil</span></label>
+          <label><input type="checkbox" name="einsatzort" value="Unterwasser / Spa / Pool"><span>Unterwasser / Spa / Pool</span></label>
+          <label><input type="checkbox" name="einsatzort" value="Sonstiges"><span>Sonstiges</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>2. Du bist …</legend>
+        <div class="opts">
+          <label><input type="radio" name="kundentyp" value="Privatperson"><span>Privatperson</span></label>
+          <label><input type="radio" name="kundentyp" value="Unternehmen"><span>Unternehmen</span></label>
+          <label><input type="radio" name="kundentyp" value="Boots-/Yachtbesitzer"><span>Boots-/Yachtbesitzer</span></label>
+          <label><input type="radio" name="kundentyp" value="Architekt / Planer"><span>Architekt / Planer</span></label>
+          <label><input type="radio" name="kundentyp" value="Handwerker / Elektriker"><span>Handwerker / Elektriker</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>3. Welche Größe stellst du dir vor?</legend>
+        <div class="opts">
+          <label><input type="radio" name="groesse" value="Klein (ca. 30×60 cm)"><span>Klein · 30×60 cm</span></label>
+          <label><input type="radio" name="groesse" value="Mittel (ca. 60×60 cm)"><span>Mittel · 60×60 cm</span></label>
+          <label><input type="radio" name="groesse" value="Groß (ca. 60×120 cm)"><span>Groß · 60×120 cm</span></label>
+          <label><input type="radio" name="groesse" value="Extra groß / Sondermaß"><span>Extra groß / Sondermaß</span></label>
+          <label><input type="radio" name="groesse" value="Weiß ich noch nicht"><span>Weiß ich noch nicht</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>4. Wo soll es hin?</legend>
+        <div class="opts">
+          <label><input type="radio" name="einbau" value="Decke (Oberlicht)"><span>Decke (Oberlicht)</span></label>
+          <label><input type="radio" name="einbau" value="Wand (Fenster)"><span>Wand (Fenster)</span></label>
+          <label><input type="radio" name="einbau" value="Beides"><span>Beides</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>5. Was ist dir am wichtigsten?</legend>
+        <p class="hint">Bis zu 3 auswählen</p>
+        <div class="opts" data-max="3">
+          <label><input type="checkbox" name="wichtig" value="Echt wirkende Sonne"><span>Echt wirkende Sonne</span></label>
+          <label><input type="checkbox" name="wichtig" value="Automatischer Tagesverlauf"><span>Automatischer Tagesverlauf</span></label>
+          <label><input type="checkbox" name="wichtig" value="Steuerung per App"><span>Steuerung per App</span></label>
+          <label><input type="checkbox" name="wichtig" value="Flache Bauweise"><span>Flache Bauweise</span></label>
+          <label><input type="checkbox" name="wichtig" value="Niedriger Preis"><span>Niedriger Preis</span></label>
+          <label><input type="checkbox" name="wichtig" value="Montage inklusive"><span>Montage inklusive</span></label>
+          <label><input type="checkbox" name="wichtig" value="12/24 V für Boot/Wohnmobil"><span>12/24 V für Boot/Wohnmobil</span></label>
+          <label><input type="checkbox" name="wichtig" value="Wasserdicht"><span>Wasserdicht</span></label>
+          <label><input type="checkbox" name="wichtig" value="Sternenhimmel bei Nacht"><span>Sternenhimmel bei Nacht</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>6. Wie viel würdest du pro Fenster ausgeben?</legend>
+        <div class="opts">
+          <label><input type="radio" name="budget" value="unter 300 €"><span>unter 300 €</span></label>
+          <label><input type="radio" name="budget" value="300–700 €"><span>300–700 €</span></label>
+          <label><input type="radio" name="budget" value="700–1.500 €"><span>700–1.500 €</span></label>
+          <label><input type="radio" name="budget" value="1.500–3.000 €"><span>1.500–3.000 €</span></label>
+          <label><input type="radio" name="budget" value="über 3.000 €"><span>über 3.000 €</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>7. Einbau selbst oder durch uns?</legend>
+        <div class="opts">
+          <label><input type="radio" name="montage" value="Selbst einbauen"><span>Selbst einbauen</span></label>
+          <label><input type="radio" name="montage" value="Mit Montage durch Himmelwerk"><span>Mit Montage durch Himmelwerk</span></label>
+          <label><input type="radio" name="montage" value="Weiß ich noch nicht"><span>Weiß ich noch nicht</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>8. Wann wäre es für dich interessant?</legend>
+        <div class="opts">
+          <label><input type="radio" name="zeitpunkt" value="Sofort"><span>Sofort</span></label>
+          <label><input type="radio" name="zeitpunkt" value="In den nächsten 3 Monaten"><span>In 3 Monaten</span></label>
+          <label><input type="radio" name="zeitpunkt" value="In 6–12 Monaten"><span>In 6–12 Monaten</span></label>
+          <label><input type="radio" name="zeitpunkt" value="Erstmal nur Interesse"><span>Erstmal nur Interesse</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>9. Wie bist du auf uns gestoßen?</legend>
+        <div class="opts">
+          <label><input type="radio" name="quelle" value="TikTok"><span>TikTok</span></label>
+          <label><input type="radio" name="quelle" value="Instagram"><span>Instagram</span></label>
+          <label><input type="radio" name="quelle" value="Google"><span>Google</span></label>
+          <label><input type="radio" name="quelle" value="Freunde / Empfehlung"><span>Freunde / Empfehlung</span></label>
+          <label><input type="radio" name="quelle" value="Sonstiges"><span>Sonstiges</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset data-q>
+        <legend>10. Was wünschst du dir sonst noch?</legend>
+        <p class="hint">Ideen, Fragen, dein Raum, alles hilft (optional)</p>
+        <textarea name="wuensche" maxlength="2000" placeholder="z. B. „Ich hab einen fensterlosen Flur, 2 m lang …“"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Möchtest du ein Angebot oder Infos zum Start?</legend>
+        <p class="hint">Optional. Ohne E-Mail bleibt die Umfrage anonym.</p>
+        <div class="row">
+          <input type="email" name="email" placeholder="deine@email.de" autocomplete="email" aria-label="E-Mail">
+          <input type="text" name="plz" placeholder="PLZ" inputmode="numeric" maxlength="5" aria-label="Postleitzahl">
+        </div>
+      </fieldset>
+
+      <label class="consent"><input type="checkbox" id="consent"> Falls ich meine E-Mail angegeben habe: Himmelwerk darf mich dazu kontaktieren. Abmeldung jederzeit möglich.</label>
+
+      <button type="submit" id="send">Antworten absenden</button>
+      <div class="msg" id="msg" aria-live="polite"></div>
+    </form>
+  </div>
+
+  <div class="done" id="done">
+    <h2>Danke dir! ☀️</h2>
+    <p>Deine Antworten sind angekommen. Damit bauen wir dein perfektes Sonnenfenster.</p>
+    <a href="./">← Zur Startseite</a>
+  </div>
+</main>
+
+<script>
+/* Antworten werden an diese Adresse geschickt (z. B. Formspree: https://formspree.io/f/xxxxxx) */
+const FORM_ENDPOINT = "";
+
+const form = document.getElementById("survey");
+const bar = document.getElementById("bar");
+const qs = [...document.querySelectorAll("[data-q]")];
+
+function answered(fs){
+  const t = fs.querySelector("textarea");
+  if(t) return t.value.trim().length>0;
+  return !!fs.querySelector("input:checked");
+}
+function updateBar(){ bar.style.width = Math.round(qs.filter(answered).length/qs.length*100)+"%"; }
+form.addEventListener("input", updateBar);
+form.addEventListener("change", updateBar);
+
+document.querySelectorAll("[data-max]").forEach(box=>{
+  const max = +box.dataset.max;
+  box.addEventListener("change", e=>{
+    const checked = box.querySelectorAll("input:checked");
+    if(checked.length>max) e.target.checked=false;
+  });
+});
+
+function collect(){
+  const fd = new FormData(form), out = {};
+  for(const [k,v] of fd.entries()){
+    if(out[k]!==undefined) out[k] += ", " + v; else out[k] = v;
+  }
+  out.einwilligung_kontakt = document.getElementById("consent").checked ? "ja" : "nein";
+  out._subject = "Neue Himmelwerk-Umfrage";
+  return out;
+}
+
+form.addEventListener("submit", async e=>{
+  e.preventDefault();
+  const msg = document.getElementById("msg"), btn = document.getElementById("send");
+  msg.className="msg"; msg.textContent="";
+  const data = collect();
+  if(qs.filter(answered).length < 3){ msg.className="msg err"; msg.textContent="Bitte beantworte mindestens ein paar Fragen."; return; }
+  if(data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)){ msg.className="msg err"; msg.textContent="Die E-Mail-Adresse sieht nicht richtig aus."; return; }
+  if(data.email && !document.getElementById("consent").checked){ msg.className="msg err"; msg.textContent="Bitte setz das Häkchen, wenn wir dich kontaktieren dürfen, oder lass die E-Mail leer."; return; }
+  if(!FORM_ENDPOINT){ msg.className="msg err"; msg.textContent="Die Umfrage öffnet in Kürze. Schau bald wieder vorbei."; return; }
+  btn.disabled=true; btn.textContent="Wird gesendet…";
+  try{
+    const r = await fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)});
+    if(!r.ok) throw new Error();
+    document.getElementById("formwrap").style.display="none";
+    document.getElementById("done").style.display="block";
+    window.scrollTo({top:0,behavior:"smooth"});
+  }catch(_){
+    msg.className="msg err"; msg.textContent="Senden hat nicht geklappt. Bitte versuch es gleich nochmal.";
+  }finally{
+    btn.disabled=false; btn.textContent="Antworten absenden";
+  }
+});
+</script>
+</body>
+</html>
